@@ -18,14 +18,24 @@
           <h3 :class="$style.subtitle">smikmator@seznam.cz</h3>
         </div>
         <div :class="$style.item">
-          <img :class="$style.frameIcon" alt="" src="/frame-1@2x.png" />
+          <img
+            :class="$style.frameIcon"
+            loading="lazy"
+            alt=""
+            src="/frame-1@2x.png"
+          />
           <div :class="$style.titleWrapper">
             <div :class="$style.title1">Telefon</div>
           </div>
           <div :class="$style.subtitle1">+420 777 550 788</div>
         </div>
         <div :class="$style.item">
-          <img :class="$style.frameIcon" alt="" src="/frame-2@2x.png" />
+          <img
+            :class="$style.frameIcon"
+            loading="lazy"
+            alt=""
+            src="/frame-2@2x.png"
+          />
           <div :class="$style.titleWrapper">
             <div :class="$style.title1">Adresa</div>
           </div>
@@ -33,7 +43,12 @@
         </div>
       </div>
     </div>
-    <img :class="$style.listChild" alt="" src="/vector-200.svg" />
+    <img
+      :class="$style.listChild"
+      loading="lazy"
+      alt=""
+      src="/vector-200.svg"
+    />
   </section>
 </template>
 <script lang="ts">
@@ -173,13 +188,12 @@
       box-sizing: border-box;
     }
   }
-  @media screen and (max-width: 1050px) {
+  @media screen and (max-width: 825px) {
     .title {
       font-size: var(--m3-headline-large-size);
       line-height: 38px;
     }
-  }
-  @media screen and (max-width: 750px) {
+
     .container {
       padding-left: var(--padding-62xl);
       padding-right: var(--padding-62xl);

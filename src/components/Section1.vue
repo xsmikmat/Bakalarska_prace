@@ -1,6 +1,6 @@
 <template>
-  <footer :class="$style.section" :style="sectionStyle">
-    <div :class="$style.footerLogo">
+  <section :class="$style.section" :style="sectionStyle">
+    <div :class="$style.upravenoLogo11Wrapper">
       <img
         :class="$style.upravenoLogo11"
         loading="lazy"
@@ -8,7 +8,7 @@
         :src="upravenoLogo11"
       />
     </div>
-    <div :class="$style.footerInfo">
+    <div :class="$style.containerWrapper">
       <div :class="$style.container">
         <h1 :class="$style.title">Šmikmátor</h1>
         <div :class="$style.description">Penzion v srdci České Kanady</div>
@@ -18,7 +18,7 @@
     <div :class="$style.component1">
       <Button28 /><Button29 /><Button30 /><Property1Button7 /><Button31 />
     </div>
-  </footer>
+  </section>
 </template>
 <script lang="ts">
   import { defineComponent } from "vue";
@@ -56,7 +56,7 @@
     max-height: 100%;
     object-fit: cover;
   }
-  .footerLogo {
+  .upravenoLogo11Wrapper {
     height: 208.5px;
     display: flex;
     flex-direction: column;
@@ -91,7 +91,7 @@
     justify-content: flex-start;
     gap: var(--gap-5xl);
   }
-  .footerInfo {
+  .containerWrapper {
     width: 559px;
     display: flex;
     flex-direction: column;
@@ -129,7 +129,6 @@
     font-family: var(--subtext);
   }
   .section {
-    align-self: stretch;
     overflow: hidden;
     display: flex;
     flex-direction: row;

@@ -1,6 +1,6 @@
 <template>
   <div :class="$style.button" @click="onButtonContainerClick">
-    <a :class="$style.fotogalerie">Fotogalerie</a>
+    <div :class="$style.fotogalerie">Fotogalerie</div>
   </div>
 </template>
 <script lang="ts">
@@ -17,12 +17,10 @@
 </script>
 <style module>
   .fotogalerie {
-    text-decoration: none;
     height: 15px;
     width: 78px;
     position: relative;
     line-height: 15px;
-    color: inherit;
     display: inline-block;
     flex-shrink: 0;
   }

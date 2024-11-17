@@ -1,6 +1,6 @@
 <template>
   <div :class="$style.button" @click="onButtonContainerClick">
-    <a :class="$style.oUbytovn">O ubytování</a>
+    <div :class="$style.oUbytovn">O ubytování</div>
   </div>
 </template>
 <script lang="ts">
@@ -17,12 +17,10 @@
 </script>
 <style module>
   .oUbytovn {
-    text-decoration: none;
     height: 15px;
     width: 81px;
     position: relative;
     line-height: 15px;
-    color: inherit;
     display: inline-block;
     flex-shrink: 0;
   }

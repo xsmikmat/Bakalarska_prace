@@ -1,6 +1,6 @@
 <template>
   <div :class="$style.property1button" @click="onProperty1ButtonContainerClick">
-    <a :class="$style.rezervace">Rezervace</a>
+    <div :class="$style.rezervace">Rezervace</div>
   </div>
 </template>
 <script lang="ts">
@@ -17,10 +17,8 @@
 </script>
 <style module>
   .rezervace {
-    text-decoration: none;
     position: relative;
     font-weight: 600;
-    color: inherit;
   }
   .property1button {
     height: 40px;

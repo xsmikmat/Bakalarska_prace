@@ -177,13 +177,12 @@
     font-family: var(--m3-label-large);
   }
 
-  @media screen and (max-width: 1050px) {
+  @media screen and (max-width: 825px) {
     .title {
       font-size: var(--m3-headline-large-size);
       line-height: 38px;
     }
-  }
-  @media screen and (max-width: 750px) {
+
     .container {
       min-width: 100%;
     }

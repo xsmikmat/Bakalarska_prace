@@ -1,7 +1,9 @@
 <template>
   <div :class="$style.rezervaceMc14">
     <FrameComponent10 />
-    <section :class="$style.rezervaceMc14Inner"><FrameComponent5 /></section>
+    <section :class="$style.rezervaceMc14Inner">
+      <FrameComponent5 :showContainer="false" />
+    </section>
   </div>
 </template>
 <script lang="ts">

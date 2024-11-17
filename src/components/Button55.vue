@@ -1,6 +1,6 @@
 <template>
   <div :class="$style.button" @click="onButtonContainerClick">
-    <a :class="$style.kontakt">Kontakt</a>
+    <div :class="$style.kontakt">Kontakt</div>
   </div>
 </template>
 <script lang="ts">
@@ -17,12 +17,10 @@
 </script>
 <style module>
   .kontakt {
-    text-decoration: none;
     height: 15px;
     width: 53px;
     position: relative;
     line-height: 15px;
-    color: inherit;
     display: inline-block;
     flex-shrink: 0;
   }
