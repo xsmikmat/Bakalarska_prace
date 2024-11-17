@@ -1,136 +1,81 @@
 <template>
   <div :class="$style.homePageMc14">
-    <section :class="$style.frameParent">
-      <FrameComponent1 />
-      <div :class="$style.loremIpsumDolorSitAmetCoWrapper">
-        <div :class="$style.loremIpsumDolor">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl
-          tincidunt eget nullam non. Quis hendrerit dolor magna eget est lorem
-          ipsum
-        </div>
-      </div>
-      <FrameComponent2 />
-    </section>
-    <section :class="$style.oPenzionuMikmtorWrapper">
-      <h1 :class="$style.oPenzionuMikmtor">O penzionu Šmikmátor</h1>
-    </section>
-    <FrameComponent3 />
-    <section :class="$style.activitiesContentWrapper">
-      <div :class="$style.activitiesContent">
-        <div :class="$style.activitiesTitle">
-          <h1 :class="$style.zitkyAAktivity">Zážitky a aktivity v okolí</h1>
-        </div>
-        <div :class="$style.loremIpsumDolor1">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl
-          tincidunt eget nullam non. Quis hendrerit dolor magna eget est lorem
-          ipsum
-        </div>
-        <div :class="$style.buttonWrapper">
-          <div :class="$style.button" @click="onButtonContainerClick">
-            <div :class="$style.vceInformac">Více informací</div>
+    <section />
+    <section :class="$style.content">
+      <div :class="$style.main">
+        <div :class="$style.section">
+          <h1 :class="$style.oPenzionuMikmtor">O penzionu Šmikmátor</h1>
+          <div :class="$style.section1">
+            <List3
+              spolecnePrsotory021="/spolecne-prsotory-02-1@2x.png"
+              title="Rodinné zázemí"
+            /><List3
+              spolecnePrsotory021="/spolecne-prsotory-03-1@2x.png"
+              title="Široké vybavení"
+            /><List3
+              spolecnePrsotory021="/okoli-07-1@2x.png"
+              title="Krásná příroda"
+            />
+            <div :class="$style.iconButtons">
+              <div :class="$style.button" @click="onButtonContainerClick">
+                <div :class="$style.vceInformac">Více informací</div>
+              </div>
+            </div>
           </div>
         </div>
+      </div>
+      <div :class="$style.activities">
+        <div :class="$style.section2">
+          <div :class="$style.activitiesTitle">
+            <h1 :class="$style.oPenzionuMikmtor">Zážitky a aktivity v okolí</h1>
+          </div>
+          <div :class="$style.loremIpsumDolor">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl
+            tincidunt eget nullam non. Quis hendrerit dolor magna eget est lorem
+            ipsum
+          </div>
+          <div :class="$style.activitiesButton">
+            <div :class="$style.button1" @click="onButtonContainerClick1">
+              <div :class="$style.vceInformac">Více informací</div>
+            </div>
+          </div>
+        </div>
+        <Section1
+          upravenoLogo11="/upraveno-logo-1-1-1@2x.png"
+          vector200="/vector-200-4.svg"
+        />
       </div>
     </section>
   </div>
 </template>
 <script lang="ts">
   import { defineComponent } from "vue";
-  import FrameComponent1 from "../components/FrameComponent1.vue";
-  import FrameComponent2 from "../components/FrameComponent2.vue";
-  import FrameComponent3 from "../components/FrameComponent3.vue";
+  import Section from "../components/Section.vue";
+  import List3 from "../components/List3.vue";
+  import Section1 from "../components/Section1.vue";
 
   export default defineComponent({
     name: "HomePageMc",
-    components: { FrameComponent1, FrameComponent2, FrameComponent3 },
+    components: { Section, List3, Section1 },
     methods: {
       onButtonContainerClick() {
+        this.$router.push("/o-ubytovn-mc14");
+      },
+      onButtonContainerClick1() {
         this.$router.push("/okol-mc14");
       },
     },
   });
 </script>
 <style module>
-  .loremIpsumDolor {
-    flex: 1;
-    position: relative;
-    line-height: 44px;
-    font-weight: 600;
-    display: inline-block;
-    max-width: 100%;
-  }
-  .loremIpsumDolorSitAmetCoWrapper {
-    align-self: stretch;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-end;
-    padding: 0px 164px 0px var(--padding-91xl);
-    box-sizing: border-box;
-    min-height: 120px;
-    max-width: 100%;
-  }
-  .frameParent {
-    align-self: stretch;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: flex-start;
-    padding: 0px 0px 37px;
-    box-sizing: border-box;
-    max-width: 100%;
-    text-align: center;
-    font-size: var(--subtext-size);
-    color: var(--color-gray-100);
-    font-family: var(--subtext);
-  }
   .oPenzionuMikmtor {
     margin: 0;
-    flex: 1;
     position: relative;
     font-size: inherit;
     line-height: 100px;
     font-weight: 400;
     font-family: inherit;
-  }
-  .oPenzionuMikmtorWrapper {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-start;
-    padding: 0px 402px 0px 403px;
-    box-sizing: border-box;
-    max-width: 100%;
-    text-align: center;
-    font-size: var(--heading-1-size);
-    color: var(--color-black);
-    font-family: var(--heading-2);
-  }
-  .zitkyAAktivity {
-    margin: 0;
-    position: relative;
-    font-size: inherit;
-    line-height: 100px;
-    font-weight: 400;
-    font-family: inherit;
-  }
-  .activitiesTitle {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-start;
-    padding: 0px 291px 0px 292px;
-    font-size: var(--heading-1-size);
-    font-family: var(--heading-2);
-  }
-  .loremIpsumDolor1 {
-    position: relative;
-    line-height: 44px;
-    font-weight: 600;
-    color: var(--color-gray-100);
-    z-index: 1;
   }
   .vceInformac {
     position: relative;
@@ -143,44 +88,136 @@
     overflow: hidden;
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: var(--padding-3xs) var(--padding-5xl);
+    flex-shrink: 0;
+    cursor: pointer;
+  }
+  .iconButtons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 540px;
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+  .section1 {
+    height: 714px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+    padding: 13.5px 126px;
+    box-sizing: border-box;
+    gap: 67px 63px;
+    max-width: 100%;
+    text-align: left;
+    font-size: var(--subtext-size);
+    color: var(--color-darkseagreen);
+    font-family: var(--subtext);
+  }
+  .section {
+    width: 1504px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    padding: var(--padding-41xl) 0px 0px;
+    box-sizing: border-box;
+    gap: 100px;
+    max-width: 100%;
+  }
+  .main {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0px 0px 0px var(--padding-9xs);
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+  .activitiesTitle {
+    width: 859px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-end;
+    max-width: 100%;
+    font-size: var(--heading-1-size);
+    font-family: var(--heading-1);
+  }
+  .loremIpsumDolor {
+    height: 120px;
+    position: relative;
+    line-height: 44px;
+    font-weight: 600;
+    color: var(--color-gray-100);
+    display: inline-block;
+    flex-shrink: 0;
+  }
+  .button1 {
+    border-radius: var(--br-3xs);
+    background-color: var(--color-seagreen);
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
     align-items: flex-start;
     justify-content: flex-start;
     padding: var(--padding-3xs) var(--padding-5xl) var(--padding-3xs)
       var(--padding-6xl);
     cursor: pointer;
-    z-index: 2;
   }
-  .buttonWrapper {
+  .activitiesButton {
+    width: 665px;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    justify-content: flex-start;
-    padding: 0px 486px 0px 485px;
+    justify-content: flex-end;
+    max-width: 100%;
     text-align: left;
     color: var(--color-darkseagreen);
   }
-  .activitiesContent {
-    width: 1151px;
+  .section2 {
+    align-self: stretch;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    min-height: 284px;
+    padding: var(--padding-41xl) 176px;
+    box-sizing: border-box;
+    gap: 19px;
     max-width: 100%;
   }
-  .activitiesContentWrapper {
-    width: 1371px;
+  .activities {
+    align-self: stretch;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: flex-start;
-    justify-content: center;
-    padding: 0px var(--padding-xl);
-    box-sizing: border-box;
+    justify-content: flex-start;
+    gap: var(--gap-9xs);
+    max-width: 100%;
+    font-size: var(--subtext-size);
+    font-family: var(--subtext);
+  }
+  .content {
+    align-self: stretch;
+    height: 1629px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
     max-width: 100%;
     text-align: center;
-    font-size: var(--subtext-size);
+    font-size: var(--heading-1-size);
     color: var(--color-black);
-    font-family: var(--subtext);
+    font-family: var(--heading-1);
   }
   .homePageMc14 {
     width: 100%;
@@ -191,121 +228,90 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    padding: 0px var(--padding-xs) 1033px 67px;
-    box-sizing: border-box;
-    gap: 116px;
+    gap: 784px;
     line-height: normal;
     letter-spacing: normal;
   }
 
-  @media screen and (max-width: 1200px) {
-    .loremIpsumDolorSitAmetCoWrapper {
-      padding-left: 55px;
-      padding-right: 82px;
-      box-sizing: border-box;
-    }
-
-    .oPenzionuMikmtorWrapper {
-      padding-left: var(--padding-182xl);
-      padding-right: var(--padding-182xl);
-      box-sizing: border-box;
-    }
-
-    .activitiesTitle {
-      padding-left: 146px;
-      padding-right: 145px;
-      box-sizing: border-box;
-    }
-
-    .buttonWrapper {
-      padding-left: 242px;
-      padding-right: 243px;
+  @media screen and (max-width: 1425px) {
+    .iconButtons {
+      padding-left: var(--padding-251xl);
+      padding-right: var(--padding-251xl);
       box-sizing: border-box;
     }
   }
-  @media screen and (max-width: 1050px) {
+  @media screen and (max-width: 825px) {
     .oPenzionuMikmtor {
       font-size: var(--font-size-23xl);
       line-height: 80px;
     }
 
-    .zitkyAAktivity {
-      font-size: var(--font-size-23xl);
-      line-height: 80px;
-    }
-  }
-  @media screen and (max-width: 750px) {
-    .loremIpsumDolorSitAmetCoWrapper {
-      padding-left: 27px;
-      padding-right: 41px;
+    .iconButtons {
+      padding-left: var(--padding-116xl);
+      padding-right: var(--padding-116xl);
       box-sizing: border-box;
     }
 
-    .oPenzionuMikmtorWrapper {
-      padding-left: var(--padding-81xl);
-      padding-right: var(--padding-81xl);
+    .section1 {
+      gap: 31px;
+      padding-left: var(--padding-44xl);
+      padding-right: var(--padding-44xl);
       box-sizing: border-box;
     }
 
-    .activitiesTitle {
-      padding-left: var(--padding-54xl);
-      padding-right: 72px;
+    .section {
+      gap: 50px;
+      padding-top: var(--padding-20xl);
       box-sizing: border-box;
     }
 
-    .buttonWrapper {
-      padding-left: var(--padding-102xl);
-      padding-right: var(--padding-102xl);
+    .section2 {
+      padding-left: var(--padding-69xl);
+      padding-right: var(--padding-69xl);
       box-sizing: border-box;
     }
 
     .homePageMc14 {
-      gap: 58px;
-      padding-left: 33px;
-      box-sizing: border-box;
+      gap: 392px;
     }
   }
   @media screen and (max-width: 450px) {
-    .loremIpsumDolor {
-      font-size: var(--m3-body-large-size);
-      line-height: 35px;
-    }
-
     .oPenzionuMikmtor {
       font-size: var(--font-size-12xl);
       line-height: 60px;
     }
 
-    .oPenzionuMikmtorWrapper {
+    .iconButtons {
       padding-left: var(--padding-xl);
       padding-right: var(--padding-xl);
       box-sizing: border-box;
     }
 
-    .zitkyAAktivity {
-      font-size: var(--font-size-12xl);
-      line-height: 60px;
-    }
-
-    .activitiesTitle {
+    .section1 {
+      gap: var(--gap-base);
       padding-left: var(--padding-xl);
       padding-right: var(--padding-xl);
       box-sizing: border-box;
     }
 
-    .loremIpsumDolor1 {
-      font-size: var(--m3-body-large-size);
+    .section {
+      gap: 25px;
+      padding-top: var(--padding-6xl);
+      box-sizing: border-box;
+    }
+
+    .loremIpsumDolor {
+      font-size: var(--font-size-base);
       line-height: 35px;
     }
 
-    .buttonWrapper {
-      padding-left: var(--padding-xl);
-      padding-right: var(--padding-xl);
+    .section2 {
+      padding: var(--padding-20xl) var(--padding-xl);
       box-sizing: border-box;
     }
 
     .homePageMc14 {
-      gap: 29px;
+      gap: 196px;
     }
   }
 </style>

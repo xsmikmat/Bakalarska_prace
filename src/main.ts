@@ -8,6 +8,7 @@ import KontaktMc from "./pages/KontaktMc.vue";
 import OUbytovnMc from "./pages/OUbytovnMc.vue";
 import RezervaceMc from "./pages/RezervaceMc.vue";
 import OkolMc from "./pages/OkolMc.vue";
+import Page from "./pages/Page.vue";
 import "./global.css";
 
 interface Route {
@@ -46,6 +47,11 @@ const routes: Route[] = [
     path: "/okol-mc14",
     name: "OkolMc",
     component: OkolMc,
+  },
+  {
+    path: "/page",
+    name: "Page",
+    component: Page,
   },
 ];
 

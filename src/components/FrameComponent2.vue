@@ -1,11 +1,11 @@
 <template>
-  <div :class="$style.frameWrapper">
+  <div :class="$style.frameParent">
     <div :class="$style.image1Parent">
       <img
         :class="$style.image1Icon"
         loading="lazy"
         alt=""
-        src="/image-1@2x.png"
+        src="/image-12@2x.png"
       />
       <div :class="$style.reservationButtonsParent">
         <div :class="$style.reservationButtons">
@@ -167,8 +167,9 @@
     gap: var(--gap-4xl);
     max-width: 100%;
   }
-  .frameWrapper {
-    align-self: stretch;
+  .frameParent {
+    width: 100%;
+    position: relative;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -177,7 +178,7 @@
     text-align: left;
     font-size: var(--m3-headline-large-size);
     color: var(--color-seagreen);
-    font-family: var(--heading-2);
+    font-family: var(--heading-1);
   }
 
   @media screen and (max-width: 1050px) {
@@ -191,7 +192,7 @@
       line-height: 35px;
     }
   }
-  @media screen and (max-width: 450px) {
+  @media screen and (max-width: 750px) {
     .rezervovat {
       font-size: var(--font-size-lgi);
       line-height: 26px;

@@ -14,7 +14,7 @@
         commodo consequat.
       </div>
       <div :class="$style.iconButtons">
-        <div :class="$style.button" @click="onButtonContainerClick">
+        <div :class="$style.button" @click="__PH1__">
           <div :class="$style.vceInformac">Více informací</div>
         </div>
       </div>
@@ -28,6 +28,7 @@
     name: "Card",
     props: {
       title: { type: String },
+      __PH1__: { type: Function },
     },
     methods: {
       onButtonContainerClick() {
@@ -70,7 +71,7 @@
     font-size: var(--m3-headline-large-size);
     line-height: 44px;
     font-weight: 400;
-    font-family: var(--heading-2);
+    font-family: var(--heading-1);
   }
   .subtitle {
     height: 144px;
@@ -138,9 +139,9 @@
     justify-content: flex-start;
     max-width: 100%;
     text-align: center;
-    font-size: var(--m3-body-small-size);
+    font-size: var(--font-size-xs);
     color: var(--color-black);
-    font-family: var(--m3-body-small);
+    font-family: var(--m3-label-large);
   }
 
   @media screen and (max-width: 1050px) {
@@ -149,7 +150,7 @@
       line-height: 35px;
     }
   }
-  @media screen and (max-width: 450px) {
+  @media screen and (max-width: 750px) {
     .title1 {
       font-size: var(--font-size-lgi);
       line-height: 26px;
