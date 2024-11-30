@@ -86,12 +86,17 @@
         <footer class="footer-7">
           <img class="upraveno_logo-1-1-15" :src="upraveno_Logo112" alt="upraveno_logo (1) 1" /><container />
           <div class="component-1-7">
-            <div class="button-container-14">
-              <component136 :oUbytovn="component136Props.oUbytovn" />
-              <component137 :okol="component137Props.okol" />
-              <component138 :fotogalerie="component138Props.fotogalerie" />
-              <component139 :rezervace="component139Props.rezervace" />
-              <component140 :kontakt="component140Props.kontakt" />
+            <div class="button-footer-container">
+              <router-link to="/o-ubytovani-3">
+                <div class="button-nav"><div class="text-nav text">O ubytování</div></div></router-link>
+              <router-link to="/okoli-2">
+                <div class="button-nav"><div class="text-nav text">Okolí</div></div></router-link>
+              <router-link to="/fotogalerie-1">
+                <div class="button-nav"><div class="text-nav text">Fotogalerie</div></div></router-link>
+              <router-link to="/rezervace-3">
+                <div class="button-nav"><div class="text-nav text">Rezervace</div></div></router-link>
+              <router-link to="/kontakt-2">
+                <div class="button-nav"><div class="text-nav text">Kontakt</div></div></router-link>
             </div>
           </div>
         </footer>
@@ -104,22 +109,12 @@
 import Item32 from "./Item32";
 import Item42 from "./Item42";
 import Container from "./Container";
-import Component136 from "./Component136";
-import Component137 from "./Component137";
-import Component138 from "./Component138";
-import Component139 from "./Component139";
-import Component140 from "./Component140";
 export default {
   name: "Kontakt2",
   components: {
     Item32,
     Item42,
-    Container,
-    Component136,
-    Component137,
-    Component138,
-    Component139,
-    Component140,
+    Container
   },
   props: [
     "upraveno_Logo111",
@@ -135,12 +130,7 @@ export default {
     "item423Props",
     "item424Props",
     "item425Props",
-    "item426Props",
-    "component136Props",
-    "component137Props",
-    "component138Props",
-    "component139Props",
-    "component140Props",
+    "item426Props"
   ],
 };
 </script>

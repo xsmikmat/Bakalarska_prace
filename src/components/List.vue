@@ -48,7 +48,16 @@ export default {
   height: 556px
   overflow: hidden
   position: relative
-  width: 100%
+  width: 100% // Use percentage-based width for responsiveness
+  max-width: 406px // Set a maximum width to maintain design consistency
+
+@media (max-width: 1200px)
+  .card-3
+    max-width: 300px // Adjust the max-width for smaller screens
+
+@media (max-width: 768px)
+  .card-3
+    max-width: 100%
 
 .image-container-5
   align-items: flex-start
@@ -76,7 +85,6 @@ export default {
   gap: 4px
   padding: 12px
   position: relative
-  width: 100%
 
 .title-14
   align-self: stretch

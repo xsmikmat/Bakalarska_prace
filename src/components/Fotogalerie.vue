@@ -48,12 +48,17 @@
         <footer class="footer">
           <img class="upraveno_logo-1-1-1" :src="upraveno_Logo112" alt="upraveno_logo (1) 1" /><container />
           <div class="component-1">
-            <div class="button-container-1">
-              <component1 :oUbytovn="component1Props.oUbytovn" />
-              <component12 :okol="component12Props.okol" />
-              <component13 :fotogalerie="component13Props.fotogalerie" />
-              <component14 :rezervace="component14Props.rezervace" />
-              <component15 :kontakt="component15Props.kontakt" />
+            <div class="button-footer-container">
+              <router-link to="/o-ubytovani-3">
+                <div class="button-nav"><div class="text-nav text">O ubytování</div></div></router-link>
+              <router-link to="/okoli-2">
+                <div class="button-nav"><div class="text-nav text">Okolí</div></div></router-link>
+              <router-link to="/fotogalerie-1">
+                <div class="button-nav"><div class="text-nav text">Fotogalerie</div></div></router-link>
+              <router-link to="/rezervace-3">
+                <div class="button-nav"><div class="text-nav text">Rezervace</div></div></router-link>
+              <router-link to="/kontakt-2">
+                <div class="button-nav"><div class="text-nav text">Kontakt</div></div></router-link>
             </div>
           </div>
         </footer>
@@ -70,11 +75,6 @@ import Navigace4 from "./Navigace4";
 import Navigace5 from "./Navigace5";
 import Contents from "./Contents";
 import Container from "./Container";
-import Component1 from "./Component1";
-import Component12 from "./Component12";
-import Component13 from "./Component13";
-import Component14 from "./Component14";
-import Component15 from "./Component15";
 export default {
   name: "Fotogalerie",
   components: {
@@ -84,12 +84,7 @@ export default {
     Navigace4,
     Navigace5,
     Contents,
-    Container,
-    Component1,
-    Component12,
-    Component13,
-    Component14,
-    Component15,
+    Container
   },
   props: [
     "upraveno_Logo111",
@@ -103,11 +98,6 @@ export default {
     "contents1Props",
     "contents2Props",
     "contents3Props",
-    "component1Props",
-    "component12Props",
-    "component13Props",
-    "component14Props",
-    "component15Props",
   ],
 };
 </script>

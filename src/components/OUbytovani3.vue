@@ -77,12 +77,17 @@
         <footer class="footer-10">
           <img class="upraveno_logo-1-1-23" :src="upraveno_Logo112" alt="upraveno_logo (1) 1" /><container />
           <div class="component-1-11">
-            <div class="button-container-22">
-              <component156 />
-              <component157 />
-              <component158 />
-              <component159 />
-              <component160 />
+            <div class="button-footer-container">
+              <router-link to="/o-ubytovani-3">
+                <div class="button-nav"><div class="text-nav text">O ubytování</div></div></router-link>
+              <router-link to="/okoli-2">
+                <div class="button-nav"><div class="text-nav text">Okolí</div></div></router-link>
+              <router-link to="/fotogalerie-1">
+                <div class="button-nav"><div class="text-nav text">Fotogalerie</div></div></router-link>
+              <router-link to="/rezervace-3">
+                <div class="button-nav"><div class="text-nav text">Rezervace</div></div></router-link>
+              <router-link to="/kontakt-2">
+                <div class="button-nav"><div class="text-nav text">Kontakt</div></div></router-link>
             </div>
           </div>
         </footer>
@@ -100,11 +105,6 @@ import ImageContainer4 from "./ImageContainer4";
 import Frame4273189062 from "./Frame4273189062";
 import XArticle2 from "./XArticle2";
 import Container from "./Container";
-import Component156 from "./Component156";
-import Component157 from "./Component157";
-import Component158 from "./Component158";
-import Component159 from "./Component159";
-import Component160 from "./Component160";
 export default {
   name: "OUbytovani3",
   components: {
@@ -115,12 +115,7 @@ export default {
     ImageContainer4,
     Frame4273189062,
     XArticle2,
-    Container,
-    Component156,
-    Component157,
-    Component158,
-    Component159,
-    Component160,
+    Container
   },
   props: [
     "upraveno_Logo111",

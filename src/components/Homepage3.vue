@@ -46,6 +46,7 @@
             <list :spolecnePrsotory021="list1Props.spolecnePrsotory021" :title="list1Props.title" />
             <list :spolecnePrsotory021="list2Props.spolecnePrsotory021" :title="list2Props.title" />
             <list :spolecnePrsotory021="list3Props.spolecnePrsotory021" :title="list3Props.title" />
+          </div>
             <div class="icon-buttons-2">
               <router-link to="/o-ubytovani-3">
                 <div class="button-37">
@@ -53,7 +54,6 @@
                 </div></router-link
               >
             </div>
-          </div>
         </div>
         <div class="page-item">
           <p class="zitky-a-aktivity-v-okol-2 heading-1">{{ zitkyAAktivityVOkol }}</p>
@@ -69,11 +69,16 @@
           <img class="vector-200" :src="vector200" alt="Vector 200" />
           <div class="component-1-4">
             <div class="button-container-9">
-              <component121 />
-              <component122 />
-              <component123 />
-              <component124 />
-              <component125 />
+              <router-link to="/o-ubytovani-3">
+                <div class="button-nav"><div class="text-nav text">O ubytování</div></div></router-link>
+              <router-link to="/okoli-2">
+                <div class="button-nav"><div class="text-nav text">Okolí</div></div></router-link>
+              <router-link to="/fotogalerie-1">
+                <div class="button-nav"><div class="text-nav text">Fotogalerie</div></div></router-link>
+              <router-link to="/rezervace-3">
+                <div class="button-nav"><div class="text-nav text">Rezervace</div></div></router-link>
+              <router-link to="/kontakt-2">
+                <div class="button-nav"><div class="text-nav text">Kontakt</div></div></router-link>
             </div>
           </div>
         </footer>
@@ -86,22 +91,12 @@
 import ImgContainer from "./ImgContainer";
 import List from "./List";
 import Container from "./Container";
-import Component121 from "./Component121";
-import Component122 from "./Component122";
-import Component123 from "./Component123";
-import Component124 from "./Component124";
-import Component125 from "./Component125";
 export default {
   name: "Homepage3",
   components: {
     ImgContainer,
     List,
-    Container,
-    Component121,
-    Component122,
-    Component123,
-    Component124,
-    Component125,
+    Container
   },
   props: [
     "upraveno_Logo111",
@@ -209,7 +204,6 @@ export default {
   position: relative
   text-align: center
   white-space: nowrap
-  width: fit-content
 
 .lorem-ipsum-dolor-si-3
   color: $gray
@@ -277,17 +271,15 @@ export default {
   width: 172px
 
 .cards
-  align-items: center
   display: flex
-  flex-wrap: wrap
-  gap: 67px 67px
-  height: 714px
+  flex-direction: row
+  align-items: center
   justify-content: center
-  margin-left: -80.00px
-  margin-right: -80.00px
+  gap: 67px
   padding: 20px 80px
+  margin-left: -80px
+  margin-right: -80px
   position: relative
-  width: 1512px
 
 .icon-buttons-2
   align-items: center

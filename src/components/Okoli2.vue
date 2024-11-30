@@ -93,12 +93,17 @@
         <footer class="footer-12">
           <img class="upraveno_logo-1-1-26" :src="upraveno_Logo112" alt="upraveno_logo (1) 1" /><container />
           <div class="component-1-13">
-            <div class="button-container-25">
-              <component166 :oUbytovn="component166Props.oUbytovn" />
-              <component167 :okol="component167Props.okol" />
-              <component168 :fotogalerie="component168Props.fotogalerie" />
-              <component169 :rezervace="component169Props.rezervace" />
-              <component170 :kontakt="component170Props.kontakt" />
+            <div class="button-footer-container">
+              <router-link to="/o-ubytovani-3">
+                <div class="button-nav"><div class="text-nav text">O ubytování</div></div></router-link>
+              <router-link to="/okoli-2">
+                <div class="button-nav"><div class="text-nav text">Okolí</div></div></router-link>
+              <router-link to="/fotogalerie-1">
+                <div class="button-nav"><div class="text-nav text">Fotogalerie</div></div></router-link>
+              <router-link to="/rezervace-3">
+                <div class="button-nav"><div class="text-nav text">Rezervace</div></div></router-link>
+              <router-link to="/kontakt-2">
+                <div class="button-nav"><div class="text-nav text">Kontakt</div></div></router-link>
             </div>
           </div>
         </footer>
@@ -119,11 +124,6 @@ import Tag3 from "./Tag3";
 import TextContent22 from "./TextContent22";
 import Tag4 from "./Tag4";
 import Container from "./Container";
-import Component166 from "./Component166";
-import Component167 from "./Component167";
-import Component168 from "./Component168";
-import Component169 from "./Component169";
-import Component170 from "./Component170";
 export default {
   name: "Okoli2",
   components: {
@@ -138,11 +138,6 @@ export default {
     TextContent22,
     Tag4,
     Container,
-    Component166,
-    Component167,
-    Component168,
-    Component169,
-    Component170,
   },
   props: [
     "upraveno_Logo111",
@@ -459,13 +454,4 @@ export default {
   position: relative
   width: 260px
 
-.button-container-25
-  align-items: flex-start
-  display: flex
-  flex-direction: column
-  left: 20px
-  min-height: 220px
-  position: relative
-  top: 20px
-  width: 80px
 </style>
