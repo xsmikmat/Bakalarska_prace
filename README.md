@@ -1,8 +1,9 @@
-# Bakalářská práce
-  
-Note: Please ensure you have installed <code><a href="https://nodejs.org/en/download/">nodejs</a></code>
-  
-To preview and run the project on your device:
-1) Open project folder in <a href="https://code.visualstudio.com/download">Visual Studio Code</a>
-2) In the terminal, run `npm install`
-3) Run `npm run start` to view project in browser
+# Anima App exported vue code
+This package was generated automatically with [Anima App](https://www.animaapp.com).
+## Instructions
+```
+cd package_code
+npm install
+npm start
+```
+Open [http://localhost:8080](http://localhost:8080).
