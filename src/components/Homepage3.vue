@@ -1,20 +1,29 @@
 <template>
   <div class="container-center-horizontal">
-    <div class="homepage-3 screen">
+    <div class="screen">
       <div class="page">
-        <header class="header-6">
-          <img class="upraveno_logo-1-1-8" :src="upraveno_Logo111" alt="upraveno_logo (1) 1" />
-          <p class="penzion-v-srdci-esk-kanady-1 valign-text-middle heading-2">{{ penzionVSrdciEskKanady }}</p>
-          <div class="navigace-3">
-            <div class="button-container-8">
-              <navigace16 />
-              <navigace17 />
-              <navigace18 />
-              <navigace19 />
-              <navigace20 />
+        <div class="header">
+          <router-link to="/"
+          ><img class="logo" :src="upraveno_Logo111" alt="upraveno_logo (1) 1"
+          /></router-link>
+          <p class="nav-header valign-text-middle heading-2">{{ penzionVSrdciEskKanady }}</p>
+          <div class="navigace">
+            <div class="button-nav-container">
+              <router-link to="/o-ubytovani-3">
+                <div class="button-nav"><div class="text-nav text">O ubytování</div></div></router-link>
+              <router-link to="/okoli-2">
+                <div class="button-nav"><div class="text-nav text">Okolí</div></div></router-link>
+              <router-link to="/fotogalerie-1">
+                <div class="button-nav"><div class="text-nav text">Fotogalerie</div></div></router-link>
+              <router-link to="/rezervace-3">
+                <div class="property-1-button-23">
+                  <div class="rezervace-nav-text fredoka-semi-bold-surf-16px">Rezervace</div>
+                </div></router-link>
+              <router-link to="/kontakt-2">
+                <div class="button-nav"><div class="text-nav text">Kontakt</div></div></router-link>
             </div>
           </div>
-        </header>
+        </div>
         <div class="page-item">
           <h1 class="vtejte-u-ns-na-penzionu-2 valign-text-middle heading-1">{{ vtejteUNsNaPenzionu }}</h1>
           <p class="lorem-ipsum-dolor-si-3 subtext">{{ loremIpsumDolorSi1 }}</p>
@@ -74,11 +83,6 @@
 </template>
 
 <script>
-import Navigace16 from "./Navigace16";
-import Navigace17 from "./Navigace17";
-import Navigace18 from "./Navigace18";
-import Navigace19 from "./Navigace19";
-import Navigace20 from "./Navigace20";
 import ImgContainer from "./ImgContainer";
 import List from "./List";
 import Container from "./Container";
@@ -90,11 +94,6 @@ import Component125 from "./Component125";
 export default {
   name: "Homepage3",
   components: {
-    Navigace16,
-    Navigace17,
-    Navigace18,
-    Navigace19,
-    Navigace20,
     ImgContainer,
     List,
     Container,

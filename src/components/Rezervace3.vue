@@ -1,21 +1,30 @@
 <template>
   <div class="container-center-horizontal">
-    <form class="rezervace-3-1 screen" name="form3" action="form3" method="post">
-      <div class="page-2">
-        <header class="header-14">
-          <img class="upraveno_logo-1-1-16" :src="upraveno_Logo11" alt="upraveno_logo (1) 1" />
-          <h1 class="penzion-v-srdci-esk-kanady-3 valign-text-middle heading-2">{{ penzionVSrdciEskKanady }}</h1>
-          <div class="navigace-6">
-            <div class="button-container-15">
-              <navigace31 :oUbytovn="navigace31Props.oUbytovn" />
-              <navigace32 :okol="navigace32Props.okol" />
-              <navigace33 :fotogalerie="navigace33Props.fotogalerie" />
-              <navigace34 :rezervace="navigace34Props.rezervace" />
-              <navigace35 :kontakt="navigace35Props.kontakt" />
+    <div class="screen">
+      <div class="page">
+        <div class="header">
+          <router-link to="/"
+          ><img class="logo" :src="upraveno_Logo11" alt="upraveno_logo (1) 1"
+          /></router-link>
+          <p class="nav-header valign-text-middle heading-2">{{ penzionVSrdciEskKanady }}</p>
+          <div class="navigace">
+            <div class="button-nav-container">
+              <router-link to="/o-ubytovani-3">
+                <div class="button-nav"><div class="text-nav text">O ubytování</div></div></router-link>
+              <router-link to="/okoli-2">
+                <div class="button-nav"><div class="text-nav text">Okolí</div></div></router-link>
+              <router-link to="/fotogalerie-1">
+                <div class="button-nav"><div class="text-nav text">Fotogalerie</div></div></router-link>
+              <router-link to="/rezervace-3">
+                <div class="property-1-button-23">
+                  <div class="rezervace-nav-text fredoka-semi-bold-surf-16px">Rezervace</div>
+                </div></router-link>
+              <router-link to="/kontakt-2">
+                <div class="button-nav"><div class="text-nav text">Kontakt</div></div></router-link>
             </div>
           </div>
-        </header>
-        <div class="form-2">
+        </div>
+        <form class="form-2">
           <div class="image-container-12">
             <text-field20 :iconButtonProps="textField201Props.iconButtonProps" />
             <text-field20
@@ -45,18 +54,13 @@
               :className="component1Variant6Props.className"
             />
           </div>
-        </div>
+        </form>
       </div>
-    </form>
+    </div>
   </div>
 </template>
 
 <script>
-import Navigace31 from "./Navigace31";
-import Navigace32 from "./Navigace32";
-import Navigace33 from "./Navigace33";
-import Navigace34 from "./Navigace34";
-import Navigace35 from "./Navigace35";
 import TextField20 from "./TextField20";
 import TextField22 from "./TextField22";
 import TextField13 from "./TextField13";
@@ -71,11 +75,6 @@ import Component1Variant6 from "./Component1Variant6";
 export default {
   name: "Rezervace3",
   components: {
-    Navigace31,
-    Navigace32,
-    Navigace33,
-    Navigace34,
-    Navigace35,
     TextField20,
     TextField22,
     TextField13,
@@ -91,11 +90,6 @@ export default {
   props: [
     "upraveno_Logo11",
     "penzionVSrdciEskKanady",
-    "navigace31Props",
-    "navigace32Props",
-    "navigace33Props",
-    "navigace34Props",
-    "navigace35Props",
     "textField201Props",
     "textField202Props",
     "textField22Props",

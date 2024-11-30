@@ -1,22 +1,29 @@
 <template>
   <div class="container-center-horizontal">
-    <div class="fotogalerie-1 screen">
-      <div class="section">
-        <header class="header">
-          <router-link to="/homepage-3"
-            ><img class="upraveno_logo-1-1" :src="upraveno_Logo111" alt="upraveno_logo (1) 1"
+    <div class="screen">
+      <div class="page">
+        <div class="header">
+          <router-link to="/"
+          ><img class="logo" :src="upraveno_Logo111" alt="upraveno_logo (1) 1"
           /></router-link>
-          <h1 class="penzion-v-srdci-esk-kanady valign-text-middle heading-2">{{ penzionVSrdciEskKanady }}</h1>
+          <p class="nav-header valign-text-middle heading-2">{{ penzionVSrdciEskKanady }}</p>
           <div class="navigace">
-            <div class="button-container">
-              <navigace :oUbytovn="navigaceProps.oUbytovn" />
-              <navigace2 :okol="navigace2Props.okol" />
-              <navigace3 :fotogalerie="navigace3Props.fotogalerie" />
-              <navigace4 :rezervace="navigace4Props.rezervace" />
-              <navigace5 :kontakt="navigace5Props.kontakt" />
+            <div class="button-nav-container">
+              <router-link to="/o-ubytovani-3">
+                <div class="button-nav"><div class="text-nav text">O ubytování</div></div></router-link>
+              <router-link to="/okoli-2">
+                <div class="button-nav"><div class="text-nav text">Okolí</div></div></router-link>
+              <router-link to="/fotogalerie-1">
+                <div class="button-nav"><div class="text-nav text">Fotogalerie</div></div></router-link>
+              <router-link to="/rezervace-3">
+                <div class="property-1-button-23">
+                  <div class="rezervace-nav-text fredoka-semi-bold-surf-16px">Rezervace</div>
+                </div></router-link>
+              <router-link to="/kontakt-2">
+                <div class="button-nav"><div class="text-nav text">Kontakt</div></div></router-link>
             </div>
           </div>
-        </header>
+        </div>
         <contents
           :title="contents1Props.title"
           :imageContainer1Props="contents1Props.imageContainer1Props"

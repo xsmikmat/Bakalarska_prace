@@ -19,12 +19,6 @@ import OUbytovani3 from "./components/OUbytovani3";
 import Okoli from "./components/Okoli";
 import Okoli2 from "./components/Okoli2";
 import Okoli3 from "./components/Okoli3";
-import KontaktMc14 from "./components/KontaktMc14";
-import RezervaceMc14 from "./components/RezervaceMc14";
-import FotogalerieMc14 from "./components/FotogalerieMc14";
-import HomePagemc14 from "./components/HomePagemc14";
-import OUbytovnmc14 from "./components/OUbytovnmc14";
-import Okolmc14 from "./components/Okolmc14";
 import {
   fotogalerieData,
   homepageData,
@@ -89,11 +83,6 @@ export default createRouter({
         xNav4Props: navigaceMobilData.xNav4Props,
         xNav5Props: navigaceMobilData.xNav5Props,
       },
-    },
-    {
-      path: "/homepage-3",
-      component: Homepage3,
-      props: { ...homepage3Data },
     },
     {
       path: "/fotogalerie-3",
@@ -161,34 +150,9 @@ export default createRouter({
       props: { ...okoli3Data },
     },
     {
-      path: "/kontakt-mc14",
-      component: KontaktMc14,
-      props: { ...kontaktMc14Data },
-    },
-    {
-      path: "/rezervace-mc14",
-      component: RezervaceMc14,
-      props: { ...rezervaceMc14Data },
-    },
-    {
-      path: "/fotogalerie-mc14",
-      component: FotogalerieMc14,
-      props: { ...fotogalerieMc14Data },
-    },
-    {
-      path: "/o-ubytovani-u40mc14u41",
-      component: OUbytovnmc14,
-      props: { ...oUbytovnmc14Data },
-    },
-    {
-      path: "/okoli-u40mc14u41",
-      component: Okolmc14,
-      props: { ...okolmc14Data },
-    },
-    {
       path: "/",
-      component: HomePagemc14,
-      props: { ...homePagemc14Data },
-    },
+      component: Homepage3,
+      props: { ...homepage3Data },
+    }
   ],
 });

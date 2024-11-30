@@ -1,19 +1,26 @@
 <template>
   <div class="container-center-horizontal">
-    <div class="kontakt-2-1 screen">
-      <div class="page-1">
-        <div class="heeader">
-          <router-link to="/homepage-3"
-            ><img class="upraveno_logo-1-1-14" :src="upraveno_Logo111" alt="upraveno_logo (1) 1"
+    <div class="screen">
+      <div class="page">
+        <div class="header">
+          <router-link to="/"
+          ><img class="logo" :src="upraveno_Logo111" alt="upraveno_logo (1) 1"
           /></router-link>
-          <p class="penzion-v-srdci-esk-kanady-2 valign-text-middle heading-2">{{ penzionVSrdciEskKanady }}</p>
-          <div class="navigace-5">
-            <div class="button-container-13">
-              <navigace26 :oUbytovn="navigace26Props.oUbytovn" />
-              <navigace27 :okol="navigace27Props.okol" />
-              <navigace28 :fotogalerie="navigace28Props.fotogalerie" />
-              <navigace29 :rezervace="navigace29Props.rezervace" />
-              <navigace30 :kontakt="navigace30Props.kontakt" />
+          <p class="nav-header valign-text-middle heading-2">{{ penzionVSrdciEskKanady }}</p>
+          <div class="navigace">
+            <div class="button-nav-container">
+              <router-link to="/o-ubytovani-3">
+                <div class="button-nav"><div class="text-nav text">O ubytování</div></div></router-link>
+              <router-link to="/okoli-2">
+                <div class="button-nav"><div class="text-nav text">Okolí</div></div></router-link>
+              <router-link to="/fotogalerie-1">
+                <div class="button-nav"><div class="text-nav text">Fotogalerie</div></div></router-link>
+              <router-link to="/rezervace-3">
+                <div class="property-1-button-23">
+                  <div class="rezervace-nav-text fredoka-semi-bold-surf-16px">Rezervace</div>
+                </div></router-link>
+              <router-link to="/kontakt-2">
+                <div class="button-nav"><div class="text-nav text">Kontakt</div></div></router-link>
             </div>
           </div>
         </div>
@@ -94,11 +101,6 @@
 </template>
 
 <script>
-import Navigace26 from "./Navigace26";
-import Navigace27 from "./Navigace27";
-import Navigace28 from "./Navigace28";
-import Navigace29 from "./Navigace29";
-import Navigace30 from "./Navigace30";
 import Item32 from "./Item32";
 import Item42 from "./Item42";
 import Container from "./Container";
@@ -110,11 +112,6 @@ import Component140 from "./Component140";
 export default {
   name: "Kontakt2",
   components: {
-    Navigace26,
-    Navigace27,
-    Navigace28,
-    Navigace29,
-    Navigace30,
     Item32,
     Item42,
     Container,
@@ -130,11 +127,6 @@ export default {
     "title1",
     "title2",
     "upraveno_Logo112",
-    "navigace26Props",
-    "navigace27Props",
-    "navigace28Props",
-    "navigace29Props",
-    "navigace30Props",
     "item321Props",
     "item322Props",
     "item323Props",
@@ -171,17 +163,6 @@ export default {
   flex-direction: column
   position: relative
   width: 1512px
-
-.heeader
-  align-items: center
-  align-self: stretch
-  display: flex
-  gap: 160px
-  height: 156px
-  justify-content: center
-  padding: 60px 80px
-  position: relative
-  width: 100%
 
 .upraveno_logo-1-1-14
   cursor: pointer

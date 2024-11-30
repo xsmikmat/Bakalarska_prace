@@ -1,19 +1,26 @@
 <template>
   <div class="container-center-horizontal">
-    <form class="o-ubytovani-3 screen" name="form6" action="form6" method="post">
-      <div class="page-3">
-        <div class="heeader-1">
-          <router-link to="/homepage-3"
-            ><img class="upraveno_logo-1-1-22" :src="upraveno_Logo111" alt="upraveno_logo (1) 1"
+    <div class="screen">
+      <div class="page">
+        <div class="header">
+          <router-link to="/"
+            ><img class="logo" :src="upraveno_Logo111" alt="upraveno_logo (1) 1"
           /></router-link>
-          <p class="penzion-v-srdci-esk-kanady-4 valign-text-middle heading-2">{{ penzionVSrdciEskKanady }}</p>
-          <div class="navigace-9">
-            <div class="button-container-21">
-              <navigace46 />
-              <navigace47 />
-              <navigace48 />
-              <navigace49 />
-              <navigace50 />
+          <p class="nav-header valign-text-middle heading-2">{{ penzionVSrdciEskKanady }}</p>
+          <div class="navigace">
+            <div class="button-nav-container">
+              <router-link to="/o-ubytovani-3">
+                <div class="button-nav"><div class="text-nav text">O ubytování</div></div></router-link>
+              <router-link to="/okoli-2">
+                <div class="button-nav"><div class="text-nav text">Okolí</div></div></router-link>
+              <router-link to="/fotogalerie-1">
+                <div class="button-nav"><div class="text-nav text">Fotogalerie</div></div></router-link>
+              <router-link to="/rezervace-3">
+              <div class="property-1-button-23">
+                <div class="rezervace-nav-text fredoka-semi-bold-surf-16px">Rezervace</div>
+              </div></router-link>
+              <router-link to="/kontakt-2">
+                <div class="button-nav"><div class="text-nav text">Kontakt</div></div></router-link>
             </div>
           </div>
         </div>
@@ -80,16 +87,11 @@
           </div>
         </footer>
       </div>
-    </form>
+    </div>
   </div>
 </template>
 
 <script>
-import Navigace46 from "./Navigace46";
-import Navigace47 from "./Navigace47";
-import Navigace48 from "./Navigace48";
-import Navigace49 from "./Navigace49";
-import Navigace50 from "./Navigace50";
 import Container4 from "./Container4";
 import ImageContainer5 from "./ImageContainer5";
 import Component1Variant6 from "./Component1Variant6";
@@ -106,11 +108,6 @@ import Component160 from "./Component160";
 export default {
   name: "OUbytovani3",
   components: {
-    Navigace46,
-    Navigace47,
-    Navigace48,
-    Navigace49,
-    Navigace50,
     Container4,
     ImageContainer5,
     Component1Variant6,
@@ -148,73 +145,7 @@ export default {
 <style lang="sass">
 @import '../../variables'
 
-.o-ubytovani-3
-  align-items: flex-start
-  background-color: $white
-  display: flex
-  height: 1737px
-  overflow: hidden
-  width: 1512px
 
-.page-3
-  align-items: flex-end
-  background-color: $white
-  display: flex
-  flex-direction: column
-  position: relative
-  width: 1512px
-
-.heeader-1
-  align-items: center
-  align-self: stretch
-  display: flex
-  gap: 160px
-  height: 156px
-  justify-content: center
-  padding: 60px 80px
-  position: relative
-  width: 100%
-
-.upraveno_logo-1-1-22
-  cursor: pointer
-  height: 109px
-  margin-bottom: -36.50px
-  margin-left: -24.00px
-  margin-top: -36.50px
-  object-fit: cover
-  position: relative
-  width: 153px
-
-.penzion-v-srdci-esk-kanady-4
-  color: $black
-  font-weight: 400
-  height: 91px
-  line-height: 44px
-  margin-bottom: -26.50px
-  margin-top: -28.50px
-  position: relative
-  text-align: center
-  width: 454px
-
-.navigace-9
-  border-radius: 5px
-  height: 84px
-  margin-bottom: -24.00px
-  margin-right: -24.00px
-  margin-top: -24.00px
-  overflow: hidden
-  position: relative
-  width: 473px
-
-.button-container-21
-  align-items: flex-end
-  display: flex
-  gap: 21px
-  height: 44px
-  left: 20px
-  min-width: 433px
-  position: relative
-  top: 20px
 
 .page-item-1
   align-items: center
