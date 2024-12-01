@@ -6,7 +6,7 @@
           <router-link to="/"
           ><img class="logo" :src="upraveno_Logo111" alt="upraveno_logo (1) 1"
           /></router-link>
-          <p class="nav-header valign-text-middle heading-2">{{ penzionVSrdciEskKanady }}</p>
+          <p class="heading-2 nav-header">{{ penzionVSrdciEskKanady }}</p>
           <div class="navigace">
             <div class="button-nav-container">
               <router-link to="/o-ubytovani-3">
@@ -22,6 +22,24 @@
               <router-link to="/kontakt-2">
                 <div class="button-nav"><div class="text-nav text">Kontakt</div></div></router-link>
             </div>
+            <img class="menu-1" src="../../img/icon_burger.png" alt="menu" @click="toggleActive" />
+              <div class="button-container-9" :class="{ 'active': active }" v-if="active">
+                <router-link to="/o-ubytovani-3">
+                  <div class="button-nav"><div class="text-nav text">O ubytování</div></div>
+                </router-link>
+                <router-link to="/okoli-2">
+                  <div class="button-nav"><div class="text-nav text">Okolí</div></div>
+                </router-link>
+                <router-link to="/fotogalerie-1">
+                  <div class="button-nav"><div class="text-nav text">Fotogalerie</div></div>
+                </router-link>
+                <router-link to="/rezervace-3">
+                  <div class="button-nav"><div class="text-nav text">Rezervace</div></div>
+                </router-link>
+                <router-link to="/kontakt-2">
+                  <div class="button-nav"><div class="text-nav text">Kontakt</div></div>
+                </router-link>
+              </div>
           </div>
         </div>
         <div class="page-item">
@@ -91,12 +109,28 @@
 import ImgContainer from "./ImgContainer";
 import List from "./List";
 import Container from "./Container";
+import xNav from "@/components/xNav.vue";
+import xNav3 from "@/components/xNav3.vue";
+import xNav2 from "@/components/xNav2.vue";
+import xNav4 from "@/components/xNav4.vue";
+import xNav5 from "@/components/xNav5.vue";
 export default {
   name: "Homepage3",
   components: {
+    xNav5, xNav4, xNav2, xNav3, xNav,
     ImgContainer,
     List,
     Container
+  },
+  data() {
+    return {
+      active: false,
+    };
+  },
+  methods: {
+    toggleActive() {
+      this.active = !this.active;
+    },
   },
   props: [
     "upraveno_Logo111",
@@ -122,21 +156,27 @@ export default {
 <style lang="sass">
 @import '../../variables'
 
-.homepage-3
-  align-items: flex-start
-  background-color: $white
-  display: flex
-  height: 2287px
-  overflow: hidden
-  width: 1504px
+@media screen and (max-width: 991px)
 
-.page
-  align-items: flex-end
-  background-color: $white
-  display: flex
-  flex-direction: column
+  .navigace
+    display: none !important
+  .nav-header
+    display: none
+  .menu-1
+    display: flex !important
+
+@media screen and (min-width: 990px)
+  .menu-1
+    display: none
+  .navigace
+    display: flex
+
+.menu-1
+  cursor: pointer
+  height: 24px
   position: relative
-  width: 1512px
+  width: 24px
+  border: red
 
 .header-6
   align-items: center
