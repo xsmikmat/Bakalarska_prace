@@ -176,52 +176,6 @@ export default {
   height: 24px
   position: relative
   width: 24px
-  border: red
-
-.header-6
-  align-items: center
-  align-self: stretch
-  background-color: transparent
-  display: flex
-  flex: 0 0 auto
-  gap: 160px
-  justify-content: center
-  padding: 20px 80px
-  position: relative
-  width: 100%
-
-.upraveno_logo-1-1-8
-  height: 109px
-  margin-left: -65.50px
-  object-fit: cover
-  position: relative
-  width: 153px
-
-.penzion-v-srdci-esk-kanady-1
-  color: $black
-  font-weight: 400
-  height: 91px
-  line-height: 44px
-  position: relative
-  text-align: center
-  width: 454px
-
-.navigace-3
-  border-radius: 5px
-  height: 84px
-  margin-right: -65.50px
-  overflow: hidden
-  position: relative
-  width: 556px
-
-.button-container-8
-  align-items: flex-end
-  display: flex
-  height: 44px
-  left: 20px
-  min-width: 434px
-  position: relative
-  top: 20px
 
 .page-item
   align-items: center
@@ -320,6 +274,14 @@ export default {
   margin-left: -80px
   margin-right: -80px
   position: relative
+
+@media (max-width: 991px)
+  .cards
+    flex-direction: column
+    gap: 20px
+    padding: 20px 40px
+    margin-left: 0
+    margin-right: 0
 
 .icon-buttons-2
   align-items: center

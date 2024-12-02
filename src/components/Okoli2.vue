@@ -4,8 +4,7 @@
       <div class="page">
         <div class="header">
           <router-link to="/"
-          ><img class="logo" :src="upraveno_Logo111" alt="upraveno_logo (1) 1"
-          /></router-link>
+          ><img class="logo" :src="upraveno_Logo111" alt="upraveno_logo (1) 1"/></router-link>
           <p class="nav-header valign-text-middle heading-2">{{ penzionVSrdciEskKanady }}</p>
           <div class="navigace">
             <div class="button-nav-container">
