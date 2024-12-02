@@ -1,5 +1,5 @@
 <template>
-  <router-link to="/rezervace-2">
+  <router-link to="/rezervace">
     <div class="property-1-button-4">
       <div class="rezervace-4 text">{{ rezervace }}</div>
     </div></router-link

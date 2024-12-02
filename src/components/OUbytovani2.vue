@@ -106,7 +106,6 @@ import Navigace43 from "./Navigace43";
 import Navigace44 from "./Navigace44";
 import Navigace45 from "./Navigace45";
 import Tag from "./Tag";
-import Component1Variant6 from "./Component1Variant6";
 import ImageContainer62 from "./ImageContainer62";
 import ImageContainer4 from "./ImageContainer4";
 import Frame42731890632 from "./Frame42731890632";
@@ -126,7 +125,6 @@ export default {
     Navigace44,
     Navigace45,
     Tag,
-    Component1Variant6,
     ImageContainer62,
     ImageContainer4,
     Frame42731890632,

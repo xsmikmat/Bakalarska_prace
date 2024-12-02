@@ -1,5 +1,4 @@
 <template>
-  <div :class="[`icon-button-2`, className || ``]">
     <div class="container-14">
       <div class="state-layer-16">
         <img
@@ -9,7 +8,6 @@
         />
       </div>
     </div>
-  </div>
 </template>
 
 <script>

@@ -1,154 +1,154 @@
 <template>
-  <div class="container-center-horizontal">
-    <form class="rezervace-1-1 screen" name="form1" action="form1" method="post">
-      <div class="section-19">
-        <div class="header-8">
-          <router-link to="/homepage-3"
-            ><img class="upraveno_logo-1-1-11" :src="upraveno_Logo11" alt="upraveno_logo (1) 1" /></router-link
-          ><router-link to="/navigace-mobil"
-            ><img
-              class="menu-3"
-              src="https://cdn.animaapp.com/projects/673b2aed8a1b7d25aab8cf0f/releases/6746cea99d6a8703ef5210fc/img/menu-2.svg"
-              alt="menu"
-            />
-          </router-link>
-        </div>
-        <div class="form">
-          <input-date-picker />
-          <input-date-picker2 :textField2Props="inputDatePicker2Props.textField2Props" />
-          <div class="image-container-7">
-            <text-field3 :activeIndicator="textField3Props.activeIndicator" />
-            <text-field4 :activeIndicator="textField4Props.activeIndicator" />
-            <text-field5 :activeIndicator="textField5Props.activeIndicator" />
-            <text-field6 :activeIndicator="textField6Props.activeIndicator" />
-            <text-field7
-              :activeIndicator="textField7Props.activeIndicator"
-              :iconButton22Props="textField7Props.iconButton22Props"
-              :iconButton22Props2="textField7Props.iconButton22Props2"
-            />
-            <text-field8 :activeIndicator="textField8Props.activeIndicator" />
-            <text-field9 :activeIndicator="textField9Props.activeIndicator" />
-            <text-field10 :activeIndicator="textField10Props.activeIndicator" />
-            <text-field11
-              :activeIndicator="textField11Props.activeIndicator"
-              :inputTextContainer9Props="textField11Props.inputTextContainer9Props"
-              :iconButton22Props="textField11Props.iconButton22Props"
-            />
-            <component1-variant6 :potvrditRezervaci="component1Variant6Props.potvrditRezervaci" />
-          </div>
-        </div>
+  <div class="screen">
+    <navigace_final />
+    <form class="form-container">
+      <div class="field">
+        <input id="date-input" class="input-text m3bodylarge" type="date" required :placeholder="placeholder2" @focus="placeholder2 = ''" @blur="placeholder2 = 'Den příjezdu'" />
+        <div class="supporting-text m3bodysmall"> Povinné pole</div>
       </div>
+      <div class="field">
+        <input id="date-input" class="input-text m3bodylarge" type="date" required :placeholder="placeholder2" @focus="placeholder2 = ''" @blur="placeholder2 = 'Den odjezdu'" />
+        <div class="supporting-text m3bodysmall"> Povinné pole</div>
+      </div>
+      <div class="field">
+        <input class="input-text m3bodylarge" name="inputtext" placeholder="Jméno" type="text" required />
+        <div class="supporting-text m3bodysmall"> Povinné pole</div>
+      </div>
+      <div class="field">
+        <input class="input-text m3bodylarge" name="inputtext" placeholder="Příjmení" type="text" required />
+        <div class="supporting-text m3bodysmall"> Povinné pole</div>
+      </div>
+      <div class="field">
+        <input class="input-text m3bodylarge" name="inputtext" placeholder="Ulice" type="text" required />
+        <div class="supporting-text m3bodysmall"> Povinné pole</div>
+      </div>
+      <div class="field">
+        <input class="input-text m3bodylarge" name="inputtext" placeholder="Číslo popisné" type="number" required />
+        <div class="supporting-text m3bodysmall"> Povinné pole</div>
+      </div>
+      <div class="field">
+        <input class="input-text m3bodylarge" name="inputtext" placeholder="Město" type="text" required />
+        <div class="supporting-text m3bodysmall"> Povinné pole</div>
+      </div>
+      <div class="field">
+        <input class="input-text m3bodylarge" name="inputtext" placeholder="PSČ" type="text" required />
+        <div class="supporting-text m3bodysmall"> Povinné pole</div>
+      </div>
+      <div class="field">
+        <input class="input-text m3bodylarge" name="inputtext" placeholder="Email" type="email" required />
+        <div class="supporting-text m3bodysmall"> Povinné pole</div>
+      </div>
+      <div class="field">
+        <input class="input-text m3bodylarge" name="inputtext" placeholder="Telefon" type="tel" required />
+        <div class="supporting-text m3bodysmall"> Povinné pole</div>
+      </div>
+      <div class="field">
+        <input class="input-text m3bodylarge" name="inputtext" placeholder="Poznámka" type="text" required />
+        <div class="supporting-text m3bodysmall"> Povinné pole</div>
+      </div>
+      <button type="submit" class="component-1-variant6" @click="SubmitForm('form1')">
+        Potvrdit
+      </button>
     </form>
   </div>
 </template>
 
 <script>
-import InputDatePicker from "./InputDatePicker";
-import InputDatePicker2 from "./InputDatePicker2";
-import TextField3 from "./TextField3";
-import TextField4 from "./TextField4";
-import TextField5 from "./TextField5";
-import TextField6 from "./TextField6";
-import TextField7 from "./TextField7";
-import TextField8 from "./TextField8";
-import TextField9 from "./TextField9";
-import TextField10 from "./TextField10";
-import TextField11 from "./TextField11";
-import Component1Variant6 from "./Component1Variant6";
+import Navigace_final from "@/components/navigace_final.vue";
 export default {
   name: "Rezervace",
   components: {
-    InputDatePicker,
-    InputDatePicker2,
-    TextField3,
-    TextField4,
-    TextField5,
-    TextField6,
-    TextField7,
-    TextField8,
-    TextField9,
-    TextField10,
-    TextField11,
-    Component1Variant6,
+    Navigace_final,
+  },
+  data() {
+    return {
+      placeholder1: "Den příjezdu",
+      placeholder2: "Den odjezdu",
+    };
   },
   props: [
-    "upraveno_Logo11",
-    "inputDatePicker2Props",
-    "textField3Props",
-    "textField4Props",
-    "textField5Props",
-    "textField6Props",
-    "textField7Props",
-    "textField8Props",
-    "textField9Props",
-    "textField10Props",
-    "textField11Props",
     "component1Variant6Props",
   ],
+  methods: {
+    SubmitForm(formName) {
+      const form = document.forms[formName];
+      const formData = new FormData(form);
+      const formEntries = {};
+      for (let [key, value] of formData.entries()) {
+        formEntries[key] = value;
+      }
+      console.log(formEntries);
+    }
+  }
 };
 </script>
 
 <style lang="sass">
 @import '../../variables'
 
-.rezervace-1-1
+.field
   align-items: flex-start
-  background-color: $white
+  border-bottom-style: solid
+  border-bottom-width: 1px
+  border-color: $fun-green
+  border-radius: 4px 4px 0px 0px
   display: flex
-  height: 1147px
-  width: 375px
+  flex-direction: column
+  height: 49px
+  margin-top: -1.00px
+  position: relative
+  flex: 1
+  padding: 4px 0px 4px 16px
+  width: 50%
 
-.section-19
+.input-text
+  background-color: transparent
+  border: 0
+  color: $eerie-black
+  flex: 0 0 auto
+  font-weight: 400
+  line-height: 24px
+  margin-top: -1.00px
+  padding: 0
+  position: relative
+  white-space: nowrap
+  width: 100%
+
+.form-container
   align-items: center
   display: flex
   flex-direction: column
-  margin-left: 3px
-  padding: 20px 0px
+  gap: 53px
+  padding: 20px
   position: relative
-  width: 372px
+  width: 100%
+  justify-content: center
 
-.header-8
+.supporting-text
+  align-items: flex-start
+  display: flex
+  gap: 10px
+  height: 20px
+  left: 0
+  padding: 4px 16px 0px
+  position: absolute
+  top: 47px
+
+.component-1-variant6
   align-items: center
-  align-self: stretch
-  display: flex
-  flex: 0 0 auto
-  gap: 80px
-  justify-content: center
-  position: relative
-  width: 100%
-
-.upraveno_logo-1-1-11
+  background-color: $fun-green
+  border: 0
+  color: white
+  font-weight: bold
+  border-radius: 10px
   cursor: pointer
-  height: 109px
-  object-fit: cover
-  position: relative
-  width: 153px
-
-.menu-3
-  cursor: pointer
-  height: 24px
-  position: relative
-  width: 24px
-
-.form
-  align-items: flex-start
-  align-self: stretch
-  display: flex
+  display: inline-flex
   flex: 0 0 auto
-  flex-wrap: wrap
-  gap: 8px 8px
+  gap: 10px
+  height: 40px
   justify-content: center
-  padding: 20px 0px
+  overflow: hidden
+  padding: 20px
   position: relative
-  width: 100%
 
-.image-container-7
-  align-items: flex-start
-  display: flex
-  flex-wrap: wrap
-  gap: 20px 8px
-  justify-content: center
-  padding: 20px 0px
-  position: relative
-  width: 350px
 </style>

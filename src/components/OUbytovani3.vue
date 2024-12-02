@@ -15,7 +15,7 @@
                 <div class="button-nav"><div class="text-nav text">Okolí</div></div></router-link>
               <router-link to="/fotogalerie-1">
                 <div class="button-nav"><div class="text-nav text">Fotogalerie</div></div></router-link>
-              <router-link to="/rezervace-3">
+              <router-link to="/rezervace">
               <div class="property-1-button-23">
                 <div class="rezervace-nav-text fredoka-semi-bold-surf-16px">Rezervace</div>
               </div></router-link>
@@ -84,7 +84,7 @@
                 <div class="button-nav"><div class="text-nav text">Okolí</div></div></router-link>
               <router-link to="/fotogalerie-1">
                 <div class="button-nav"><div class="text-nav text">Fotogalerie</div></div></router-link>
-              <router-link to="/rezervace-3">
+              <router-link to="/rezervace">
                 <div class="button-nav"><div class="text-nav text">Rezervace</div></div></router-link>
               <router-link to="/kontakt-2">
                 <div class="button-nav"><div class="text-nav text">Kontakt</div></div></router-link>
@@ -99,7 +99,6 @@
 <script>
 import Container4 from "./Container4";
 import ImageContainer5 from "./ImageContainer5";
-import Component1Variant6 from "./Component1Variant6";
 import ImageContainer62 from "./ImageContainer62";
 import ImageContainer4 from "./ImageContainer4";
 import Frame4273189062 from "./Frame4273189062";
@@ -110,7 +109,6 @@ export default {
   components: {
     Container4,
     ImageContainer5,
-    Component1Variant6,
     ImageContainer62,
     ImageContainer4,
     Frame4273189062,

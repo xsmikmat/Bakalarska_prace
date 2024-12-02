@@ -20,7 +20,7 @@
           <h1 class="vtejte-u-ns-na-penzionu-1 valign-text-middle heading-1">Vítejte u nás na penzionu</h1>
           <p class="lorem-ipsum-dolor-si-1 subtext">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl tincidunt eget nullam non. Quis hendrerit dolor magna eget est lorem ipsum</p>
           <div class="section-10">
-            <router-link to="/rezervace-3">
+            <router-link to="/rezervace">
               <div class="button-24">
                 <div class="rezervovat-1 heading-2">{{ rezervovat }}</div>
               </div></router-link

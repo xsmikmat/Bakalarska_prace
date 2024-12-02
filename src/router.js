@@ -8,10 +8,8 @@ import NavigaceMobil from "./components/NavigaceMobil";
 import Homepage3 from "./components/Homepage3";
 import Fotogalerie3 from "./components/Fotogalerie3";
 import Rezervace from "./components/Rezervace";
-import Rezervace2 from "./components/Rezervace2";
 import Kontakt from "./components/Kontakt";
 import Kontakt2 from "./components/Kontakt2";
-import Rezervace3 from "./components/Rezervace3";
 import Kontakt3 from "./components/Kontakt3";
 import OUbytovani from "./components/OUbytovani";
 import OUbytovani2 from "./components/OUbytovani2";
@@ -28,10 +26,8 @@ import {
   homepage3Data,
   fotogalerie3Data,
   rezervaceData,
-  rezervace2Data,
   kontaktData,
   kontakt2Data,
-  rezervace3Data,
   kontakt3Data,
   oUbytovaniData,
   oUbytovani2Data,
@@ -39,12 +35,6 @@ import {
   okoliData,
   okoli2Data,
   okoli3Data,
-  kontaktMc14Data,
-  rezervaceMc14Data,
-  fotogalerieMc14Data,
-  homePagemc14Data,
-  oUbytovnmc14Data,
-  okolmc14Data,
 } from "./data";
 
 export default createRouter({
@@ -90,14 +80,9 @@ export default createRouter({
       props: { ...fotogalerie3Data },
     },
     {
-      path: "/rezervace-1",
+      path: "/rezervace",
       component: Rezervace,
       props: { ...rezervaceData },
-    },
-    {
-      path: "/rezervace-2",
-      component: Rezervace2,
-      props: { ...rezervace2Data },
     },
     {
       path: "/kontakt-1",
@@ -108,11 +93,6 @@ export default createRouter({
       path: "/kontakt-2",
       component: Kontakt2,
       props: { ...kontakt2Data },
-    },
-    {
-      path: "/rezervace-3",
-      component: Rezervace3,
-      props: { ...rezervace3Data },
     },
     {
       path: "/kontakt-3",

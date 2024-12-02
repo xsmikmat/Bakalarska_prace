@@ -1,8 +1,8 @@
 <template>
   <div class="header">
     <router-link to="/"
-    ><img class="logo" :src="upraveno_Logo112" alt="logo"/></router-link>
-    <p class="heading-2 valign-text-middle nav-header">{{ penzionVSrdciEskKanady }}</p>
+    ><img class="logo" :src="upraveno_Logo111" alt="logo"/></router-link>
+    <p class="heading-2 valign-text-middle nav-header">Penzion v srdci České Kanady</p>
     <div class="navigace">
       <div class="button-nav-container">
         <router-link to="/o-ubytovani-3">
@@ -11,7 +11,7 @@
           <div class="button-nav"><div class="text-nav text">Okolí</div></div></router-link>
         <router-link to="/fotogalerie-1">
           <div class="button-nav"><div class="text-nav text">Fotogalerie</div></div></router-link>
-        <router-link to="/rezervace-3">
+        <router-link to="/rezervace">
           <div class="property-1-button-23">
             <div class="rezervace-nav-text fredoka-semi-bold-surf-16px">Rezervace</div>
           </div></router-link>
@@ -29,7 +29,7 @@
         <router-link to="/fotogalerie-1">
           <div class="button-nav"><div class="text-nav text">Fotogalerie</div></div>
         </router-link>
-        <router-link to="/rezervace-3">
+        <router-link to="/rezervace">
           <div class="button-nav"><div class="text-nav text">Rezervace</div></div>
         </router-link>
         <router-link to="/kontakt-2">
@@ -160,11 +160,10 @@ export default {
   width: fit-content
 
 @media screen and (max-width: 991px)
-
   .navigace
     display: none !important
   .nav-header
-    display: none
+    display: none !important
   .menu-1
     display: flex !important
 
@@ -173,6 +172,7 @@ export default {
     display: none
   .navigace
     display: flex
+
 
 .menu-1
   cursor: pointer

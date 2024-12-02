@@ -85,7 +85,6 @@
 
 <script>
 import Tag from "./Tag";
-import Component1Variant6 from "./Component1Variant6";
 import ImageContainer4 from "./ImageContainer4";
 import Frame427318906 from "./Frame427318906";
 import XArticle from "./XArticle";
@@ -98,7 +97,6 @@ export default {
   name: "OUbytovani",
   components: {
     Tag,
-    Component1Variant6,
     ImageContainer4,
     Frame427318906,
     XArticle,

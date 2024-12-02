@@ -1,7 +1,5 @@
 <template>
-  <div class="container-center-horizontal">
     <div class="screen">
-      <div class="page">
         <--! vymenit za navigace_final az bude upravena -->
         <div class="header">
           <router-link to="/"
@@ -16,7 +14,7 @@
                 <div class="button-nav"><div class="text-nav text">Okolí</div></div></router-link>
               <router-link to="/fotogalerie-1">
                 <div class="button-nav"><div class="text-nav text">Fotogalerie</div></div></router-link>
-              <router-link to="/rezervace-3">
+              <router-link to="/rezervace">
                 <div class="property-1-button-23">
                   <div class="rezervace-nav-text fredoka-semi-bold-surf-16px">Rezervace</div>
                 </div></router-link>
@@ -34,7 +32,7 @@
                 <router-link to="/fotogalerie-1">
                   <div class="button-nav"><div class="text-nav text">Fotogalerie</div></div>
                 </router-link>
-                <router-link to="/rezervace-3">
+                <router-link to="/rezervace">
                   <div class="button-nav"><div class="text-nav text">Rezervace</div></div>
                 </router-link>
                 <router-link to="/kontakt-2">
@@ -51,7 +49,7 @@
             Nisl tincidunt eget nullam non. Quis hendrerit dolor magna eget est
             lorem ipsum</p>
           <div class="section-15">
-            <router-link to="/rezervace-3">
+            <router-link to="/rezervace">
               <div class="button-38">
                 <div class="rezervovat-2 heading-2">{{ rezervovat }}</div>
               </div></router-link
@@ -98,16 +96,14 @@
                 <div class="button-nav"><div class="text-nav text">Okolí</div></div></router-link>
               <router-link to="/fotogalerie-1">
                 <div class="button-nav"><div class="text-nav text">Fotogalerie</div></div></router-link>
-              <router-link to="/rezervace-3">
+              <router-link to="/rezervace">
                 <div class="button-nav"><div class="text-nav text">Rezervace</div></div></router-link>
               <router-link to="/kontakt-2">
                 <div class="button-nav"><div class="text-nav text">Kontakt</div></div></router-link>
             </div>
           </div>
         </footer>
-      </div>
     </div>
-  </div>
 </template>
 
 <script>

@@ -736,23 +736,6 @@ export const component1Variant62Data = {
     className: "component-1-variant6-1",
 };
 
-export const rezervace2Data = {
-    upraveno_Logo11: "https://cdn.animaapp.com/projects/673b2aed8a1b7d25aab8cf0f/releases/673b2d66ac84e614e11f02a0/img/upraveno-logo--1--1.png",
-    navigace21Props: navigace21Data,
-    navigace22Props: navigace22Data,
-    navigace23Props: navigace23Data,
-    navigace25Props: navigace25Data,
-    inputDatePicker4Props: inputDatePicker41Data,
-    textField13Props: textField132Data,
-    textField14Props: textField141Data,
-    textField15Props: textField151Data,
-    textField16Props: textField161Data,
-    textField17Props: textField171Data,
-    textField18Props: textField181Data,
-    textField19Props: textField191Data,
-    textField11Props: textField112Data,
-    component1Variant6Props: component1Variant62Data,
-};
 
 export const item1Data = {
     title: "Email",

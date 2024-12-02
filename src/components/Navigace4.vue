@@ -1,5 +1,5 @@
 <template>
-  <router-link to="/rezervace-3">
+  <router-link to="/rezervace">
     <div class="property-1-button">
       <div class="rezervace fredoka-semi-bold-surf-16px">{{ rezervace }}</div>
     </div></router-link
