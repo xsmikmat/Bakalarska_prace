@@ -61,7 +61,6 @@ export default {
   props: [
     "upraveno_Logo111",
     "penzionVSrdciEskKanady",
-    "vtejteUNsNaPenzionu",
     "loremIpsumDolorSi1",
     "rezervovat",
     "kontakt",

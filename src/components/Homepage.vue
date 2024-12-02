@@ -14,7 +14,7 @@
           </router-link>
         </header>
         <div class="section-4">
-          <h1 class="vtejte-u-ns-na-penzionu valign-text-middle heading-2">{{ vtejteUNsNaPenzionu }}</h1>
+          <h1 class="vtejte-u-ns-na-penzionu valign-text-middle heading-2">Vítejte u nás na penzionu</h1>
           <p class="description-6 subtext">{{ description }}</p>
           <router-link to="/rezervace-2">
             <div class="button-9">
@@ -95,7 +95,6 @@ export default {
   },
   props: [
     "upraveno_Logo111",
-    "vtejteUNsNaPenzionu",
     "description",
     "rezervovat",
     "kontakt",

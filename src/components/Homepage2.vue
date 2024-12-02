@@ -17,8 +17,8 @@
           </div>
         </header>
         <div class="section-9">
-          <h1 class="vtejte-u-ns-na-penzionu-1 valign-text-middle heading-1">{{ vtejteUNsNaPenzionu }}</h1>
-          <p class="lorem-ipsum-dolor-si-1 subtext">{{ loremIpsumDolorSi1 }}</p>
+          <h1 class="vtejte-u-ns-na-penzionu-1 valign-text-middle heading-1">Vítejte u nás na penzionu</h1>
+          <p class="lorem-ipsum-dolor-si-1 subtext">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl tincidunt eget nullam non. Quis hendrerit dolor magna eget est lorem ipsum</p>
           <div class="section-10">
             <router-link to="/rezervace-3">
               <div class="button-24">
@@ -132,7 +132,6 @@ export default {
   },
   props: [
     "upraveno_Logo111",
-    "vtejteUNsNaPenzionu",
     "loremIpsumDolorSi1",
     "rezervovat",
     "kontakt",

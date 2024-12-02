@@ -151,7 +151,6 @@ export const component110Data = {
 
 export const homepageData = {
     upraveno_Logo111: "https://cdn.animaapp.com/projects/673b2aed8a1b7d25aab8cf0f/releases/673b2d66ac84e614e11f02a0/img/upraveno-logo--1--1.png",
-    vtejteUNsNaPenzionu: "Vítejte u nás na penzionu",
     description: "Zažijte pohodlné ubytování v okolí krásné přírody",
     rezervovat: "Rezervovat",
     kontakt: "Kontakt",
@@ -364,7 +363,6 @@ export const component120Data = {
 
 export const homepage2Data = {
     upraveno_Logo111: "https://cdn.animaapp.com/projects/673b2aed8a1b7d25aab8cf0f/releases/673b2d66ac84e614e11f02a0/img/upraveno-logo--1--1.png",
-    vtejteUNsNaPenzionu: "Vítejte u nás na penzionu",
     loremIpsumDolorSi1: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl tincidunt eget nullam non. Quis hendrerit dolor magna eget est lorem ipsum",
     rezervovat: "Rezervovat",
     kontakt: "Kontakt",
@@ -443,7 +441,6 @@ export const list3Data = {
 export const homepage3Data = {
     upraveno_Logo111: "https://cdn.animaapp.com/projects/673b2aed8a1b7d25aab8cf0f/releases/673b2d66ac84e614e11f02a0/img/upraveno-logo--1--1.png",
     penzionVSrdciEskKanady: "Penzion v srdci České Kanady",
-    vtejteUNsNaPenzionu: "Vítejte u nás na penzionu",
     loremIpsumDolorSi1: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl tincidunt eget nullam non. Quis hendrerit dolor magna eget est lorem ipsum",
     rezervovat: "Rezervovat",
     kontakt: "Kontakt",
@@ -2054,7 +2051,6 @@ export const list34Data = {
 export const homePagemc14Data = {
     upraveno_Logo111: "https://cdn.animaapp.com/projects/673b2aed8a1b7d25aab8cf0f/releases/673b2d66ac84e614e11f02a0/img/upraveno-logo--1--1.png",
     penzionVSrdciEskKanady: "Penzion v srdci České Kanady",
-    vtejteUNsNaPenzionu: "Vítejte u nás na penzionu",
     loremIpsumDolorSi1: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl tincidunt eget nullam non. Quis hendrerit dolor magna eget est lorem ipsum",
     rezervovat: "Rezervovat",
     kontakt: "Kontakt",

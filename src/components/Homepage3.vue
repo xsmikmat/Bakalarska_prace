@@ -2,6 +2,7 @@
   <div class="container-center-horizontal">
     <div class="screen">
       <div class="page">
+        <--! vymenit za navigace_final az bude upravena -->
         <div class="header">
           <router-link to="/"
           ><img class="logo" :src="upraveno_Logo111" alt="upraveno_logo (1) 1"
@@ -43,8 +44,12 @@
           </div>
         </div>
         <div class="page-item">
-          <h1 class="vtejte-u-ns-na-penzionu-2 valign-text-middle heading-1">{{ vtejteUNsNaPenzionu }}</h1>
-          <p class="lorem-ipsum-dolor-si-3 subtext">{{ loremIpsumDolorSi1 }}</p>
+          <h1 class="heading-1">Vítejte u nás na penzionu</h1>
+          <p class="heading-subtext subtext">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Nisl tincidunt eget nullam non. Quis hendrerit dolor magna eget est
+            lorem ipsum</p>
           <div class="section-15">
             <router-link to="/rezervace-3">
               <div class="button-38">
@@ -135,7 +140,6 @@ export default {
   props: [
     "upraveno_Logo111",
     "penzionVSrdciEskKanady",
-    "vtejteUNsNaPenzionu",
     "loremIpsumDolorSi1",
     "rezervovat",
     "kontakt",
@@ -164,6 +168,10 @@ export default {
     display: none
   .menu-1
     display: flex !important
+  .page-item
+    padding: 20px 40px
+  .section-15
+    flex-direction: column
 
 @media screen and (min-width: 990px)
   .menu-1
@@ -187,6 +195,25 @@ export default {
   padding: 20px 80px
   position: relative
   width: 100%
+  max-width: 100%
+  overflow: visible
+  flex-wrap: wrap
+
+  @media (max-width: 1024px)
+    .page-item
+      padding: 20px 40px
+      gap: 15px
+
+  @media (max-width: 768px)
+    .page-item
+      padding: 15px 20px
+      gap: 10px
+
+  @media (max-width: 480px)
+    .page-item
+      padding: 10px 15px
+      gap: 8px
+
 
 .vtejte-u-ns-na-penzionu-2,
 .o-penzionu-mikmtor-2,
@@ -199,13 +226,28 @@ export default {
   text-align: center
   white-space: nowrap
 
-.lorem-ipsum-dolor-si-3
+.heading-subtext
   color: $gray
   font-weight: 600
-  line-height: 44px
   position: relative
   text-align: center
-  width: 1151px
+  margin: 0 auto
+  overflow-wrap: break-word
+  word-wrap: break-word
+  word-break: break-word
+.page-item, .heading-subtext
+  flex: 1 1 auto
+
+  @media (max-width: 768px)
+    .lorem-ipsum-dolor-si-3
+      font-size: 16px
+      line-height: 1.4
+
+  @media (max-width: 480px)
+    .lorem-ipsum-dolor-si-3
+      font-size: 14px
+      line-height: 1.3
+
 
 .section-15
   align-items: center
