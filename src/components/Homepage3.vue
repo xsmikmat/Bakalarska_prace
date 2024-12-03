@@ -1,46 +1,6 @@
 <template>
     <div class="screen">
-        <--! vymenit za navigace_final az bude upravena -->
-        <div class="header">
-          <router-link to="/"
-          ><img class="logo" :src="upraveno_Logo111" alt="upraveno_logo (1) 1"
-          /></router-link>
-          <p class="heading-2 nav-header">{{ penzionVSrdciEskKanady }}</p>
-          <div class="navigace">
-            <div class="button-nav-container">
-              <router-link to="/o-ubytovani-3">
-                <div class="button-nav"><div class="text-nav text">O ubytování</div></div></router-link>
-              <router-link to="/okoli-2">
-                <div class="button-nav"><div class="text-nav text">Okolí</div></div></router-link>
-              <router-link to="/fotogalerie-1">
-                <div class="button-nav"><div class="text-nav text">Fotogalerie</div></div></router-link>
-              <router-link to="/rezervace">
-                <div class="property-1-button-23">
-                  <div class="rezervace-nav-text fredoka-semi-bold-surf-16px">Rezervace</div>
-                </div></router-link>
-              <router-link to="/kontakt-2">
-                <div class="button-nav"><div class="text-nav text">Kontakt</div></div></router-link>
-            </div>
-            <img class="menu-1" src="../../img/icon_burger.png" alt="menu" @click="toggleActive" />
-              <div class="button-container-9" :class="{ 'active': active }" v-if="active">
-                <router-link to="/o-ubytovani-3">
-                  <div class="button-nav"><div class="text-nav text">O ubytování</div></div>
-                </router-link>
-                <router-link to="/okoli-2">
-                  <div class="button-nav"><div class="text-nav text">Okolí</div></div>
-                </router-link>
-                <router-link to="/fotogalerie-1">
-                  <div class="button-nav"><div class="text-nav text">Fotogalerie</div></div>
-                </router-link>
-                <router-link to="/rezervace">
-                  <div class="button-nav"><div class="text-nav text">Rezervace</div></div>
-                </router-link>
-                <router-link to="/kontakt-2">
-                  <div class="button-nav"><div class="text-nav text">Kontakt</div></div>
-                </router-link>
-              </div>
-          </div>
-        </div>
+        <navigace_final />
         <div class="page-item">
           <h1 class="heading-1">Vítejte u nás na penzionu</h1>
           <p class="heading-subtext subtext">
@@ -50,19 +10,33 @@
             lorem ipsum</p>
           <div class="section-15">
             <router-link to="/rezervace">
-              <div class="button-38">
-                <div class="rezervovat-2 heading-2">{{ rezervovat }}</div>
-              </div></router-link
+                <div class="white-button heading-2">Rezervovat</div>
+              </router-link
             ><router-link to="/kontakt-2">
-              <div class="button-37">
-                <div class="kontakt-10 heading-2">{{ kontakt }}</div>
-              </div></router-link
+                <div class="green-button heading-2">Kontakt</div>
+              </router-link
             >
           </div>
-          <img-container />
+          <div class="img-container">
+            <img
+                class="image"
+                src="https://cdn.animaapp.com/projects/673b2aed8a1b7d25aab8cf0f/releases/673b2d66ac84e614e11f02a0/img/image-1.png"
+                alt="image 1"
+            />
+            <img
+                class="image-2 image"
+                src="https://cdn.animaapp.com/projects/673b2aed8a1b7d25aab8cf0f/releases/673b2d66ac84e614e11f02a0/img/image-2.png"
+                alt="image 2"
+            />
+            <img
+                class="image-2 image"
+                src="https://cdn.animaapp.com/projects/673b2aed8a1b7d25aab8cf0f/releases/673b2d66ac84e614e11f02a0/img/image-3.png"
+                alt="image 3"
+            />
+          </div>
         </div>
         <div class="page-item">
-          <div class="o-penzionu-mikmtor-2 valign-text-middle heading-1">{{ oPenzionuMikmtor }}</div>
+          <div class="o-penzionu-mikmtor-2 valign-text-middle heading-2">{{ oPenzionuMikmtor }}</div>
           <div class="cards">
             <list :spolecnePrsotory021="list1Props.spolecnePrsotory021" :title="list1Props.title" />
             <list :spolecnePrsotory021="list2Props.spolecnePrsotory021" :title="list2Props.title" />
@@ -70,19 +44,17 @@
           </div>
             <div class="icon-buttons-2">
               <router-link to="/o-ubytovani-3">
-                <div class="button-37">
-                  <div class="vce-informac-2 subtext">{{ vceInformac1 }}</div>
-                </div></router-link
+                  <div class="green-button subtext">Více informací</div>
+                </router-link
               >
             </div>
         </div>
         <div class="page-item">
-          <p class="zitky-a-aktivity-v-okol-2 heading-1">{{ zitkyAAktivityVOkol }}</p>
+          <p class="zitky-a-aktivity-v-okol-2 heading-2">{{ zitkyAAktivityVOkol }}</p>
           <p class="lorem-ipsum-dolor-si-4 subtext">{{ loremIpsumDolorSi2 }}</p>
           <router-link to="/okoli-2">
-            <div class="button-37">
-              <div class="vce-informac-2 subtext">{{ vceInformac2 }}</div>
-            </div></router-link
+              <div class="green-button subtext">Více informací</div>
+            </router-link
           >
         </div>
         <footer class="footer-4">
@@ -115,9 +87,11 @@ import xNav3 from "@/components/xNav3.vue";
 import xNav2 from "@/components/xNav2.vue";
 import xNav4 from "@/components/xNav4.vue";
 import xNav5 from "@/components/xNav5.vue";
+import Navigace_final from "@/components/navigace_final.vue";
 export default {
   name: "Homepage3",
   components: {
+    Navigace_final,
     xNav5, xNav4, xNav2, xNav3, xNav,
     ImgContainer,
     List,
@@ -156,24 +130,7 @@ export default {
 <style lang="sass">
 @import '../../variables'
 
-@media screen and (max-width: 991px)
 
-  .navigace
-    display: none !important
-  .nav-header
-    display: none
-  .menu-1
-    display: flex !important
-  .page-item
-    padding: 20px 40px
-  .section-15
-    flex-direction: column
-
-@media screen and (min-width: 990px)
-  .menu-1
-    display: none
-  .navigace
-    display: flex
 
 .menu-1
   cursor: pointer
@@ -183,32 +140,17 @@ export default {
 
 .page-item
   align-items: center
-  align-self: stretch
+  justify-content: center
   display: flex
   flex: 0 0 auto
   flex-direction: column
   gap: 20px
-  padding: 20px 80px
+  padding: 20px
   position: relative
   width: 100%
-  max-width: 100%
-  overflow: visible
   flex-wrap: wrap
 
-  @media (max-width: 1024px)
-    .page-item
-      padding: 20px 40px
-      gap: 15px
 
-  @media (max-width: 768px)
-    .page-item
-      padding: 15px 20px
-      gap: 10px
-
-  @media (max-width: 480px)
-    .page-item
-      padding: 10px 15px
-      gap: 8px
 
 
 .vtejte-u-ns-na-penzionu-2,
@@ -228,35 +170,36 @@ export default {
   position: relative
   text-align: center
   margin: 0 auto
-  overflow-wrap: break-word
-  word-wrap: break-word
-  word-break: break-word
-.page-item, .heading-subtext
-  flex: 1 1 auto
 
-  @media (max-width: 768px)
-    .lorem-ipsum-dolor-si-3
-      font-size: 16px
-      line-height: 1.4
+.img_container
+  align-items: center
+  display: flex
+  height: auto
+  justify-content: center
+  overflow: hidden
+  position: relative
 
-  @media (max-width: 480px)
-    .lorem-ipsum-dolor-si-3
-      font-size: 14px
-      line-height: 1.3
+.image
+  height: 250px
+  object-fit: cover
+  position: relative
+  width: 33%
+  padding: 20px
 
+.img_container.section-16
+  margin-left: -170.00px
+  margin-right: -170.00px
 
 .section-15
   align-items: center
-  align-self: stretch
   display: flex
   flex: 0 0 auto
-  gap: 100px
+  gap: 50px
   justify-content: center
-  padding: 20px 40px
   position: relative
   width: 100%
 
-.button-38
+.white-button
   align-items: center
   background-color: $white
   border: 1px solid
@@ -270,17 +213,14 @@ export default {
   overflow: hidden
   padding: 10px 25px
   position: relative
-
-.rezervovat-2
   color: $fun-green
   font-weight: 400
   line-height: 44px
   margin-top: -1.00px
-  position: relative
   white-space: nowrap
   width: fit-content
 
-.button-37
+.green-button
   align-items: center
   background-color: $fun-green
   border-radius: 10px
@@ -292,15 +232,12 @@ export default {
   overflow: hidden
   padding: 10px 25px
   position: relative
-
-.kontakt-10
   color: $surf
   font-weight: 400
   line-height: 44px
   margin-top: -1.00px
-  position: relative
   text-align: center
-  width: 172px
+  width: fit-content
 
 .cards
   display: flex
@@ -313,13 +250,7 @@ export default {
   margin-right: -80px
   position: relative
 
-@media (max-width: 991px)
-  .cards
-    flex-direction: column
-    gap: 20px
-    padding: 20px 40px
-    margin-left: 0
-    margin-right: 0
+
 
 .icon-buttons-2
   align-items: center
@@ -391,4 +322,47 @@ export default {
   position: relative
   top: 20px
   width: 80px
+
+@media (max-width: 480px)
+  .lorem-ipsum-dolor-si-3
+    font-size: 14px
+    line-height: 1.3
+
+@media (max-width: 768px)
+  .img_container
+    flex-direction: column
+    gap: 20px
+    margin-left: -20px
+    margin-right: -20px
+    padding: 20px
+    width: calc(100% + 40px)
+  .image-2
+    display: none
+  .image
+    width: 100%
+
+@media screen and (max-width: 991px)
+
+  .navigace
+    display: none !important
+  .nav-header
+    display: none
+  .menu-1
+    display: flex !important
+  .section-15
+    flex-direction: column
+    gap: 8px
+  .cards
+    flex-direction: column
+    gap: 20px
+    padding: 20px 40px
+    margin-left: 0
+    margin-right: 0
+
+@media screen and (min-width: 990px)
+  .menu-1
+    display: none
+  .navigace
+    display: flex
+
 </style>
