@@ -39,24 +39,6 @@ export default {
   position: relative
   width: 100%
 
-.container
-  align-items: center
-  align-self: stretch
-  display: flex
-  flex: 0 0 auto
-  flex-direction: column
-  gap: 24px
-  position: relative
-  width: 100%
-
-.title
-  color: $black
-  font-weight: 400
-  line-height: 44px
-  margin-top: -1.00px
-  position: relative
-  text-align: center
-  width: 520px
 
 .description
   color: $gray

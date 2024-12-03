@@ -1,6 +1,5 @@
 <template>
-  <div class="list-4">
-    <div class="card-3">
+    <div class="card">
       <div class="image-container-5">
         <img class="spolecne-prsotory-02-1-2" :src="spolecnePrsotory021" alt="Spolecne prsotory 02 1" />
       </div>
@@ -13,7 +12,6 @@
         </p>
       </div>
     </div>
-  </div>
 </template>
 
 <script>
@@ -26,45 +24,28 @@ export default {
 <style lang="sass">
 @import '../../variables'
 
-.list-4
+.list
   align-items: center
   display: flex
-  flex: 1
-  flex-direction: column
-  flex-grow: 1
-  gap: 40px
+  flex-direction: row
   justify-content: center
-  margin-top: -6.50px
   position: relative
+  width: 100%
 
-.card-3
+.card
   align-items: center
   align-self: stretch
-  border: 1px solid
-  border-color: $black-2
-  border-radius: 6px
   display: flex
   flex-direction: column
   height: 556px
   overflow: hidden
   position: relative
-  width: 100% // Use percentage-based width for responsiveness
-  max-width: 406px // Set a maximum width to maintain design consistency
-
-@media (max-width: 1200px)
-  .card-3
-    max-width: 300px // Adjust the max-width for smaller screens
-
-@media (max-width: 768px)
-  .card-3
-    max-width: 100%
+  white-space: normal
+  width: 33%
 
 .image-container-5
-  align-items: flex-start
-  align-self: stretch
+  align-items: center
   display: flex
-  flex: 1
-  flex-grow: 1
   position: relative
   width: 100%
 
@@ -74,7 +55,7 @@ export default {
   height: 340px
   object-fit: cover
   position: relative
-  width: 406px
+  width: 100%
 
 .text-content-2
   align-items: flex-start
@@ -85,6 +66,7 @@ export default {
   gap: 4px
   padding: 12px
   position: relative
+  white-space: normal
 
 .title-14
   align-self: stretch
@@ -93,6 +75,7 @@ export default {
   line-height: 44px
   margin-top: -1.00px
   position: relative
+  white-space: normal
 
 .subtitle-2
   align-self: stretch
@@ -101,4 +84,6 @@ export default {
   height: 144px
   line-height: 15px
   position: relative
+  white-space: normal !important
+
 </style>

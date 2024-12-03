@@ -307,9 +307,6 @@ export default {
 .card
   align-items: center
   align-self: stretch
-  border: 1px solid
-  border-color: $black-2
-  border-radius: 6px
   display: flex
   flex-direction: column
   height: 526px

@@ -46,7 +46,7 @@
           :imageContainer4Props="contents3Props.imageContainer4Props"
         />
         <footer class="footer">
-          <img class="upraveno_logo-1-1-1" :src="upraveno_Logo112" alt="upraveno_logo (1) 1" /><container />
+          <img class="upraveno_logo" :src="upraveno_Logo112" alt="upraveno_logo (1) 1" /><container />
           <div class="component-1">
             <div class="button-footer-container">
               <router-link to="/o-ubytovani-3">
@@ -133,16 +133,6 @@ export default {
   position: relative
   width: 100%
 
-.upraveno_logo-1-1
-  cursor: pointer
-  height: 109px
-  margin-bottom: -36.50px
-  margin-left: -114.00px
-  margin-top: -36.50px
-  object-fit: cover
-  position: relative
-  width: 153px
-
 .penzion-v-srdci-esk-kanady
   color: $black
   font-weight: 400
@@ -164,33 +154,7 @@ export default {
   position: relative
   width: 473px
 
-.button-container
-  align-items: flex-end
-  display: flex
-  gap: 21px
-  height: 44px
-  left: 20px
-  min-width: 433px
-  position: relative
-  top: 20px
 
-.footer
-  align-items: center
-  align-self: stretch
-  background-color: transparent
-  display: flex
-  gap: 60px
-  height: 313px
-  justify-content: center
-  padding: 60px 170px
-  position: relative
-  width: 100%
-
-.upraveno_logo-1-1-1
-  height: 109px
-  object-fit: cover
-  position: relative
-  width: 153px
 
 .component-1
   border-radius: 5px

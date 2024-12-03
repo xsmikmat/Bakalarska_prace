@@ -2,7 +2,7 @@
   <div class="header">
     <router-link to="/"
     ><img class="logo" :src="upraveno_Logo111" alt="logo"/></router-link>
-    <p class="heading-2 valign-text-middle nav-header">Penzion v srdci České Kanady</p>
+    <p class="heading-2 nav-header">Penzion v srdci České Kanady</p>
     <div class="navigace">
       <div class="button-nav-container">
         <router-link to="/o-ubytovani-3">
@@ -90,7 +90,11 @@ export default {
   margin-top: -24.00px
   overflow: hidden
   position: relative
-
+.menu-1
+  cursor: pointer
+  height: 24px
+  position: relative
+  width: 24px
 .header
   align-items: center
   align-self: stretch
@@ -110,14 +114,11 @@ export default {
   left: 20px
   position: relative
   top: 20px
+  width: 100%
 
 .nav-header
   color: $black
   font-weight: 400
-  height: 91px
-  line-height: 44px
-  margin-bottom: -26.50px
-  margin-top: -28.50px
   position: relative
   text-align: center
 
@@ -134,21 +135,6 @@ export default {
   line-height: 15px
   white-space: nowrap
 
-.property-1-button-23,
-.property-1-button-24
-  align-items: center
-  background-color: $fun-green
-  border-radius: 10px
-  cursor: pointer
-  display: flex
-  gap: 10px
-  height: 40px
-  justify-content: center
-  overflow: hidden
-  padding: 10px 25px
-  position: relative
-  width: 100px
-
 .rezervace-nav-text
   letter-spacing: 0
   line-height: normal
@@ -157,26 +143,27 @@ export default {
   margin-top: -0.50px
   position: relative
   white-space: nowrap
-  width: fit-content
 
-@media screen and (max-width: 991px)
-  .navigace
-    display: none !important
+@media screen and (max-width: 1400px)
   .nav-header
     display: none !important
+
+  .nav-header
+    font-size: 16px !important
+@media screen and (max-width: 991px)
+  .nav-header
+    display: none !important
+  .navigace
+    display: none
+  .nav-header
+    font-size: 16px !important
   .menu-1
-    display: flex !important
+    display: block
 
 @media screen and (min-width: 990px)
-  .menu-1
-    display: none
   .navigace
     display: flex
 
 
-.menu-1
-  cursor: pointer
-  height: 24px
-  position: relative
-  width: 24px
+
 </style>
