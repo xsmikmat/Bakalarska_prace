@@ -1,0 +1,51 @@
+[
+  {
+    "název": "Rozhledna na Havlově Hoře",
+    "typ": ["pesky"],
+    "popis": "Nádherný výhled na Českou Kanadu. Ideální pro odpočinek a pozorování přírody.",
+    "vzdalenost": 2,
+    "obrazek": "rozhledna_havlova_hore.jpg"
+  },
+  {
+    "název": "Zvůle",
+    "typ": ["pesky", "voda"],
+    "popis": "Krásná obec s možností koupání v místním rybníku. Ideální pro relaxaci.",
+    "vzdalenost": 2,
+    "obrazek": "zvule.jpg"
+  },
+  {
+    "název": "Ďáblova prdel",
+    "typ": ["pesky"],
+    "popis": "Zajímavý skalní útvar s legendou. Krátká, ale zajímavá túra.",
+    "vzdalenost": 0.3,
+    "obrazek": "dablova_prdel.jpg"
+  },
+  {
+    "název": "Landštejn",
+    "typ": ["pesky", "cyklo"],
+    "popis": "Zřícenina hradu s nádherným výhledem. Možnost prohlídky a procházek po okolí.",
+    "vzdalenost": 10,
+    "obrazek": "landstejn.jpg"
+  },
+  {
+    "název": "Markvarec",
+    "typ": ["pesky", "cyklo"],
+    "popis": "Krásná vesnička s možností cykloturistiky a pěších výletů do okolí.",
+    "vzdalenost": 6,
+    "obrazek": "markvarec.jpg"
+  },
+  {
+    "název": "Hladový rybník",
+    "typ": ["pesky", "cyklo", "voda"],
+    "popis": "Velký rybník s možností koupání, rybaření a cykloturistiky kolem. Ideální pro rodiny s dětmi.",
+    "vzdalenost": 5,
+    "obrazek": "hladovy_rybnik.jpg"
+  },
+  {
+    "název": "Český Rudolec",
+    "typ": ["pesky", "cyklo"],
+    "popis": "Malebné městečko s krásným zámkem. Možnost prohlídky zámku a procházek po městě.",
+    "vzdalenost": 7,
+    "obrazek": "cesky_rudolec.jpg"
+  }
+]

@@ -1,6 +1,6 @@
 <template>
   <footer class="footer">
-    <div><img class="upraveno_logo" :src="upraveno_Logo112" alt="upraveno_logo (1) 1" /></div>
+    <div><img class="upraveno_logo" src="../../img/upraveno-logo--1--1.png" alt="logo" /></div>
     <div class="container-footer">
       <div class="heading-2">Penzion Šmikmátor</div>
       <p class="description-footer subtext">...v srdci České Kanady</p>
@@ -8,7 +8,7 @@
       <div class="button-container-footer">
         <router-link to="/o-ubytovani-3">
           <div class="button-nav"><div class="text-nav text">O ubytování</div></div></router-link>
-        <router-link to="/okoli-2">
+        <router-link to="/okoli">
           <div class="button-nav"><div class="text-nav text">Okolí</div></div></router-link>
         <router-link to="/fotogalerie-1">
           <div class="button-nav"><div class="text-nav text">Fotogalerie</div></div></router-link>

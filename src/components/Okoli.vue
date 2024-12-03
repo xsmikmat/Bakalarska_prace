@@ -1,108 +1,136 @@
 <template>
   <div class="container-center-horizontal">
-    <div class="okoli-1 screen">
-      <div class="section-31">
-        <header class="header-18">
-          <router-link to="/homepage-3"
-            ><img class="upraveno_logo-1-1-24" :src="upraveno_Logo111" alt="upraveno_logo (1) 1" /></router-link
-          ><router-link to="/navigace-mobil"
-            ><img
-              class="menu-6"
-              src="https://cdn.animaapp.com/projects/673b2aed8a1b7d25aab8cf0f/releases/6746cea99d6a8703ef5210fc/img/menu-2.svg"
-              alt="menu"
-            />
-          </router-link>
-        </header>
-        <div class="section-32">
-          <div class="container-34">
-            <h1 class="title-43 heading-2">{{ title1 }}</h1>
-            <p class="description-20 subtext">{{ description }}</p>
-          </div>
-          <div class="image-container-28"><img class="okoli-10-1-1" :src="okoli101" alt="Okoli 10 1" /></div>
+    <div class="screen">
+      <div class="page">
+        <navigace_final />
+        <div class="section-33">
+          <container4 :title="container4Props.title" :description="container4Props.description" />
+          <image-container5 :src="imageContainer5Props.src" :className="imageContainer5Props.className" />
         </div>
-        <div class="list-19">
-          <div class="list-20">
-            <div class="row-10">
-              <div class="item-8">
-                <img class="icon-for-3" :src="iconForTourism1" alt="icon-for-tourism 1" />
-                <div class="frame-427318906-9">
-                  <div class="title-42 roboto-bold-black-20px">{{ title2 }}</div>
+        <div class="list-21">
+          <div class="container-35">
+            <div class="title-47 heading-1">{{ title1 }}</div>
+          </div>
+          <div class="list-22">
+            <div class="row-11">
+              <div class="item-9">
+                <frame2 />
+                <div class="frame-427318906-11">
+                  <div class="title-48 roboto-bold-black-20px">{{ title2 }}</div>
+                  <div class="subtitle-13 roboto-normal-black-16px-2">{{ subtitle1 }}</div>
                 </div>
               </div>
-              <div class="item-8">
-                <div class="frame-427318906-9">
-                  <img class="icon-for-3" :src="iconForCycling1" alt="icon-for-cycling 1" />
-                  <div class="title-44 roboto-normal-black-20px">{{ title3 }}</div>
-                </div>
+              <div class="item-9">
+                <frame3 />
+                <frame42731890652 :title="frame427318906521Props.title" :subtitle="frame427318906521Props.subtitle" />
               </div>
-              <div class="item-8">
-                <img
-                  class="icon-for-3"
-                  :src="iconForSwimmersAndBoatersInNature1"
-                  alt="icon-for-swimmers-and-boaters-in-nature 1"
-                />
-                <div class="frame-427318906-9">
-                  <div class="title-42 roboto-normal-black-20px">{{ title4 }}</div>
-                </div>
+              <div class="item-9">
+                <frame4 />
+                <frame42731890652 :title="frame427318906522Props.title" :subtitle="frame427318906522Props.subtitle" />
               </div>
             </div>
           </div>
-          <row />
-          <row />
-        </div>
-        <footer class="footer-11">
-          <router-link to="/homepage-3"
-            ><img class="upraveno_logo-1-1-24" :src="upraveno_Logo112" alt="upraveno_logo (1) 1"
-          /></router-link>
-          <div class="component-1-12">
-            <div class="button-container-23">
-              <component161 :oUbytovn="component161Props.oUbytovn" />
-              <component162 :okol="component162Props.okol" />
-              <component163 :fotogalerie="component163Props.fotogalerie" />
-              <component164 :rezervace="component164Props.rezervace" />
-              <component165 :kontakt="component165Props.kontakt" />
+          <div class="list-23">
+            <div class="row-12">
+              <div class="card-6">
+                <div class="image-container-30">
+                  <div class="image-15">
+                    <div class="title-46 valign-text-middle roboto-normal-black-12px">{{ title3 }}</div>
+                    <tag2 />
+                  </div>
+                </div>
+                <div class="text-content-6">
+                  <div class="subtitle-14 roboto-medium-black-20px">{{ subtitle2 }}</div>
+                  <p class="title-49 roboto-normal-black-16px">
+                    <span class="roboto-normal-black-16px">{{ spanText1 }}</span
+                    ><span class="span1 roboto-normal-black-16px">{{ spanText2 }}</span
+                  ><span class="roboto-normal-black-16px">{{ spanText3 }}</span>
+                  </p>
+                </div>
+              </div>
+              <div class="card-6">
+                <div class="image-container-30">
+                  <div class="image-15">
+                    <div class="title-46 valign-text-middle roboto-normal-black-12px">{{ title4 }}</div>
+                    <tag3 />
+                  </div>
+                </div>
+                <text-content22 :subtitle="textContent221Props.subtitle" :title="textContent221Props.title" />
+              </div>
+              <div class="card-7">
+                <div class="image-container-30">
+                  <div class="image-15">
+                    <div class="title-46 valign-text-middle roboto-normal-black-12px">{{ title5 }}</div>
+                    <tag4 />
+                  </div>
+                </div>
+                <text-content22 :subtitle="textContent222Props.subtitle" :title="textContent222Props.title" />
+              </div>
             </div>
           </div>
-        </footer>
+        </div>
+        <footer-final/>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import Row from "./Row";
-import Component161 from "./Component161";
-import Component162 from "./Component162";
-import Component163 from "./Component163";
-import Component164 from "./Component164";
-import Component165 from "./Component165";
+import Container4 from "./Container4";
+import ImageContainer5 from "./ImageContainer5";
+import Frame2 from "./Frame2";
+import Frame3 from "./Frame3";
+import Frame42731890652 from "./Frame42731890652";
+import Frame4 from "./Frame4";
+import Tag2 from "./Tag2";
+import Tag3 from "./Tag3";
+import TextContent22 from "./TextContent22";
+import Tag4 from "./Tag4";
+import Container from "./Container";
+import Navigace_final from "@/components/navigace_final.vue";
+import FooterFinal from "@/components/footer_final.vue";
 export default {
   name: "Okoli",
   components: {
-    Row,
-    Component161,
-    Component162,
-    Component163,
-    Component164,
-    Component165,
+    FooterFinal,
+    Navigace_final,
+    Container4,
+    ImageContainer5,
+    Frame2,
+    Frame3,
+    Frame42731890652,
+    Frame4,
+    Tag2,
+    Tag3,
+    TextContent22,
+    Tag4,
+    Container,
   },
   props: [
     "upraveno_Logo111",
+    "penzionVSrdciEskKanady",
     "title1",
-    "description",
-    "okoli101",
-    "iconForTourism1",
     "title2",
-    "iconForCycling1",
+    "subtitle1",
     "title3",
-    "iconForSwimmersAndBoatersInNature1",
+    "subtitle2",
+    "spanText1",
+    "spanText2",
+    "spanText3",
     "title4",
+    "title5",
     "upraveno_Logo112",
-    "component161Props",
-    "component162Props",
-    "component163Props",
-    "component164Props",
-    "component165Props",
+    "container4Props",
+    "imageContainer5Props",
+    "frame427318906521Props",
+    "frame427318906522Props",
+    "textContent221Props",
+    "textContent222Props",
+    "component166Props",
+    "component167Props",
+    "component168Props",
+    "component169Props",
+    "component170Props",
   ],
 };
 </script>
@@ -110,59 +138,99 @@ export default {
 <style lang="sass">
 @import '../../variables'
 
-.okoli-1
+.okoli-2
   align-items: flex-start
   background-color: $white
   display: flex
-  width: 375px
+  height: 1871px
+  overflow: hidden
+  width: 1512px
 
-.section-31
-  align-items: center
+.page-4
+  align-items: flex-end
+  background-color: $white
   display: flex
   flex-direction: column
-  height: 1468px
-  margin-left: 3px
-  padding: 20px 0px
   position: relative
-  width: 372px
+  width: 1512px
 
-.header-18
+.heeader-2
   align-items: center
   align-self: stretch
-  background-color: transparent
   display: flex
-  flex: 0 0 auto
-  gap: 80px
+  gap: 160px
+  height: 156px
   justify-content: center
+  padding: 60px 80px
   position: relative
   width: 100%
 
-.upraveno_logo-1-1-24
+.upraveno_logo-1-1-25
   cursor: pointer
   height: 109px
+  margin-bottom: -36.50px
+  margin-left: -24.00px
+  margin-top: -36.50px
   object-fit: cover
   position: relative
   width: 153px
 
-.menu-6
-  cursor: pointer
-  height: 24px
+.penzion-v-srdci-esk-kanady-5
+  color: $black
+  font-weight: 400
+  height: 91px
+  line-height: 44px
+  margin-bottom: -26.50px
+  margin-top: -28.50px
   position: relative
-  width: 24px
+  text-align: center
+  width: 454px
 
-.section-32
-  align-items: flex-start
+.navigace-10
+  border-radius: 5px
+  height: 84px
+  margin-bottom: -24.00px
+  margin-right: -24.00px
+  margin-top: -24.00px
+  overflow: hidden
+  position: relative
+  width: 473px
+
+.button-container-24
+  align-items: flex-end
+  display: flex
+  gap: 21px
+  height: 44px
+  left: 20px
+  min-width: 433px
+  position: relative
+  top: 20px
+
+.section-33
+  align-items: center
+  align-self: stretch
+  display: flex
+  flex: 0 0 auto
+  gap: 20px
+  justify-content: center
+  padding: 20px 80px
+  position: relative
+  width: 100%
+
+.list-21
+  align-items: center
   align-self: stretch
   display: flex
   flex: 0 0 auto
   flex-direction: column
-  gap: 8px
-  padding: 8px 20px
+  gap: 20px
+  justify-content: center
+  padding: 20px 80px
   position: relative
   width: 100%
 
-.container-34
-  align-items: flex-start
+.container-35
+  align-items: center
   align-self: stretch
   display: flex
   flex: 0 0 auto
@@ -171,65 +239,29 @@ export default {
   position: relative
   width: 100%
 
-.title-43
-  align-self: stretch
+.title-47
   color: $black
   font-weight: 400
-  line-height: 44px
+  line-height: 100px
   margin-top: -1.00px
   position: relative
   text-align: center
+  width: 520px
 
-.description-20
-  align-self: stretch
-  color: $gray
-  font-weight: 600
-  line-height: 44px
-  position: relative
-  text-align: center
-
-.image-container-28
-  align-items: center
-  align-self: stretch
-  display: flex
-  height: 261px
-  justify-content: center
-  padding: 30px 0px
-  position: relative
-  width: 100%
-
-.okoli-10-1-1
-  height: 261px
-  margin-bottom: -30.00px
-  margin-top: -30.00px
-  object-fit: cover
-  position: relative
-  width: 316px
-
-.list-19
+.list-22
   align-items: center
   align-self: stretch
   display: flex
   flex: 0 0 auto
   flex-direction: column
-  gap: 8px
+  gap: 20px
   justify-content: center
-  padding: 8px 20px
+  padding: 20px
   position: relative
   width: 100%
 
-.list-20
-  align-items: center
-  align-self: stretch
-  display: flex
-  flex: 0 0 auto
-  flex-direction: column
-  gap: 8px
-  justify-content: center
-  position: relative
-  width: 100%
-
-.row-10
+.row-11,
+.row-12
   align-items: flex-start
   align-self: stretch
   display: flex
@@ -238,7 +270,7 @@ export default {
   position: relative
   width: 100%
 
-.item-8
+.item-9
   align-items: center
   display: flex
   flex: 1
@@ -249,13 +281,7 @@ export default {
   padding: 12px 0px
   position: relative
 
-.icon-for-3
-  height: 66px
-  object-fit: cover
-  position: relative
-  width: 66px
-
-.frame-427318906-9
+.frame-427318906-11
   align-items: flex-start
   align-self: stretch
   display: flex
@@ -265,7 +291,7 @@ export default {
   position: relative
   width: 100%
 
-.title-42
+.title-48
   align-self: stretch
   letter-spacing: 0
   line-height: 28px
@@ -273,41 +299,126 @@ export default {
   position: relative
   text-align: center
 
-.title-44
+.subtitle-13
   align-self: stretch
   letter-spacing: 0
-  line-height: 28px
+  line-height: 24px
   position: relative
   text-align: center
 
-.footer-11
+.list-23
   align-items: center
   align-self: stretch
-  background-color: transparent
   display: flex
-  height: 240px
+  flex: 0 0 auto
+  flex-direction: column
+  gap: 20px
   justify-content: center
-  margin-bottom: -20.00px
-  padding: 20px 0px
   position: relative
   width: 100%
 
-.component-1-12
-  border-radius: 5px
-  height: 240px
-  margin-bottom: -20.00px
-  margin-top: -20.00px
+.card-6
+  align-items: center
+  border: 1px solid
+  border-color: $black-2
+  border-radius: 6px
+  display: flex
+  flex: 1
+  flex-direction: column
+  flex-grow: 1
   overflow: hidden
   position: relative
-  width: 131px
 
-.button-container-23
+.image-container-30
   align-items: flex-start
+  align-self: stretch
   display: flex
-  flex-direction: column
-  left: 20px
-  min-height: 220px
+  height: 340px
   position: relative
-  top: 20px
-  width: 80px
+  width: 100%
+
+.image-15
+  align-self: stretch
+  background-color: $iron
+  flex: 1
+  flex-grow: 1
+  position: relative
+
+.title-46
+  height: 16px
+  left: 16px
+  letter-spacing: 0
+  line-height: 16px
+  position: absolute
+  text-align: center
+  top: 161px
+  white-space: nowrap
+  width: 392px
+
+.text-content-6
+  align-items: flex-start
+  align-self: stretch
+  display: flex
+  flex: 0 0 auto
+  flex-direction: column
+  gap: 4px
+  padding: 12px
+  position: relative
+  width: 100%
+
+.subtitle-14
+  align-self: stretch
+  letter-spacing: 0
+  line-height: 28px
+  margin-top: -1.00px
+  position: relative
+
+.title-49
+  align-self: stretch
+  letter-spacing: 0
+  line-height: 24px
+  position: relative
+
+.span1
+  text-decoration: underline
+
+.card-7
+  align-items: center
+  border: 1px solid
+  border-color: $black-2
+  border-radius: 6px
+  display: flex
+  flex: 1
+  flex-direction: column
+  flex-grow: 1
+  height: 540px
+  overflow: hidden
+  position: relative
+
+.footer-12
+  align-items: center
+  background-color: transparent
+  display: flex
+  gap: 60px
+  height: 313px
+  justify-content: center
+  padding: 60px 170px
+  position: relative
+  width: 1504px
+
+.upraveno_logo-1-1-26
+  height: 109px
+  object-fit: cover
+  position: relative
+  width: 153px
+
+.component-1-13
+  border-radius: 5px
+  height: 308px
+  margin-bottom: -57.50px
+  margin-top: -57.50px
+  overflow: hidden
+  position: relative
+  width: 260px
+
 </style>

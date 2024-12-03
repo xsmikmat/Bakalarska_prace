@@ -1,98 +1,103 @@
 <template>
   <div class="container-center-horizontal">
-    <div class="kontakt-1-1 screen">
-      <div class="section-21">
-        <header class="header-13">
-          <router-link to="/homepage-3"
-            ><img class="upraveno_logo-1-1-13" :src="upraveno_Logo111" alt="upraveno_logo (1) 1" /></router-link
-          ><router-link to="/navigace-mobil"
-            ><img
-              class="menu-4"
-              src="https://cdn.animaapp.com/projects/673b2aed8a1b7d25aab8cf0f/releases/6746cea99d6a8703ef5210fc/img/menu-6.svg"
-              alt="menu"
-            />
-          </router-link>
-        </header>
-        <div class="list-6">
-          <div class="row">
-            <item :title="item1Props.title" :subtitle="item1Props.subtitle" />
-            <item :title="item2Props.title" :subtitle="item2Props.subtitle" />
-            <item :title="item3Props.title" :subtitle="item3Props.subtitle" />
-            <item :title="item4Props.title" :subtitle="item4Props.subtitle" />
-            <item :title="item5Props.title" :subtitle="item5Props.subtitle" />
-            <item :title="item6Props.title" :subtitle="item6Props.subtitle" />
+    <div class="screen">
+      <div class="page">
+        <navigace_final />
+        <div class="list-7">
+          <div class="container-17">
+            <h1 class="title-19 roboto-bold-black-40px">{{ title1 }}</h1>
           </div>
+          <div class="list-8">
+            <div class="row-1">
+              <item32
+                  :title="item321Props.title"
+                  :subtitle="item321Props.subtitle"
+                  :frameProps="item321Props.frameProps"
+              />
+              <item32
+                  :title="item322Props.title"
+                  :subtitle="item322Props.subtitle"
+                  :frameProps="item322Props.frameProps"
+              />
+              <item32
+                  :title="item323Props.title"
+                  :subtitle="item323Props.subtitle"
+                  :frameProps="item323Props.frameProps"
+              />
+            </div>
+          </div>
+          <img
+              class="vector-200-1"
+              src="https://cdn.animaapp.com/projects/673b2aed8a1b7d25aab8cf0f/releases/673b2d66ac84e614e11f02a0/img/vector-200.svg"
+              alt="Vector 200"
+          />
         </div>
-        <div class="section-22">
-          <div class="map-container">
-            <div class="image-4">
-              <div class="overlap-group">
-                <img
-                  class="image-5"
-                  src="https://cdn.animaapp.com/projects/673b2aed8a1b7d25aab8cf0f/releases/6746cea99d6a8703ef5210fc/img/image.svg"
-                  alt="image"
-                />
-                <div class="title-17 roboto-medium-black-16px">{{ title }}</div>
-                <img
-                  class="ic-location"
-                  src="https://cdn.animaapp.com/projects/673b2aed8a1b7d25aab8cf0f/releases/673b2d66ac84e614e11f02a0/img/ic-location.svg"
-                  alt="ic-location"
-                />
-              </div>
+        <div class="list-9">
+          <div class="title-20 roboto-bold-black-40px">{{ title2 }}</div>
+          <div class="container-18">
+            <item42 :title="item421Props.title" :subtitle="item421Props.subtitle" />
+            <item42 :title="item422Props.title" :subtitle="item422Props.subtitle" :className="item422Props.className" />
+            <item42 :title="item423Props.title" :subtitle="item423Props.subtitle" :className="item423Props.className" />
+          </div>
+          <div class="list-10">
+            <div class="row-2">
+              <item42
+                  :title="item424Props.title"
+                  :subtitle="item424Props.subtitle"
+                  :className="item424Props.className"
+              />
+              <item42
+                  :title="item425Props.title"
+                  :subtitle="item425Props.subtitle"
+                  :className="item425Props.className"
+              />
+              <item42
+                  :title="item426Props.title"
+                  :subtitle="item426Props.subtitle"
+                  :className="item426Props.className"
+              />
             </div>
           </div>
         </div>
-        <footer class="footer-6">
-          <router-link to="/homepage-3"
-            ><img class="upraveno_logo-1-1-13" :src="upraveno_Logo112" alt="upraveno_logo (1) 1"
-          /></router-link>
-          <div class="component-1-6">
-            <div class="button-container-12">
-              <component131 :oUbytovn="component131Props.oUbytovn" />
-              <component132 :okol="component132Props.okol" />
-              <component133 :fotogalerie="component133Props.fotogalerie" />
-              <component134 :rezervace="component134Props.rezervace" />
-              <component135 :kontakt="component135Props.kontakt" />
-            </div>
-          </div>
-        </footer>
+        <div class="section-23">
+          <div class="map-container-1"></div>
+        </div>
+        <footer-final />
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import Item from "./Item";
-import Component131 from "./Component131";
-import Component132 from "./Component132";
-import Component133 from "./Component133";
-import Component134 from "./Component134";
-import Component135 from "./Component135";
+import Item32 from "./Item32";
+import Item42 from "./Item42";
+import Container from "./Container";
+import Navigace_final from "@/components/navigace_final.vue";
+import FooterFinal from "@/components/footer_final.vue";
 export default {
   name: "Kontakt",
   components: {
-    Item,
-    Component131,
-    Component132,
-    Component133,
-    Component134,
-    Component135,
+    FooterFinal,
+    Navigace_final,
+    Item32,
+    Item42,
+    Container
   },
   props: [
     "upraveno_Logo111",
-    "title",
+    "penzionVSrdciEskKanady",
+    "title1",
+    "title2",
     "upraveno_Logo112",
-    "item1Props",
-    "item2Props",
-    "item3Props",
-    "item4Props",
-    "item5Props",
-    "item6Props",
-    "component131Props",
-    "component132Props",
-    "component133Props",
-    "component134Props",
-    "component135Props",
+    "item321Props",
+    "item322Props",
+    "item323Props",
+    "item421Props",
+    "item422Props",
+    "item423Props",
+    "item424Props",
+    "item425Props",
+    "item426Props"
   ],
 };
 </script>
@@ -100,153 +105,217 @@ export default {
 <style lang="sass">
 @import '../../variables'
 
-.kontakt-1-1
+.kontakt-2-1
   align-items: flex-start
   background-color: $white
   display: flex
-  height: 1250px
-  width: 375px
+  height: 1775px
+  overflow: hidden
+  width: 1512px
 
-.section-21
-  align-items: center
+.page-1
+  align-items: flex-end
+  background-color: $white
   display: flex
   flex-direction: column
-  height: 1234px
-  overflow: hidden
-  padding: 20px
   position: relative
-  width: 375px
+  width: 1512px
 
-.header-13
+.upraveno_logo-1-1-14
+  cursor: pointer
+  height: 109px
+  margin-bottom: -36.50px
+  margin-left: -24.00px
+  margin-top: -36.50px
+  object-fit: cover
+  position: relative
+  width: 153px
+
+.penzion-v-srdci-esk-kanady-2
+  color: $black
+  font-weight: 400
+  height: 91px
+  line-height: 44px
+  margin-bottom: -26.50px
+  margin-top: -28.50px
+  position: relative
+  text-align: center
+  width: 454px
+
+.navigace-5
+  border-radius: 5px
+  height: 84px
+  margin-bottom: -24.00px
+  margin-right: -24.00px
+  margin-top: -24.00px
+  overflow: hidden
+  position: relative
+  width: 473px
+
+.button-container-13
+  align-items: flex-end
+  display: flex
+  gap: 21px
+  height: 44px
+  left: 20px
+  min-width: 433px
+  position: relative
+  top: 20px
+
+.list-7
   align-items: center
   align-self: stretch
-  background-color: transparent
   display: flex
   flex: 0 0 auto
-  gap: 80px
+  flex-direction: column
+  gap: 20px
+  justify-content: center
+  overflow: hidden
+  padding: 20px 80px
+  position: relative
+  width: 100%
+
+.container-17
+  align-items: center
+  align-self: stretch
+  display: flex
+  flex: 0 0 auto
+  flex-direction: column
+  gap: 24px
+  position: relative
+  width: 100%
+
+.title-19
+  letter-spacing: 0
+  line-height: 48px
+  margin-top: -1.00px
+  position: relative
+  text-align: center
+  width: 520px
+
+.list-8
+  align-items: center
+  align-self: stretch
+  display: flex
+  flex: 0 0 auto
+  flex-direction: column
+  gap: 40px
   justify-content: center
   position: relative
   width: 100%
 
-.upraveno_logo-1-1-13
-  cursor: pointer
+.row-1
+  align-items: flex-start
+  align-self: stretch
+  display: flex
+  flex: 0 0 auto
+  gap: 40px
+  position: relative
+  width: 100%
+
+.vector-200-1
+  height: 1px
+  left: 0
+  object-fit: cover
+  position: absolute
+  top: 336px
+  width: 1512px
+
+.list-9
+  align-items: center
+  align-self: stretch
+  display: flex
+  flex: 0 0 auto
+  flex-wrap: wrap
+  gap: 60px 60px
+  justify-content: center
+  padding: 20px 80px
+  position: relative
+  width: 100%
+
+.title-20
+  letter-spacing: 0
+  line-height: 48px
+  margin-top: -1.00px
+  position: relative
+  text-align: center
+  width: 1144px
+
+.container-18
+  align-items: flex-start
+  display: inline-flex
+  flex: 0 0 auto
+  flex-direction: column
+  gap: 24px
+  height: 484px
+  position: relative
+
+.list-10
+  align-items: center
+  display: flex
+  flex: 1
+  flex-direction: column
+  flex-grow: 1
+  height: 484px
+  justify-content: center
+  position: relative
+
+.row-2
+  align-items: flex-start
+  display: flex
+  flex-direction: column
+  gap: 40px
+  height: 477px
+  margin-left: -4.00px
+  margin-right: -4.00px
+  position: relative
+  width: 650px
+
+.section-23
+  align-items: center
+  align-self: stretch
+  display: flex
+  flex: 0 0 auto
+  flex-direction: column
+  gap: 60px
+  justify-content: center
+  padding: 20px 80px
+  position: relative
+  width: 100%
+
+.map-container-1
+  align-self: stretch
+  height: 300px
+  position: relative
+  width: 100%
+
+.footer-7
+  align-items: center
+  background-color: transparent
+  display: flex
+  gap: 60px
+  height: 313px
+  justify-content: center
+  padding: 60px 170px
+  position: relative
+  width: 1504px
+
+.upraveno_logo-1-1-15
   height: 109px
   object-fit: cover
   position: relative
   width: 153px
 
-.menu-4
-  cursor: pointer
-  height: 24px
-  position: relative
-  width: 24px
-
-.list-6
-  align-items: flex-start
-  align-self: stretch
-  display: flex
-  flex: 0 0 auto
-  gap: 8px
-  justify-content: center
-  padding: 8px 20px
-  position: relative
-  width: 100%
-
-.row
-  align-items: flex-start
-  display: flex
-  flex: 1
-  flex-direction: column
-  flex-grow: 1
-  gap: 8px
-  padding: 20px 0px
-  position: relative
-
-.section-22
-  align-items: center
-  align-self: stretch
-  display: flex
-  flex-direction: column
-  gap: 60px
-  height: 218px
-  justify-content: center
-  overflow: hidden
-  padding: 60px 0px
-  position: relative
-  width: 100%
-
-.map-container
-  align-items: flex-start
-  align-self: stretch
-  display: flex
-  height: 220px
-  margin-bottom: -60.00px
-  margin-top: -61.00px
-  padding: 4px 0px
-  position: relative
-  width: 100%
-
-.image-4
-  align-self: stretch
-  background-color: $black-3
-  border-radius: 6px
-  flex: 1
-  flex-grow: 1
-  position: relative
-
-.overlap-group
-  height: 218px
-  left: -15px
-  position: relative
-  top: -3px
-  width: 365px
-
-.image-5
-  height: 218px
-  left: 15px
-  position: absolute
-  top: 0
-  width: 335px
-
-.title-17
-  left: 0
-  letter-spacing: 0
-  line-height: 22px
-  position: absolute
-  text-align: center
-  top: 116px
-  transform: rotate(180deg)
-  width: 365px
-
-.ic-location
-  height: 24px
-  left: 171px
-  position: absolute
-  top: 85px
-  width: 24px
-
-.footer-6
-  align-items: center
-  align-self: stretch
-  background-color: transparent
-  display: flex
-  height: 240px
-  justify-content: center
-  margin-bottom: -20.00px
-  padding: 20px 0px
-  position: relative
-  width: 100%
-
-.component-1-6
+.component-1-7
   border-radius: 5px
-  height: 240px
-  margin-bottom: -20.00px
-  margin-top: -20.00px
+  height: 308px
+  margin-bottom: -57.50px
+  margin-top: -57.50px
   overflow: hidden
   position: relative
-  width: 131px
+  width: 260px
 
-.button-container-12
+.button-container-14
   align-items: flex-start
   display: flex
   flex-direction: column

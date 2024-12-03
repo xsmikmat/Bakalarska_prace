@@ -5,10 +5,18 @@
       <p class="description subtext">Discover Apartment 1 with these beautiful photos.</p>
     </div>
     <div class="section-1">
-      <image-container :src="imageContainer1Props.src" />
-      <image-container :src="imageContainer2Props.src" />
-      <image-container :src="imageContainer3Props.src" />
-      <image-container :src="imageContainer4Props.src" />
+      <div class="image-container-foto">
+        <img class="foto-img" :src="imageSrc1" alt="U Tresne 02 1" />
+      </div>
+      <div class="image-container-foto">
+        <img class="foto-img" :src="imageSrc2" alt="U Tresne 02 1" />
+      </div>
+      <div class="image-container-foto">
+        <img class="foto-img" :src="imageSrc3" alt="U Tresne 02 1" />
+      </div>
+      <div class="image-container-foto">
+        <img class="foto-img" :src="imageSrc4" alt="U Tresne 02 1" />
+      </div>
     </div>
   </div>
 </template>
@@ -20,12 +28,26 @@ export default {
   components: {
     ImageContainer,
   },
-  props: ["title", "imageContainer1Props", "imageContainer2Props", "imageContainer3Props", "imageContainer4Props"],
+  props: ["title", "imageSrc1", "imageSrc2", "imageSrc3", "imageSrc4"],
 };
 </script>
 
 <style lang="sass">
 @import '../../variables'
+.image-container-foto
+  align-items: flex-start
+  display: flex
+  height: 400px
+  position: relative
+  width: 33%
+
+.foto-img
+  align-self: stretch
+  flex: 1
+  flex-grow: 1
+  object-fit: cover
+  position: relative
+  border: #1d1b20 solid 1px
 
 .contents
   align-items: center
@@ -39,6 +61,24 @@ export default {
   position: relative
   width: 100%
 
+.container
+  align-items: center
+  align-self: stretch
+  display: flex
+  flex: 0 0 auto
+  flex-direction: column
+  gap: 24px
+  position: relative
+  width: 100%
+
+.title
+  color: $black
+  font-weight: 400
+  line-height: 44px
+  margin-top: -1.00px
+  position: relative
+  text-align: center
+  width: 520px
 
 .description
   color: $gray
