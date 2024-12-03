@@ -20,7 +20,7 @@ export default createRouter({
   mode: "history",
   routes: [
     {
-      path: "/fotogalerie-1",
+      path: "/fotogalerie",
       component: Fotogalerie,
       props: { ...fotogalerieData },
     },

@@ -2,37 +2,37 @@
   <div class="header">
     <router-link to="/"
     ><img class="logo" src="../../img/upraveno-logo--1--1.png" alt="logo"/></router-link>
-    <p class="heading-2 nav-header">Penzion v srdci České Kanady</p>
+    <p class="heading-2 nav-header">Do České Kanady víza nepotřebujete</p>
     <div class="navigace">
       <div class="button-nav-container">
-        <router-link to="/o-ubytovani-3">
+        <router-link to="/o-ubytovani">
           <div class="button-nav"><div class="text-nav text">O ubytování</div></div></router-link>
         <router-link to="/okoli">
           <div class="button-nav"><div class="text-nav text">Okolí</div></div></router-link>
-        <router-link to="/fotogalerie-1">
+        <router-link to="/fotogalerie">
           <div class="button-nav"><div class="text-nav text">Fotogalerie</div></div></router-link>
         <router-link to="/rezervace">
           <div class="property-1-button-23">
             <div class="rezervace-nav-text fredoka-semi-bold-surf-16px">Rezervace</div>
           </div></router-link>
-        <router-link to="/kontakt-2">
+        <router-link to="/kontakt">
           <div class="button-nav"><div class="text-nav text">Kontakt</div></div></router-link>
       </div>
       <img class="menu-1" src="../../img/icon_burger.png" alt="menu" @click="toggleActive" />
       <div class="button-container-9" :class="{ 'active': active }" v-if="active">
-        <router-link to="/o-ubytovani-3">
+        <router-link to="/o-ubytovani">
           <div class="button-nav"><div class="text-nav text">O ubytování</div></div>
         </router-link>
-        <router-link to="/okoli-2">
+        <router-link to="/okoli">
           <div class="button-nav"><div class="text-nav text">Okolí</div></div>
         </router-link>
-        <router-link to="/fotogalerie-1">
+        <router-link to="/fotogalerie">
           <div class="button-nav"><div class="text-nav text">Fotogalerie</div></div>
         </router-link>
         <router-link to="/rezervace">
           <div class="button-nav"><div class="text-nav text">Rezervace</div></div>
         </router-link>
-        <router-link to="/kontakt-2">
+        <router-link to="/kontakt">
           <div class="button-nav"><div class="text-nav text">Kontakt</div></div>
         </router-link>
       </div>

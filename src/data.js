@@ -1,3 +1,5 @@
+import okoli from "@/components/Okoli.vue";
+
 export const imageContainer2Data = {
     src: "https://cdn.animaapp.com/projects/673b2aed8a1b7d25aab8cf0f/releases/673b2d66ac84e614e11f02a0/img/u-tresne-1.png",
 };

@@ -6,15 +6,15 @@
       <p class="description-footer subtext">...v srdci České Kanady</p>
     </div>
       <div class="button-container-footer">
-        <router-link to="/o-ubytovani-3">
+        <router-link to="/o-ubytovani">
           <div class="button-nav"><div class="text-nav text">O ubytování</div></div></router-link>
         <router-link to="/okoli">
           <div class="button-nav"><div class="text-nav text">Okolí</div></div></router-link>
-        <router-link to="/fotogalerie-1">
+        <router-link to="/fotogalerie">
           <div class="button-nav"><div class="text-nav text">Fotogalerie</div></div></router-link>
         <router-link to="/rezervace">
           <div class="button-nav"><div class="text-nav text">Rezervace</div></div></router-link>
-        <router-link to="/kontakt-2">
+        <router-link to="/kontakt">
           <div class="button-nav"><div class="text-nav text">Kontakt</div></div></router-link>
       </div>
   </footer>

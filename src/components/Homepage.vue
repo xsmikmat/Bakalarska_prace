@@ -1,37 +1,42 @@
 <template>
   <div class="screen">
-    <navigace_final />
+    <navigace_final/>
     <div class="page-item">
-      <h1 class="heading-1">Vítejte u nás na penzionu</h1>
+      <h1 class="heading-1">Penzion v srdci České Kanady</h1>
       <p class="heading-subtext subtext">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        Nisl tincidunt eget nullam non. Quis hendrerit dolor magna eget est
-        lorem ipsum</p>
+        Hledáte klid, samotu a relaxaci, jste turisté, cyklisté, rodiny s dětmi, chcete prožít víkend nebo pár dní s
+        přáteli uprostřed přírody? Vítejte u nás.</p>
       <div class="section-15">
         <router-link to="/rezervace">
           <div class="white-button heading-2">Rezervovat</div>
         </router-link
-        ><router-link to="/kontakt-2">
-        <div class="green-button heading-2">Kontakt</div>
-      </router-link
-      >
+        >
+        <router-link to="/kontakt-2">
+          <div class="green-button heading-2">Kontakt</div>
+        </router-link
+        >
       </div>
       <div class="img-container">
-        <img class="image" src="https://cdn.animaapp.com/projects/673b2aed8a1b7d25aab8cf0f/releases/673b2d66ac84e614e11f02a0/img/image-1.png" alt="image 1"/>
-        <img class="image-2 image" src="https://cdn.animaapp.com/projects/673b2aed8a1b7d25aab8cf0f/releases/673b2d66ac84e614e11f02a0/img/image-2.png" alt="image 2"/>
-        <img class="image-2 image" src="https://cdn.animaapp.com/projects/673b2aed8a1b7d25aab8cf0f/releases/673b2d66ac84e614e11f02a0/img/image-3.png" alt="image 3"/>
+        <img class="image"
+             src="https://cdn.animaapp.com/projects/673b2aed8a1b7d25aab8cf0f/releases/673b2d66ac84e614e11f02a0/img/image-1.png"
+             alt="image 1"/>
+        <img class="image-2 image"
+             src="https://cdn.animaapp.com/projects/673b2aed8a1b7d25aab8cf0f/releases/673b2d66ac84e614e11f02a0/img/image-2.png"
+             alt="image 2"/>
+        <img class="image-2 image"
+             src="https://cdn.animaapp.com/projects/673b2aed8a1b7d25aab8cf0f/releases/673b2d66ac84e614e11f02a0/img/image-3.png"
+             alt="image 3"/>
       </div>
     </div>
     <div class="page-item">
       <div class="heading-2">O penzionu Šmikmátor</div>
       <div class="lists">
-        <list :spolecnePrsotory021="list1Props.spolecnePrsotory021" :title="list1Props.title" />
-        <list :spolecnePrsotory021="list2Props.spolecnePrsotory021" :title="list2Props.title" />
-        <list  :spolecnePrsotory021="list3Props.spolecnePrsotory021" :title="list3Props.title" />
+        <list :spolecnePrsotory021="list1Props.spolecnePrsotory021" :title="list1Props.title"/>
+        <list :spolecnePrsotory021="list2Props.spolecnePrsotory021" :title="list2Props.title"/>
+        <list :spolecnePrsotory021="list3Props.spolecnePrsotory021" :title="list3Props.title"/>
       </div>
       <div class="icon-buttons-2">
-        <router-link to="/o-ubytovani-3">
+        <router-link to="/o-ubytovani">
           <div class="green-button subtext">Více informací</div>
         </router-link
         >
@@ -40,17 +45,16 @@
     <div class="page-item">
       <p class="zitky-a-aktivity-v-okol-2 heading-2">Zážitky a aktivity v okolí</p>
       <p class="lorem-ipsum-dolor-si-4 subtext">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-        sed do eiusmod tempor incididunt ut labore et dolore magna
-        aliqua. Nisl tincidunt eget nullam non. Quis
-        hendrerit dolor magna eget est lorem ipsum
+        Česká kanada představuje pro milovníky přírody a naší nádherné krajiny příležitost plně si prožít své koníčky a
+        zájmy. Připravili jsme proto tipy pro všechny kdo se k nám chystají. Je jedno zda jste plavec, cyklista, houbař
+        nebo turista.
       </p>
       <router-link to="/okoli-2">
         <div class="green-button subtext">Více informací</div>
       </router-link
       >
     </div>
-    <footer-final />
+    <footer-final/>
   </div>
 </template>
 
@@ -59,6 +63,7 @@ import ImgContainer from "./ImgContainer";
 import List from "./List";
 import Navigace_final from "@/components/navigace_final.vue";
 import FooterFinal from "@/components/footer_final.vue";
+
 export default {
   name: "Homepage",
   components: {
@@ -94,7 +99,6 @@ export default {
 
 <style lang="sass">
 @import '../../variables'
-
 
 
 .menu-1
@@ -223,7 +227,6 @@ export default {
   text-align: center
 
 
-
 .upraveno_logo-1-1-9
   height: 109px
   object-fit: cover
@@ -237,9 +240,6 @@ export default {
   position: absolute
   top: -92px
   width: 1504px
-
-
-
 
 
 @media (max-width: 480px)
