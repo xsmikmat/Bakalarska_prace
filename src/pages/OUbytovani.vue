@@ -60,13 +60,13 @@
 </template>
 
 <script>
-import Container4 from "./Container4";
-import ImageContainer5 from "./ImageContainer5";
-import ImageContainer62 from "./ImageContainer62";
-import ImageContainer4 from "./ImageContainer4";
-import Frame4273189062 from "./Frame4273189062";
-import XArticle2 from "./XArticle2";
-import Container from "./Container";
+import Container4 from "../components/Container4.vue";
+import ImageContainer5 from "../components/ImageContainer5.vue";
+import ImageContainer62 from "../components/ImageContainer62.vue";
+import ImageContainer4 from "../components/ImageContainer4.vue";
+import Frame4273189062 from "../components/Frame4273189062.vue";
+import XArticle2 from "../components/XArticle2.vue";
+import Container from "../components/Container.vue";
 import Navigace_final from "@/components/navigace_final.vue";
 import FooterFinal from "@/components/footer_final.vue";
 export default {

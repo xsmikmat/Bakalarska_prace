@@ -15,27 +15,7 @@
         <div class="supporting-text m3bodysmall"> Povinné pole</div>
       </div>
       <div class="field">
-        <input class="input-text m3bodylarge" name="inputtext" placeholder="Jméno" type="text" required v-model="formValues.name"/>
-        <div class="supporting-text m3bodysmall"> Povinné pole</div>
-      </div>
-      <div class="field">
         <input class="input-text m3bodylarge" name="inputtext" placeholder="Příjmení" type="text" required v-model="formValues.surname"/>
-        <div class="supporting-text m3bodysmall"> Povinné pole</div>
-      </div>
-      <div class="field">
-        <input class="input-text m3bodylarge" name="inputtext" placeholder="Ulice" type="text" required v-model="formValues.street"/>
-        <div class="supporting-text m3bodysmall"> Povinné pole</div>
-      </div>
-      <div class="field">
-        <input class="input-text m3bodylarge" name="inputtext" placeholder="Číslo popisné" type="number" required v-model="formValues.streetNumber"/>
-        <div class="supporting-text m3bodysmall"> Povinné pole</div>
-      </div>
-      <div class="field">
-        <input class="input-text m3bodylarge" name="inputtext" placeholder="Město" type="text" required v-model="formValues.city"/>
-        <div class="supporting-text m3bodysmall"> Povinné pole</div>
-      </div>
-      <div class="field">
-        <input class="input-text m3bodylarge" name="inputtext" placeholder="PSČ" type="text" required v-model="formValues.zip"/>
         <div class="supporting-text m3bodysmall"> Povinné pole</div>
       </div>
       <div class="field">
@@ -44,10 +24,6 @@
       </div>
       <div class="field">
         <input class="input-text m3bodylarge" name="inputtext" placeholder="Telefon" type="tel" required v-model="formValues.phone"/>
-        <div class="supporting-text m3bodysmall"> Povinné pole</div>
-      </div>
-      <div class="field">
-        <input class="input-text m3bodylarge" name="inputtext" placeholder="Poznámka" type="text" v-model="formValues.note"/>
         <div class="supporting-text m3bodysmall"> Povinné pole</div>
       </div>
       <button type="submit" class="component-1-variant6">
@@ -74,15 +50,9 @@ export default {
       formValues: {
         arrive: "",
         depart: "",
-        name: "",
         surname: "",
-        street: "",
-        streetNumber: "",
-        city: "",
-        zip: "",
         email: "",
         phone: "",
-        note: "",
       }
     };
   },

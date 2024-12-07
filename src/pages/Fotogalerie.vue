@@ -28,8 +28,8 @@
 </template>
 
 <script>
-import Contents from "./Contents";
-import Container from "./Container";
+import Contents from "../components/Contents.vue";
+import Container from "../components/Container.vue";
 import Navigace_final from "@/components/navigace_final.vue";
 import FooterFinal from "@/components/footer_final.vue";
 export default {

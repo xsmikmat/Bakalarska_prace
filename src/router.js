@@ -1,11 +1,11 @@
 import Vue from "vue";
 import {createWebHashHistory, createRouter} from "vue-router";
-import Fotogalerie from "./components/Fotogalerie";
-import Homepage from "./components/Homepage";
-import Rezervace from "./components/Rezervace";
-import Kontakt from "./components/Kontakt";
-import OUbytovani from "./components/OUbytovani";
-import Okoli from "./components/Okoli";
+import Fotogalerie from "./pages/Fotogalerie.vue";
+import Homepage from "./pages/Homepage.vue";
+import Rezervace from "./pages/Rezervace.vue";
+import Kontakt from "./pages/Kontakt.vue";
+import OUbytovani from "./pages/OUbytovani.vue";
+import Okoli from "./pages/Okoli.vue";
 import {
   fotogalerieData,
   homepageData,
@@ -42,7 +42,6 @@ export default createRouter({
     {
       path: "/okoli",
       component: Okoli,
-      props: { ...okoliData },
     },
     {
       path: "/",

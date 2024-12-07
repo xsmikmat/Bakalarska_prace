@@ -59,8 +59,8 @@
 </template>
 
 <script>
-import ImgContainer from "./ImgContainer";
-import List from "./List";
+import ImgContainer from "../components/ImgContainer.vue";
+import List from "../components/List.vue";
 import Navigace_final from "@/components/navigace_final.vue";
 import FooterFinal from "@/components/footer_final.vue";
 

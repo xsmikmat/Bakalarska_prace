@@ -1,4 +1,4 @@
-import okoli from "@/components/Okoli.vue";
+import okoli from "@/pages/Okoli.vue";
 
 export const imageContainer2Data = {
     src: "https://cdn.animaapp.com/projects/673b2aed8a1b7d25aab8cf0f/releases/673b2d66ac84e614e11f02a0/img/u-tresne-1.png",
@@ -578,53 +578,4 @@ export const oUbytovaniData = {
     frame4273189062Props: frame42731890622Data,
     xArticle21Props: xArticle22Data,
     xArticle22Props: xArticle23Data,
-};
-export const container43Data = {
-    title: "Co nabízí okolí",
-    description: "Různé výlety a aktivity pro všechny",
-};
-
-export const imageContainer55Data = {
-    src: "https://cdn.animaapp.com/projects/673b2aed8a1b7d25aab8cf0f/releases/673b2d66ac84e614e11f02a0/img/okoli-10-1.png",
-    className: "image-container-27",
-};
-
-export const frame427318906521Data = {
-    title: "Pro cyklisty",
-    subtitle: "Discover scenic routes",
-};
-
-export const frame427318906522Data = {
-    title: "Pro plavce a vodáky",
-    subtitle: "Cool off in local lakes",
-};
-
-export const textContent221Data = {
-    subtitle: "Zvůle",
-    title: "Velký písčitý rybník ve tvaru písmene V, obklopený lesem, s množstvím bludných balvanů ideálních na opalování u stejnojmenné vesnice Zvůle, od chalupy vzdálen vzdušnou čarou 900m. Ideální pro pěší výlet.",
-};
-
-export const textContent222Data = {
-    subtitle: "Landštejn",
-    title: "Zajeďte se podívat na hrad zničený úderem blesku a v posledních letech zrestaurovaný a krásně udržovaný. Více na www.hradlandstejn.cz",
-};
-
-export const okoliData = {
-    title1: "Doporučené aktivity",
-    title2: "Pro turisty",
-    subtitle1: "Explore nature trails",
-    title3: "Tour Image 1",
-    subtitle2: "Rozhledna na Havlově hoře",
-    spanText1: "Projíždíte-li po silnici  Dačice - Kunžak, určitě ji nepřehlédnete již od Markvarce nebo z druhé strany od Mostů. Cesta tam a zase zpátky od ",
-    spanText2: "Penzionu Šmikmátor ",
-    spanText3: "trvá necelou hodinu (asi 3,5 km), takže krásný výlet pro všechny.",
-    title4: "Tour Image 2",
-    title5: "Tour Image 3",
-    upraveno_Logo112: "https://cdn.animaapp.com/projects/673b2aed8a1b7d25aab8cf0f/releases/673b2d66ac84e614e11f02a0/img/upraveno-logo--1--1.png",
-    container4Props: container43Data,
-    imageContainer5Props: imageContainer55Data,
-    frame427318906521Props: frame427318906521Data,
-    frame427318906522Props: frame427318906522Data,
-    textContent221Props: textContent221Data,
-    textContent222Props: textContent222Data,
 };

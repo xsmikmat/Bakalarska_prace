@@ -5,7 +5,7 @@
         <navigace_final />
         <div class="list-7">
           <div class="container-17">
-            <h1 class="title-19 roboto-bold-black-40px">{{ title1 }}</h1>
+            <h1 class="title-19 roboto-bold-black-40px">Kontaktní informace</h1>
           </div>
           <div class="list-8">
             <div class="row-1">
@@ -69,9 +69,9 @@
 </template>
 
 <script>
-import Item32 from "./Item32";
-import Item42 from "./Item42";
-import Container from "./Container";
+import Item32 from "../components/Item32.vue";
+import Item42 from "../components/Item42.vue";
+import Container from "../components/Container.vue";
 import Navigace_final from "@/components/navigace_final.vue";
 import FooterFinal from "@/components/footer_final.vue";
 export default {
