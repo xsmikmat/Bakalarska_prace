@@ -3,19 +3,24 @@
     <navigace_final/>
     <form class="form-container" @submit.prevent="SubmitForm()">
       <div class="field">
+        <date-picker id="date-input" class="input-text m3bodylarge"placeholder="Den příjezdu"
+                     @focus="handleFocus('od')" @blur="handleBlur('od')" v-model="formValues.od"
+                      :aria-disabled="data">
+
+        </date-picker>
         <input id="date-input" class="input-text m3bodylarge" :type="arriveInputType" required
                placeholder="Den příjezdu"
-               @focus="handleFocus('arrive')" @blur="handleBlur('arrive')" v-model="formValues.arrive"/>
+               @focus="handleFocus('od')" @blur="handleBlur('od')" v-model="formValues.od"/>
         <div class="supporting-text m3bodysmall"> Povinné pole</div>
       </div>
       <div class="field">
         <input id="date-input" class="input-text m3bodylarge" :type="departInputType" required
                placeholder="Den odjezdu"
-               @focus="handleFocus('depart')" @blur="handleBlur('depart')" v-model="formValues.depart"/>
+               @focus="handleFocus('do')" @blur="handleBlur('do')" v-model="formValues.do"/>
         <div class="supporting-text m3bodysmall"> Povinné pole</div>
       </div>
       <div class="field">
-        <input class="input-text m3bodylarge" name="inputtext" placeholder="Příjmení" type="text" required v-model="formValues.surname"/>
+        <input class="input-text m3bodylarge" name="inputtext" placeholder="Příjmení" type="text" required v-model="formValues.prijmeni"/>
         <div class="supporting-text m3bodysmall"> Povinné pole</div>
       </div>
       <div class="field">
@@ -23,7 +28,7 @@
         <div class="supporting-text m3bodysmall"> Povinné pole</div>
       </div>
       <div class="field">
-        <input class="input-text m3bodylarge" name="inputtext" placeholder="Telefon" type="tel" required v-model="formValues.phone"/>
+        <input class="input-text m3bodylarge" name="inputtext" placeholder="Telefon" type="tel" required v-model="formValues.telefon"/>
         <div class="supporting-text m3bodysmall"> Povinné pole</div>
       </div>
       <button type="submit" class="component-1-variant6">
@@ -35,36 +40,55 @@
 
 <script>
 import Navigace_final from "@/components/navigace_final.vue";
+import {ref} from "vue";
 
 export default {
   name: "Rezervace",
+  setup (){
+    const data = ref({})
+    return{
+      data
+    }
+  },
   components: {
     Navigace_final,
   },
   data() {
     return {
-      placeholder1: "Den příjezdu",
-      placeholder2: "Den odjezdu",
       arriveInputType: "text",
       departInputType: "text",
       formValues: {
-        arrive: "",
-        depart: "",
-        surname: "",
+        od: "",
+        do: "",
+        prijmeni: "",
         email: "",
-        phone: "",
-      }
+        telefon: "",
+      },
     };
   },
   props: [
     "component1Variant6Props",
   ],
+  async created (){
+    await fetch ("http://127.0.0.1:8000/rezervace", {
+      method: 'GET'
+    })
+        .then (async (response)=>{
+          const data = await response.json ()
+          console.log ("data",data);
+
+          this.data=data;
+        })
+        .catch ((error)=>{
+          console.log (error)
+          return error})
+  },
   methods: {
     handleFocus(inputType) {
-      if (inputType === "arrive") {
+      if (inputType === "od") {
         this.arriveInputType = "date";
       }
-      if (inputType === "depart") {
+      if (inputType === "do") {
         this.departInputType = "date";
       }
     },
@@ -76,12 +100,21 @@ export default {
         this.departInputType = "text";
       }
     },
-
-
-    SubmitForm() {
-      console.log(this.formValues);
-      alert('Form submitted successfully!');
-      this.$router.push('/');
+    async SubmitForm() {
+      console.log(JSON.stringify(this.formValues))
+      await fetch (`http://127.0.0.1:8000/rezervace?od=${this.formValues.od}&do=${this.formValues.do}&prijmeni=${this.formValues.prijmeni}&email=${this.formValues.email}&telefon=${this.formValues.telefon}`,{
+        method:'POST'
+      })
+          .then (async (response)=>{
+            const data = await response.json ()
+            console.log ("data",data);
+            alert('Form submitted successfully!');
+            this.$router.push('/');
+          })
+          .catch ((error)=>{
+            console.log (error)
+            alert('Form submitted not successfully!');
+            return error})
     }
   }
 };
