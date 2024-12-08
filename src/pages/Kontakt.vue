@@ -2,10 +2,10 @@
   <div class="container-center-horizontal">
     <div class="screen">
       <div class="page">
-        <navigace_final />
+        <navigace_final/>
         <div class="list-7">
           <div class="container-17">
-            <h1 class="title-19 roboto-bold-black-40px">Kontaktní informace</h1>
+            <h1 class="heading-1">Kontaktní informace</h1>
           </div>
           <div class="list-8">
             <div class="row-1">
@@ -26,43 +26,47 @@
               />
             </div>
           </div>
-          <img
-              class="vector-200-1"
-              src="https://cdn.animaapp.com/projects/673b2aed8a1b7d25aab8cf0f/releases/673b2d66ac84e614e11f02a0/img/vector-200.svg"
-              alt="Vector 200"
-          />
         </div>
         <div class="list-9">
-          <div class="title-20 roboto-bold-black-40px">{{ title2 }}</div>
-          <div class="container-18">
-            <item42 :title="item421Props.title" :subtitle="item421Props.subtitle" />
-            <item42 :title="item422Props.title" :subtitle="item422Props.subtitle" :className="item422Props.className" />
-            <item42 :title="item423Props.title" :subtitle="item423Props.subtitle" :className="item423Props.className" />
-          </div>
-          <div class="list-10">
-            <div class="row-2">
-              <item42
-                  :title="item424Props.title"
-                  :subtitle="item424Props.subtitle"
-                  :className="item424Props.className"
-              />
-              <item42
-                  :title="item425Props.title"
-                  :subtitle="item425Props.subtitle"
-                  :className="item425Props.className"
-              />
-              <item42
-                  :title="item426Props.title"
-                  :subtitle="item426Props.subtitle"
-                  :className="item426Props.className"
-              />
+          <div class="title-20 heading-1">Důležité informace</div>
+          <div class="kontakt-info2">
+            <div class="container-18">
+              <item42 :title="item421Props.title" :subtitle="item421Props.subtitle"/>
+              <div class="item-3">
+                  <div class="text ">Provozovatel</div>
+                <p class="subtext">ŠMIKMÁTOR, s.r.o. <br>
+                  Palackého 101<br>
+                  612 00 Brno - Královo Pole<br>
+                  Česká Republika</p>
+              </div>
+              <item42 :title="item422Props.title" :subtitle="item422Props.subtitle"
+                      :className="item422Props.className"/>
+              <item42 :title="item423Props.title" :subtitle="item423Props.subtitle"
+                      :className="item423Props.className"/>
+            </div>
+              <div class="container-18">
+                <item42
+                    :title="item424Props.title"
+                    :subtitle="item424Props.subtitle"
+                    :className="item424Props.className"
+                />
+                <item42
+                    :title="item425Props.title"
+                    :subtitle="item425Props.subtitle"
+                    :className="item425Props.className"
+                />
+                <item42
+                    :title="item426Props.title"
+                    :subtitle="item426Props.subtitle"
+                    :className="item426Props.className"
+                />
             </div>
           </div>
         </div>
         <div class="section-23">
           <div class="map-container-1"></div>
         </div>
-        <footer-final />
+        <footer-final/>
       </div>
     </div>
   </div>
@@ -74,6 +78,7 @@ import Item42 from "../components/Item42.vue";
 import Container from "../components/Container.vue";
 import Navigace_final from "@/components/navigace_final.vue";
 import FooterFinal from "@/components/footer_final.vue";
+
 export default {
   name: "Kontakt",
   components: {
@@ -105,63 +110,6 @@ export default {
 <style lang="sass">
 @import '../../variables'
 
-.kontakt-2-1
-  align-items: flex-start
-  background-color: $white
-  display: flex
-  height: 1775px
-  overflow: hidden
-  width: 1512px
-
-.page-1
-  align-items: flex-end
-  background-color: $white
-  display: flex
-  flex-direction: column
-  position: relative
-  width: 1512px
-
-.upraveno_logo-1-1-14
-  cursor: pointer
-  height: 109px
-  margin-bottom: -36.50px
-  margin-left: -24.00px
-  margin-top: -36.50px
-  object-fit: cover
-  position: relative
-  width: 153px
-
-.penzion-v-srdci-esk-kanady-2
-  color: $black
-  font-weight: 400
-  height: 91px
-  line-height: 44px
-  margin-bottom: -26.50px
-  margin-top: -28.50px
-  position: relative
-  text-align: center
-  width: 454px
-
-.navigace-5
-  border-radius: 5px
-  height: 84px
-  margin-bottom: -24.00px
-  margin-right: -24.00px
-  margin-top: -24.00px
-  overflow: hidden
-  position: relative
-  width: 473px
-
-.button-container-13
-  align-items: flex-end
-  display: flex
-  gap: 21px
-  height: 44px
-  left: 20px
-  min-width: 433px
-  position: relative
-  top: 20px
-
 .list-7
   align-items: center
   align-self: stretch
@@ -185,14 +133,6 @@ export default {
   position: relative
   width: 100%
 
-.title-19
-  letter-spacing: 0
-  line-height: 48px
-  margin-top: -1.00px
-  position: relative
-  text-align: center
-  width: 520px
-
 .list-8
   align-items: center
   align-self: stretch
@@ -213,18 +153,10 @@ export default {
   position: relative
   width: 100%
 
-.vector-200-1
-  height: 1px
-  left: 0
-  object-fit: cover
-  position: absolute
-  top: 336px
-  width: 1512px
-
 .list-9
   align-items: center
-  align-self: stretch
   display: flex
+  flex-direction: column
   flex: 0 0 auto
   flex-wrap: wrap
   gap: 60px 60px
@@ -233,43 +165,25 @@ export default {
   position: relative
   width: 100%
 
-.title-20
-  letter-spacing: 0
-  line-height: 48px
-  margin-top: -1.00px
-  position: relative
-  text-align: center
-  width: 1144px
-
 .container-18
   align-items: flex-start
-  display: inline-flex
-  flex: 0 0 auto
+  display: flex
   flex-direction: column
   gap: 24px
   height: 484px
   position: relative
 
-.list-10
-  align-items: center
+.kontakt-info2
   display: flex
-  flex: 1
-  flex-direction: column
-  flex-grow: 1
-  height: 484px
-  justify-content: center
-  position: relative
+  flex-direction: row
 
-.row-2
-  align-items: flex-start
+.item-3
+  align-items: center
+  justify-content: center
   display: flex
   flex-direction: column
-  gap: 40px
-  height: 477px
-  margin-left: -4.00px
-  margin-right: -4.00px
+  gap: 8px
   position: relative
-  width: 650px
 
 .section-23
   align-items: center
