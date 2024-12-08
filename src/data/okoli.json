@@ -1,51 +1,86 @@
 [
   {
-    "nazev": "Rozhledna na Havlově Hoře",
-    "typ": ["pesky"],
-    "popis": "Nádherný výhled na Českou Kanadu. Ideální pro odpočinek a pozorování přírody.",
-    "vzdalenost": 2,
-    "obrazek": "rozhledna_havlova_hore.jpg"
-  },
-  {
-    "nazev": "Zvůle",
-    "typ": ["pesky", "voda"],
-    "popis": "Krásná obec s možností koupání v místním rybníku. Ideální pro relaxaci.",
-    "vzdalenost": 2,
-    "obrazek": "zvule.jpg"
-  },
-  {
     "nazev": "Ďáblova prdel",
     "typ": ["pesky"],
     "popis": "Zajímavý skalní útvar s legendou. Krátká, ale zajímavá túra.",
-    "vzdalenost": 0.3,
+    "vzdalenost": "300 m",
     "obrazek": "dablova_prdel.jpg"
   },
   {
     "nazev": "Landštejn",
     "typ": ["pesky", "cyklo"],
     "popis": "Zřícenina hradu s nádherným výhledem. Možnost prohlídky a procházek po okolí.",
-    "vzdalenost": 10,
+    "vzdalenost": "10 km",
     "obrazek": "landstejn.jpg"
   },
   {
     "nazev": "Markvarec",
     "typ": ["pesky", "cyklo"],
     "popis": "Krásná vesnička s možností cykloturistiky a pěších výletů do okolí.",
-    "vzdalenost": 6,
+    "vzdalenost": "6 km",
     "obrazek": "markvarec.jpg"
   },
   {
     "nazev": "Hladový rybník",
     "typ": ["pesky", "cyklo", "voda"],
     "popis": "Velký rybník s možností koupání, rybaření a cykloturistiky kolem. Ideální pro rodiny s dětmi.",
-    "vzdalenost": 5,
+    "vzdalenost": "5 km",
     "obrazek": "hladovy_rybnik.jpg"
   },
   {
     "nazev": "Český Rudolec",
     "typ": ["pesky", "cyklo"],
     "popis": "Malebné městečko s krásným zámkem. Možnost prohlídky zámku a procházek po městě.",
-    "vzdalenost": 7,
+    "vzdalenost": "7 km",
     "obrazek": "cesky_rudolec.jpg"
+  },
+  {
+    "nazev": "Vysoký kámen",
+    "typ": ["pesky"],
+    "popis": "Nejvyšší vrchol České Kanady s krásným výhledem na okolní přírodu. Oblíbený cíl turistů.",
+    "vzdalenost": "7 km",
+    "obrazek": ""
+  },
+  {
+    "nazev": "Skalní útvar Ďáblův chléb",
+    "typ": ["pesky"],
+    "popis": "Skalní útvar připomínající pecen chleba. Zajímavé místo s krátkou pěší trasou.",
+    "vzdalenost": "2 km",
+    "obrazek": ""
+  },
+  {
+    "nazev": "Rozhledna U Jakuba",
+    "typ": ["pesky", "cyklo"],
+    "popis": "Dřevěná rozhledna s panoramatickým výhledem na Českou Kanadu a okolní lesy.",
+    "vzdalenost": "2 km",
+    "obrazek": ""
+  },
+  {
+    "nazev": "Graselova sluj",
+    "typ": ["pesky"],
+    "popis": "Přírodní žulový převis, který kdysi sloužil jako úkryt známému loupežníkovi Graselovi.",
+    "vzdalenost": "12 km",
+    "obrazek": ""
+  },
+  {
+    "nazev": "Javořice",
+    "typ": ["cyklo"],
+    "popis": "Nejvyšší vrchol Českomoravské vrchoviny, vhodný pro cykloturistiku i pěší výlety.",
+    "vzdalenost": "27 km",
+    "obrazek": ""
+  },
+  {
+    "nazev": "Rybník Zvůle",
+    "typ": ["voda", "pesky"],
+    "popis": "Oblíbený rybník ke koupání, rybaření a odpočinku v přírodě. Ideální místo pro rodiny.",
+    "vzdalenost": "1 km",
+    "obrazek": ""
+  },
+  {
+    "nazev": "Plavecký bazén Jindřichův Hradec",
+    "typ": ["voda"],
+    "popis": "Moderní aquapark s tobogány, bazény a wellness zónou. Vhodné pro celou rodinu.",
+    "vzdalenost": "25 km",
+    "obrazek": ""
   }
 ]

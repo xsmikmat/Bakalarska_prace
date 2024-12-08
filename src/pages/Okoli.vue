@@ -50,6 +50,7 @@
           </div>
           <div class="text-content-6">
             <div class="subtext">{{ activity.nazev }}</div>
+            <p>{{activity.vzdalenost}}</p>
             <p class="text">{{ activity.popis }}</p>
           </div>
         </div>
