@@ -3,7 +3,8 @@
     <navigace_final/>
     <form class="form-container" @submit.prevent="SubmitForm()">
       <div class="date-field">
-        <DatePicker ref="datePicker" v-model="formValues.oddo" selectionMode="range" inputId="in_label" class="date-input" @change="handleDateChange"/>
+        <DatePicker ref="datePicker" v-model="formValues.oddo"
+                    :disabled-dates="data" selectionMode="range" inputId="in_label" class="date-input" @change="handleDateChange"/>
         <label for="in_label" class="input-text m3bodylarge">Datum pobytu</label>
       </div>
       <div class="field">
@@ -36,7 +37,8 @@ import {ref} from "vue";
 export default {
   name: "Rezervace",
   setup() {
-    const data = ref({})
+    //const data = ref({})
+    const data= ['2024-12-09', '2024-12-10'].map(dateStr => new Date(dateStr));
     return {
       data
     }
@@ -67,6 +69,8 @@ export default {
         .then(async (response) => {
           const data = await response.json()
           console.log("Original data", data);
+          /*const data = await response.json();
+          console.log("Original data", data);
           const allDates = [];
 
           data.forEach(range => {
@@ -80,7 +84,7 @@ export default {
           });
 
           console.log("All dates", allDates);
-          this.data = allDates;
+          this.data = allDates; // Ensure this is an array of Date objects*/
         })
         .catch((error) => {
           console.log(error)
