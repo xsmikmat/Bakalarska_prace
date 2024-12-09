@@ -11,7 +11,7 @@
           <div class="white-button heading-2">Rezervovat</div>
         </router-link
         >
-        <router-link to="/kontakt-2">
+        <router-link to="/kontakt">
           <div class="green-button heading-2">Kontakt</div>
         </router-link
         >
@@ -49,7 +49,7 @@
         zájmy. Připravili jsme proto tipy pro všechny kdo se k nám chystají. Je jedno zda jste plavec, cyklista, houbař
         nebo turista.
       </p>
-      <router-link to="/okoli-2">
+      <router-link to="/okoli">
         <div class="green-button subtext">Více informací</div>
       </router-link
       >
