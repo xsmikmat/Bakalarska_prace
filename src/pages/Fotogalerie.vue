@@ -1,30 +1,43 @@
 <template>
   <div class="screen">
     <navigace_final />
-    <contents
-          :title="contents1Props.title"
-          :imageContainer1Props="contents1Props.imageContainer1Props"
-          :imageContainer2Props="contents1Props.imageContainer2Props"
-          :imageContainer3Props="contents1Props.imageContainer3Props"
-          :imageContainer4Props="contents1Props.imageContainer4Props"
-        />
-        <contents
-          :title="contents2Props.title"
-          :imageContainer1Props="contents2Props.imageContainer1Props"
-          :imageContainer2Props="contents2Props.imageContainer2Props"
-          :imageContainer3Props="contents2Props.imageContainer3Props"
-          :imageContainer4Props="contents2Props.imageContainer4Props"
-        />
-        <contents
-          :title="contents3Props.title"
-          :imageContainer1Props="contents3Props.imageContainer1Props"
-          :imageContainer2Props="contents3Props.imageContainer2Props"
-          :imageContainer3Props="contents3Props.imageContainer3Props"
-          :imageContainer4Props="contents3Props.imageContainer4Props"
-        />
-        <footer-final />
+    <div class="contents">
+      <div class="container">
+        <div class="title heading-2">Apartmán U Třešně</div>
+      </div>
+      <div class="section-1">
+        <div class="image-container-foto">
+          <img
+            class="foto-img"
+            src="../../img/u-tresne-02-1.png"
+            alt="U Tresne 02 1"
+          />
+        </div>
+        <div class="image-container-foto">
+          <img
+            class="foto-img"
+            src="../../img/u-tresne-1.png"
+            alt="U Tresne 02 1"
+          />
+        </div>
+        <div class="image-container-foto">
+          <img
+            class="foto-img"
+            src="../../img/u-tresne05-1.png"
+            alt="U Tresne 02 1"
+          />
+        </div>
+        <div class="image-container-foto">
+          <img
+            class="foto-img"
+            src="../../img/u-tresne-04-1.png"
+            alt="U Tresne 02 1"
+          />
+        </div>
+      </div>
+    </div>
+    <footer-final />
   </div>
-
 </template>
 
 <script>
@@ -38,7 +51,7 @@ export default {
     FooterFinal,
     Navigace_final,
     Contents,
-    Container
+    Container,
   },
   props: [
     "upraveno_Logo111",
@@ -53,9 +66,71 @@ export default {
     "contents2Props",
     "contents3Props",
   ],
+  mounted() {
+    console.log(this.contents1Props);
+  },
 };
 </script>
 
 <style lang="sass">
 @import '../../variables'
+
+.button-container-footer
+  align-items: flex-start
+  display: flex
+  flex-direction: column
+  position: relative
+  top: 20px
+  padding-bottom: 60px
+  height: fit-content
+  overflow: hidden
+  padding: 80px
+  width: fit-content
+
+.footer
+  align-items: center
+  background-color: transparent
+  display: flex
+  justify-content: center
+  gap: 60px
+  padding: 20px 80px
+  position: relative
+  width: 100%
+
+.container-footer
+  align-items: flex-start
+  display: flex
+  flex-direction: column
+  position: relative
+
+.description-footer
+  color: $gray
+  font-weight: 600
+  line-height: 44px
+  position: relative
+
+@media (max-width: 468px)
+  .footer
+    flex-direction: column
+    height: 100%
+    width: 100%
+    gap: 0px
+  .upraveno_logo
+    display: none
+  .button-container-footer
+    align-items: center
+    justify-content: center
+    height: fit-content
+    justify-content: center
+    overflow: hidden
+    position: relative
+    width: fit-content
+    padding: 0px
+  .container-footer
+    align-items: center
+    height: fit-content
+    justify-content: center
+    overflow: hidden
+    position: relative
+    width: fit-content
 </style>
