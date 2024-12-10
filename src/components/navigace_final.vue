@@ -18,6 +18,9 @@
         <router-link to="/kontakt">
           <div class="button-nav"><div class="text-nav text">Kontakt</div></div></router-link>
       </div>
+    </div>
+
+    <div class="mobile-menu">
       <img class="menu-1" src="../../img/icon_burger.png" alt="menu" @click="toggleActive" />
       <div class="button-container-9" :class="{ 'active': active }" v-if="active">
         <router-link to="/o-ubytovani">
@@ -90,11 +93,14 @@ export default {
   margin-top: -24.00px
   overflow: hidden
   position: relative
-.menu-1
+.mobile-menu .menu-1
   cursor: pointer
   height: 24px
   position: relative
   width: 24px
+.mobile-menu .button-container-9
+  display: flex
+  flex-direction: column  
 .header
   align-items: center
   align-self: stretch
@@ -156,13 +162,13 @@ export default {
     display: none
   .nav-header
     font-size: 16px !important
-  .menu-1
+  .mobile-menu
     display: block
 
 @media screen and (min-width: 990px)
   .navigace
     display: flex
-  .menu-1
+  .mobile-menu
     display: none
 
 
