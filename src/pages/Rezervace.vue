@@ -4,7 +4,7 @@
     <form class="form-container" @submit.prevent="SubmitForm()">
       <div class="date-field">
         <DatePicker ref="datePicker" v-model="formValues.oddo"
-                    :disabled-dates="data" selectionMode="range" inputId="in_label" class="date-input" @change="handleDateChange"/>
+                    :disabled-dates="data" selectionMode="range" inputId="in_label" class="date-input"/>
         <label for="in_label" class="input-text m3bodylarge">Datum pobytu</label>
       </div>
       <div class="field">
@@ -37,8 +37,8 @@ import {ref} from "vue";
 export default {
   name: "Rezervace",
   setup() {
-    //const data = ref({})
-    const data= ['2024-12-09', '2024-12-10'].map(dateStr => new Date(dateStr));
+    const data = ref([])
+    //const data= ['2024-12-09', '2024-12-10'].map(dateStr => new Date(dateStr));
     return {
       data
     }
@@ -49,8 +49,6 @@ export default {
   },
   data() {
     return {
-      arriveInputType: "text",
-      departInputType: "text",
       formValues: {
         oddo: [],
         prijmeni: "",
@@ -59,22 +57,17 @@ export default {
       },
     };
   },
-  props: [
-    "component1Variant6Props",
-  ],
   async created() {
     await fetch("http://127.0.0.1:8000/rezervace", {
       method: 'GET'
     })
         .then(async (response) => {
-          const data = await response.json()
-          console.log("Original data", data);
-          /*const data = await response.json();
+          const data = await response.json();
           console.log("Original data", data);
           const allDates = [];
 
           data.forEach(range => {
-            const [startDate, endDate] = range.map(date => new Date(date)); // Convert to Date objects
+            const [startDate, endDate] = range.map(date => new Date(date));
             let currentDate = new Date(startDate);
 
             while (currentDate <= endDate) {
@@ -84,7 +77,7 @@ export default {
           });
 
           console.log("All dates", allDates);
-          this.data = allDates; // Ensure this is an array of Date objects*/
+          this.data = allDates; // Ensure this is an array of Date objects
         })
         .catch((error) => {
           console.log(error)
@@ -92,14 +85,13 @@ export default {
         })
   },
   methods: {
-  handleDateChange() {
-    if (this.formValues.oddo.length === 1) {
-      console.log("Selected date range:", this.formValues.oddo);
-      this.$refs.datePicker.$el.hideOverlay();
-    }},
     async SubmitForm() {
       console.log(JSON.stringify(this.formValues))
-      await fetch(`http://127.0.0.1:8000/rezervace?od=${this.formValues.od}&do=${this.formValues.do}&prijmeni=${this.formValues.prijmeni}&email=${this.formValues.email}&telefon=${this.formValues.telefon}`, {
+      const date = this.formValues.oddo[0];
+      const od = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`;
+      const date2 = this.formValues.oddo[1];
+      const do1 = `${date2.getFullYear()}-${String(date2.getMonth() + 1).padStart(2, '0')}-${String(date2.getDate()).padStart(2, '0')}`;
+      await fetch(`http://127.0.0.1:8000/rezervace?od=${od}&do=${do1}&prijmeni=${this.formValues.prijmeni}&email=${this.formValues.email}&telefon=${this.formValues.telefon}`, {
         method: 'POST'
       })
           .then(async (response) => {
