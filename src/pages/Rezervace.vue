@@ -3,8 +3,12 @@
     <navigace_final/>
     <form class="form-container" @submit.prevent="SubmitForm()">
       <div class="date-field">
-        <DatePicker ref="datePicker" v-model="formValues.oddo"
-                    :disabled-dates="data" selectionMode="range" inputId="in_label" class="date-input"/>
+        <DatePicker ref="datePicker"
+                    v-model="formValues.oddo"
+                    :disabled-dates="data"
+                    selectionMode="range"
+                    inputId="in_label"
+                    class="date-input"/>
         <label for="in_label" class="input-text m3bodylarge">Datum pobytu</label>
       </div>
       <div class="field">
@@ -18,7 +22,7 @@
         <div class="supporting-text m3bodysmall"> Povinné pole</div>
       </div>
       <div class="field">
-        <input class="input-text m3bodylarge" name="inputtext" placeholder="Telefon" type="tel" required
+        <input class="input-text m3bodylarge" name="inputtext" placeholder="Telefon" type="number" required
                v-model="formValues.telefon"/>
         <div class="supporting-text m3bodysmall"> Povinné pole</div>
       </div>
@@ -85,7 +89,28 @@ export default {
         })
   },
   methods: {
+    areDatesOverlapping(startDate, endDate, allDates) {
+      const start = new Date(startDate);
+      const end = new Date(endDate);
+
+      let currentDate = new Date(start);
+      while (currentDate <= end) {
+        const formattedDate = currentDate.toISOString().split("T")[0];
+        if (allDates.some(date => new Date(date).toISOString().split("T")[0] === formattedDate)) {
+          return true; // Překryv nalezen
+        }
+        currentDate.setDate(currentDate.getDate() + 1); // Posuň datum o 1 den
+      }
+      return false; // Žádný překryv
+    },
     async SubmitForm() {
+      const startDate = this.formValues.oddo[0];
+      const endDate = this.formValues.oddo[1];
+
+      if (this.areDatesOverlapping(startDate, endDate, this.data)) {
+        alert("Vybraná data se překrývají s již rezervovanými daty.");
+        return;
+      }
       console.log(JSON.stringify(this.formValues))
       const date = this.formValues.oddo[0];
       const od = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`;

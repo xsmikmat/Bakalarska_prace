@@ -147,7 +147,6 @@ export default {
 @media screen and (max-width: 1400px)
   .nav-header
     display: none !important
-
   .nav-header
     font-size: 16px !important
 @media screen and (max-width: 991px)
@@ -163,7 +162,8 @@ export default {
 @media screen and (min-width: 990px)
   .navigace
     display: flex
-
+  .menu-1
+    display: none
 
 
 </style>

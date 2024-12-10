@@ -1,5 +1,3 @@
-import okoli from "@/pages/Okoli.vue";
-
 export const imageContainer2Data = {
     src: "https://cdn.animaapp.com/projects/673b2aed8a1b7d25aab8cf0f/releases/673b2d66ac84e614e11f02a0/img/u-tresne-1.png",
 };
@@ -14,10 +12,10 @@ export const imageContainer4Data = {
 
 export const contents1Data = {
     title: "Apartmán U Třešně",
-    imageSrc1: "https://cdn.animaapp.com/projects/673b2aed8a1b7d25aab8cf0f/releases/67438376dd7a660b98eb30a9/img/u-tresne-02-1.png",
-    imageSrc2: "https://cdn.animaapp.com/projects/673b2aed8a1b7d25aab8cf0f/releases/673b2d66ac84e614e11f02a0/img/u-tresne-1.png",
-    imageSrc3: "https://cdn.animaapp.com/projects/673b2aed8a1b7d25aab8cf0f/releases/67438376dd7a660b98eb30a9/img/u-tresne05-1.png",
-    imageSrc4: "https://cdn.animaapp.com/projects/673b2aed8a1b7d25aab8cf0f/releases/67438376dd7a660b98eb30a9/img/u-tresne-04-1.png",
+    imageSrc1: "u-tresne-02-1.png",
+    imageSrc2: "u-tresne-1.png",
+    imageSrc3: "u-tresne05-1.png",
+    imageSrc4: "u-tresne-04-1.png",
 
 };
 
@@ -262,45 +260,6 @@ export const xSection24Data = {
     imageContainer32Props: imageContainer311Data,
     imageContainer33Props: imageContainer312Data,
     imageContainer34Props: imageContainer313Data,
-};
-
-export const contents33Data = {
-    xSection2Props: xSection24Data,
-};
-
-export const component126Data = {
-    oUbytovn: "O ubytování",
-};
-
-export const component127Data = {
-    okol: "Okolí",
-};
-
-export const component128Data = {
-    fotogalerie: "Fotogalerie",
-};
-
-export const component129Data = {
-    rezervace: "Rezervace",
-};
-
-export const component130Data = {
-    kontakt: "Kontakt",
-};
-
-export const fotogalerie3Data = {
-    upraveno_Logo111: "https://cdn.animaapp.com/projects/673b2aed8a1b7d25aab8cf0f/releases/673b2d66ac84e614e11f02a0/img/upraveno-logo--1--1.png",
-    title: "Apartmán <br />U Třešně",
-    description: "Discover Apartment 1 with these beautiful photos.",
-    upraveno_Logo112: "https://cdn.animaapp.com/projects/673b2aed8a1b7d25aab8cf0f/releases/673b2d66ac84e614e11f02a0/img/upraveno-logo--1--1.png",
-    xSection2Props: xSection22Data,
-    contents31Props: contents32Data,
-    contents32Props: contents33Data,
-    component126Props: component126Data,
-    component127Props: component127Data,
-    component128Props: component128Data,
-    component129Props: component129Data,
-    component130Props: component130Data,
 };
 
 export const textField2Data = {

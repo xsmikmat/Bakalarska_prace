@@ -97,8 +97,3 @@ async def new_reservation (
         potvrzeni=False)
     array.append(rezervace)
     return rezervace
-
-
-@app.post("/rezervace1")
-async def ReservationSurname (prijmeni:str):
-    pass
