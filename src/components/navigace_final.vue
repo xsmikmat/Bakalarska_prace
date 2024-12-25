@@ -3,35 +3,8 @@
     <router-link to="/"
     ><img class="logo" src="../../img/upraveno-logo--1--1.png" alt="logo"/></router-link>
     <p class="heading-2 nav-header">Do České Kanady víza nepotřebujete</p>
-    <div class="navigace">
-      <div class="button-nav-container">
-        <router-link to="/o-ubytovani">
-          <div class="button-nav">
-            <div class="text-nav text">O ubytování</div>
-          </div>
-        </router-link>
-        <router-link to="/okoli">
-          <div class="button-nav">
-            <div class="text-nav text">Okolí</div>
-          </div>
-        </router-link>
-        <router-link to="/fotogalerie">
-          <div class="button-nav">
-            <div class="text-nav text">Fotogalerie</div>
-          </div>
-        </router-link>
-        <router-link to="/rezervace">
-          <div class="rezervace-nav-button">
-            <div class="rezervace-nav-text fredoka-semi-bold-surf-16px">Rezervace</div>
-          </div>
-        </router-link>
-        <router-link to="/kontakt">
-          <div class="button-nav">
-            <div class="text-nav text">Kontakt</div>
-          </div>
-        </router-link>
-      </div>
-      <img class="menu-1" src="../../img/icon_burger.png" alt="menu" @click="toggleActive"/>
+    <div class="mobile-menu">
+      <img class="menu-1" src="../../img/icon_burger.png" alt="menu" @click="toggleActive" />
       <div class="button-container-9" :class="{ 'active': active }" v-if="active">
         <router-link to="/o-ubytovani">
           <div class="button-nav">
@@ -112,12 +85,15 @@ export default {
   margin-top: -24.00px
   position: relative
 
-.menu-1
+.mobile-menu .menu-1
   cursor: pointer
   height: 24px
   position: relative
   width: 24px
 
+.mobile-menu .button-container-9
+  display: flex
+  flex-direction: column
 .header
   align-items: center
   display: flex
@@ -180,28 +156,33 @@ export default {
   position: relative
   width: 100px
 
+@media screen and (max-width: 991px)
+  .nav-header
+    display: none !important
+  .navigace
+    display: none
+  .mobile-menu
+    display: block
+
 @media (min-width: 480px)
   .navigace
     display: flex
-  .menu-1
+  .mobile-menu
     display: none
 
 @media (max-width: 480px)
-  .button-nav-container
+  .navigace
     display: none
-  .nav-header
-    display: none
-  .menu-1
+  .mobile-menu .button-container-9
+    position: absolute
+    top: 100%
+    left: 0
+    width: 100%
+    z-index: 9999
+    background-color: $white
+    padding: 10px 20px
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1)
+    border-radius: 4px
     display: flex
-  .button-container-9
-    align-items: center
-    display: block
-    gap: 21px
-    left: 0 // Align it to the left edge
-    background-color: $white // Add a background color for better visibility
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) // Add a slight shadow for distinction
-    z-index: 10 // Ensure it appears above other elements
-    width: fit-content
-    padding: 50px 80px
-
+    flex-direction: column
 </style>
