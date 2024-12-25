@@ -125,14 +125,14 @@ export default {
   text-align: center
   margin: 0 auto
 
-.img_container
+.img-container
   align-items: center
   display: flex
   height: auto
   justify-content: center
   overflow: hidden
   position: relative
-  width: 100%
+  width: 105%
 
 .image
   height: 250px
@@ -144,7 +144,6 @@ export default {
 .section-15
   align-items: center
   display: flex
-  flex: 0 0 auto
   gap: 50px
   justify-content: center
   position: relative
@@ -197,7 +196,7 @@ export default {
   gap: 40px
   justify-content: center
   position: relative
-  width: 80%
+  width: 100%
 
 .icon-buttons-2
   align-items: center
@@ -209,14 +208,6 @@ export default {
   position: relative
   width: 1260px
 
-.vce-informac-2
-  color: $surf
-  font-weight: 600
-  line-height: 44px
-  margin-top: -1.00px
-  position: relative
-  white-space: nowrap
-  width: fit-content
 
 .lorem-ipsum-dolor-si-4
   align-self: stretch
@@ -226,56 +217,7 @@ export default {
   position: relative
   text-align: center
 
-
-.upraveno_logo-1-1-9
-  height: 109px
-  object-fit: cover
-  position: relative
-  width: 153px
-
-.vector-200
-  height: 1px
-  left: 1125px
-  object-fit: cover
-  position: absolute
-  top: -92px
-  width: 1504px
-
-
 @media (max-width: 480px)
-  .page-item
-    align-items: center
-    justify-content: center
-    display: flex
-    flex: 0 0 auto
-    flex-direction: column
-    gap: 8px
-    padding: 20px 20px
-    position: relative
-    width: 100%
-  .heading-1
-    font-size: 36px !important
-    font-weight: 200 !important
-    line-height: 44px
-    margin-top: -1.00px
-    position: relative
-    text-align: center
-  .heading-2
-    font-size: 24px !important
-    font-weight: 200 !important
-    line-height: 24px
-    margin-top: -1.00px
-    position: relative
-    text-align: center
-    flex-wrap: wrap
-
-  .subtext
-    font-size: 16px !important
-    font-weight: 200 !important
-    line-height: 24px
-    margin-top: -1.00px
-    position: relative
-    text-align: center
   .section-15
     gap: 8px
     flex-direction: column

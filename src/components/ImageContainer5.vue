@@ -1,5 +1,5 @@
 <template>
-  <div :class="[`image-container-24`, className || ``]"><img class="image-1-6" :src="src" alt="image 1" /></div>
+  <div :class="[`image-container-24`, className || ``]"></div>
 </template>
 
 <script>

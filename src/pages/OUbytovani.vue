@@ -1,85 +1,75 @@
 <template>
-  <div class="container-center-horizontal">
-    <div class="screen">
-      <div class="page">
-        <navigace_final />
-        <div class="page-item-1">
-          <container4 :title="container4Props.title" :description="container4Props.description" />
-          <image-container5 :src="imageContainer51Props.src" />
+  <div class="screen">
+    <navigace_final/>
+    <div class="okoli-uvod">
+      <div class="heading-text-div">
+        <h1 class="heading-1">O ubytování</h1>
+        <p class="description-18 subtext">Zažijte pohodlnou a krásnou dovolenou</p>
+      </div>
+      <div class="image-container-okoli"><img class="image-okoli" src="../../img/s-obrazem-1.png" alt="image 1"/></div>
+    </div>
+    <div class="page-item-1">
+      <div class="okoli-uvod">
+        <div class="image-container-okoli">
+          <img class="image-ubytko1" src="../../img/s-obrazem-1.png" alt="image 2"/>
         </div>
-        <div class="page-item-1">
-          <image-container5 :src="imageContainer52Props.src" :className="imageContainer52Props.className" />
-          <div class="container-28">
-            <div class="container-29">
-              <div class="title-37 heading-2">{{ title1 }}</div>
-            </div>
-            <div class="list-17">
-              <div class="row-8">
-                <div class="card-5">
-                  <image-container5 :src="imageContainer53Props.src" :className="imageContainer53Props.className" />
-                  <div class="text-content-5">
-                    <component1-variant6
-                        :potvrditRezervaci="component1Variant6Props.potvrditRezervaci"
-                        :className="component1Variant6Props.className"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
+        <div class="oubytovani-fotogalerie">
+          <div class="heading-2">Prohlédněte si naše pokoje</div>
+          <div class="image-container-okoli">
+            <img class="image-ubytko2" src="../../img/u-tresne-1.png" alt="image 2"/>
           </div>
+          <router-link to="/fotogalerie">
+            <div class="green-button subtext">Fotogalerie</div>
+          </router-link>
         </div>
-        <div class="contents-6">
-          <div class="container-30">
-            <div class="container-31">
-              <div class="title-38 heading-1">{{ title2 }}</div>
-              <p class="description-17 subtext">{{ description }}</p>
-            </div>
-            <image-container62 />
-          </div>
-          <div class="list-18">
-            <div class="row-9">
-              <div class="article-4">
-                <image-container4 :frameProps="imageContainer4Props.frameProps" />
-                <frame4273189062 :title="frame4273189062Props.title" :subtitle="frame4273189062Props.subtitle" />
-              </div>
-              <x-article2
-                  :frameProps="xArticle21Props.frameProps"
-                  :frame4273189062Props="xArticle21Props.frame4273189062Props"
-              />
-              <x-article2
-                  :frameProps="xArticle22Props.frameProps"
-                  :frame4273189062Props="xArticle22Props.frame4273189062Props"
-              />
-            </div>
-          </div>
-        </div>
-        <footer-final />
       </div>
     </div>
+    <div class="contents-6">
+      <div class="container-30">
+        <div class="heading-text-div">
+          <div class="heading-1">Co nabízíme dál</div>
+          <p class="description-18 subtext">Relax a nejrůznější aktivity</p>
+        </div>
+        <img class="image-ubytko2" style="width: 35%" src="../../img/img-2624-2.png" alt="IMG_2624 1"/>
+      </div>
+      <div class="row-9">
+        <div class="article-5">
+          <div class="frame"><img class="icon-for" src="../../img/img-2621-1.png" alt="icon-for-email 1"/></div>
+          <div class="frame-ubytko-text">
+            <div class="description-19 subtext">Venkovní aktivity</div>
+            <p class="subtitle-11 text">Volejbal, stolní tenis, kolárna, trampolína</p>
+          </div>
+        </div>
+        <div class="article-5">
+          <div class="frame"><img class="icon-for" src="../../img/img-2621-1.png" alt="icon-for-email 1"/></div>
+          <div class="frame-ubytko-text">
+            <div class="description-19 subtext">Společné prostory</div>
+            <p class="subtitle-11 text">1 velká společenská místnost s kuchní, 1 místnost s kobercem</p>
+          </div>
+        </div>
+        <div class="article-5">
+          <div class="frame"><img class="icon-for" src="../../img/img-2621-1.png" alt="icon-for-email 1"/></div>
+          <div class="frame-ubytko-text">
+            <div class="description-19 subtext">Vnitřní aktivity a vybavení</div>
+            <p class="subtitle-11 text">Šipky, sauna, kulečník, výčep, kávovar</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer-final/>
   </div>
 </template>
 
 <script>
-import Container4 from "../components/Container4.vue";
 import ImageContainer5 from "../components/ImageContainer5.vue";
-import ImageContainer62 from "../components/ImageContainer62.vue";
-import ImageContainer4 from "../components/ImageContainer4.vue";
-import Frame4273189062 from "../components/Frame4273189062.vue";
-import XArticle2 from "../components/XArticle2.vue";
-import Container from "../components/Container.vue";
 import Navigace_final from "@/components/navigace_final.vue";
 import FooterFinal from "@/components/footer_final.vue";
+
 export default {
   name: "OUbytovani",
   components: {
     FooterFinal,
-    Container4,
     ImageContainer5,
-    ImageContainer62,
-    ImageContainer4,
-    Frame4273189062,
-    XArticle2,
-    Container,
     Navigace_final,
   },
   props: [
@@ -105,97 +95,51 @@ export default {
 <style lang="sass">
 @import '../../variables'
 
-
-
-.page-item-1
+.heading-text-div
   align-items: center
-  align-self: stretch
   display: flex
-  flex: 0 0 auto
+  flex-direction: column
   gap: 20px
   justify-content: center
+  position: relative
   padding: 20px 80px
-  position: relative
-  width: 100%
 
-.container-28
-  align-items: center
-  display: flex
-  flex: 1
-  flex-direction: column
-  flex-grow: 1
-  gap: 44px
-  justify-content: center
-  position: relative
-
-.container-29
-  align-items: flex-start
+.description-18, .description-19
   align-self: stretch
-  display: flex
-  flex: 0 0 auto
-  flex-direction: column
-  gap: 24px
-  position: relative
-  width: 100%
-
-.title-37
-  align-self: stretch
-  color: $black
-  font-weight: 400
-  line-height: 44px
-  margin-top: -1.00px
+  color: $gray
+  font-weight: 600
   position: relative
   text-align: center
 
-.list-17
+.oubytovani-fotogalerie
   align-items: center
-  align-self: stretch
   display: flex
-  flex: 0 0 auto
   flex-direction: column
   gap: 40px
   justify-content: center
   position: relative
-  width: 100%
+  height: 400px
 
-.row-8
-  align-items: flex-start
-  align-self: stretch
-  display: flex
-  flex: 0 0 auto
-  gap: 40px
-  position: relative
+.image-ubytko1
+  height: 400px
   width: 100%
-
-.card-5
-  align-items: center
-  border: 1px solid
-  border-color: $black-2
-  border-radius: 6px
-  display: flex
-  flex: 1
-  flex-direction: column
-  flex-grow: 1
-  overflow: hidden
+  object-fit: cover
   position: relative
 
-.text-content-5
-  align-items: center
-  align-self: stretch
-  display: flex
-  flex: 0 0 auto
-  flex-direction: column
-  gap: 4px
-  justify-content: center
-  padding: 18px 12px 12px
-  position: relative
+.image-ubytko2
   width: 100%
+  object-fit: cover
+  position: relative
+  height: 250px
+
+.image-container-22
+  display: flex
+  height: 250px
+  width: 25%
 
 .contents-6
   align-items: center
-  align-self: stretch
   display: flex
-  flex: 0 0 auto
   flex-direction: column
   gap: 20px
   justify-content: center
@@ -205,50 +149,10 @@ export default {
 
 .container-30
   align-items: center
-  align-self: stretch
   display: flex
-  flex: 0 0 auto
   gap: 60px
-  justify-content: center
-  position: relative
+  justify-content: space-between
   width: 100%
-
-.container-31
-  align-items: flex-start
-  display: flex
-  flex: 1
-  flex-direction: column
-  flex-grow: 1
-  gap: 24px
-  position: relative
-
-.title-38
-  align-self: stretch
-  color: $black
-  font-weight: 400
-  line-height: 100px
-  margin-top: -1.00px
-  position: relative
-
-.description-17
-  align-self: stretch
-  color: $gray
-  font-weight: 600
-  line-height: 44px
-  position: relative
-
-.list-18
-  align-items: center
-  align-self: stretch
-  display: flex
-  flex: 0 0 auto
-  flex-direction: column
-  gap: 40px
-  justify-content: center
-  padding: 20px 0px
-  position: relative
-  width: 100%
-
 .row-9
   align-items: center
   align-self: stretch
@@ -258,7 +162,28 @@ export default {
   position: relative
   width: 100%
 
-.article-4
+.frame-ubytko-text
+  align-items: flex-start
+  display: flex
+  flex: 1
+  flex-direction: column
+  flex-grow: 1
+  gap: 8px
+  position: relative
+
+.subtitle-11
+  color: $gray
+
+.frame
+  background-color: $black-3
+  border-radius: 50px
+  width: 100px
+
+.icon-for
+  height: 100px
+  width: 100px
+
+.article-5
   align-items: flex-start
   border: 1px solid
   border-color: $black-2
@@ -271,39 +196,36 @@ export default {
   padding: 16px
   position: relative
 
-.footer-10
-  align-items: center
-  background-color: transparent
-  display: flex
-  gap: 60px
-  height: 313px
-  justify-content: center
-  padding: 60px 170px
-  position: relative
-  width: 1504px
+@media (max-width: 480px)
+  .image-ubytko1
+    display: none
+  .oubytovani-fotogalerie
+    height: fit-content
+  .image-ubytko2
+    height: 200px
+    width: 100% !important
+  .container-30
+    flex-direction: column
+  .article-5
+    gap: 8px
+    padding: 8px
+  .row-9
+    flex-direction: column
+    gap: 8px
+    padding: 8px
+    width: 100%
+  .contents-6
+    padding: 20px
+    width: 100%
+  .heading-text-div
+    padding: 8px
+    width: 100%
+    gap: 8px
+  .container-30
+    gap: 8px
+    padding: 8px
+    width: 100%
+  .description-19
+   font-weight: bold !important
 
-.upraveno_logo-1-1-23
-  height: 109px
-  object-fit: cover
-  position: relative
-  width: 153px
-
-.component-1-11
-  border-radius: 5px
-  height: 308px
-  margin-bottom: -57.50px
-  margin-top: -57.50px
-  overflow: hidden
-  position: relative
-  width: 260px
-
-.button-container-22
-  align-items: flex-start
-  display: flex
-  flex-direction: column
-  left: 20px
-  min-height: 220px
-  position: relative
-  top: 20px
-  width: 80px
 </style>

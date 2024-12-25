@@ -1,9 +1,9 @@
 <template>
   <div :class="[`item-3`, className || ``]">
-    <div class="frame-427318906-2">
-      <div class="title-22 roboto-normal-black-20px">{{ title }}</div>
+    <div class="kontakt2-container">
+      <div class="title-21 text">{{ title }}</div>
     </div>
-    <p class="subtitle-5 roboto-medium-black-28px" v-html="subtitle"></p>
+    <p class="subtext kontakt2" v-html="subtitle"></p>
   </div>
 </template>
 
@@ -16,18 +16,17 @@ export default {
 
 <style lang="sass">
 .item-3
-  align-items: center
   display: flex
   flex: 0 0 auto
   flex-direction: column
-  gap: 20px
+  gap: 60px
   justify-content: center
   padding: 12px 0px
   position: relative
-  width: 650px
+  align-self: stretch
+  width: 100%
 
-.frame-427318906-2
-  align-items: flex-start
+.kontakt2-container
   align-self: stretch
   display: flex
   flex: 0 0 auto
@@ -35,23 +34,16 @@ export default {
   gap: 8px
   position: relative
   width: 100%
-
-.title-22
-  align-self: stretch
-  letter-spacing: 0
-  line-height: 28px
-  margin-top: -1.00px
+.kontakt2
+  line-height: 24px
   position: relative
   text-align: center
 
-.subtitle-5
-  align-self: stretch
-  letter-spacing: 0
-  line-height: 36px
-  position: relative
-  text-align: center
-
-.item-3.item-2
-  align-self: stretch
-  width: 100%
+@media (max-width: 480px)
+  .item-3
+    gap: 30px
+  .kontakt2-container
+    gap: 4px
+  .title-21
+    font-weight: bold !important
 </style>

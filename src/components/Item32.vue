@@ -2,9 +2,9 @@
   <div class="item-1">
     <frame :src="frameProps.src" />
     <div class="frame-427318906-1">
-      <div class="title-21 roboto-normal-black-20px">{{ title }}</div>
+      <div class="title-21 text">{{ title }}</div>
     </div>
-    <div class="subtitle-4 roboto-medium-black-28px">{{ subtitle }}</div>
+    <div class="subtext ">{{ subtitle }}</div>
   </div>
 </template>
 
@@ -55,4 +55,16 @@ export default {
   line-height: 36px
   position: relative
   text-align: center
+@media (max-width: 480px)
+  .item-1
+    padding: 8px 0px
+
+  .frame-427318906-1
+    gap: 4px
+
+  .title-21
+    line-height: 24px
+
+  .subtitle-4
+    line-height: 32px
 </style>

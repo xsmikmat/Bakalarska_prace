@@ -1,14 +1,9 @@
 <template>
-  <div class="container-center-horizontal">
-    <div class="screen">
-      <div class="page">
+      <div class="screen">
         <navigace_final/>
+        <h1 class="heading-1">Kontaktní informace</h1>
         <div class="list-7">
-          <div class="container-17">
-            <h1 class="heading-1">Kontaktní informace</h1>
-          </div>
-          <div class="list-8">
-            <div class="row-1">
+            <div class="row-kontakt1">
               <item32
                   :title="item321Props.title"
                   :subtitle="item321Props.subtitle"
@@ -25,23 +20,18 @@
                   :frameProps="item323Props.frameProps"
               />
             </div>
-          </div>
         </div>
-        <div class="list-9">
-          <div class="title-20 heading-1">Důležité informace</div>
-          <div class="kontakt-info2">
+        <div class="heading-1">Důležité informace</div>
+        <div class="list-7">
             <div class="container-18">
-              <item42 :title="item421Props.title" :subtitle="item421Props.subtitle"/>
-              <div class="item-3">
-                  <div class="text ">Provozovatel</div>
-                <p class="subtext">ŠMIKMÁTOR, s.r.o. <br>
-                  Palackého 101<br>
-                  612 00 Brno - Královo Pole<br>
-                  Česká Republika</p>
-              </div>
-              <item42 :title="item422Props.title" :subtitle="item422Props.subtitle"
+              <item42 :title="item421Props.title"
+                      :subtitle="item421Props.subtitle"
+                      :className="item421Props.className"/>
+              <item42 :title="item422Props.title"
+                      :subtitle="item422Props.subtitle"
                       :className="item422Props.className"/>
-              <item42 :title="item423Props.title" :subtitle="item423Props.subtitle"
+              <item42 :title="item423Props.title"
+                      :subtitle="item423Props.subtitle"
                       :className="item423Props.className"/>
             </div>
               <div class="container-18">
@@ -61,24 +51,16 @@
                     :className="item426Props.className"
                 />
             </div>
-          </div>
-        </div>
-        <div class="section-23">
-          <div class="map-container-1"></div>
         </div>
         <footer-final/>
       </div>
-    </div>
-  </div>
 </template>
 
 <script>
 import Item32 from "../components/Item32.vue";
 import Item42 from "../components/Item42.vue";
-import Container from "../components/Container.vue";
 import Navigace_final from "@/components/navigace_final.vue";
 import FooterFinal from "@/components/footer_final.vue";
-
 export default {
   name: "Kontakt",
   components: {
@@ -86,14 +68,8 @@ export default {
     Navigace_final,
     Item32,
     Item42,
-    Container
   },
   props: [
-    "upraveno_Logo111",
-    "penzionVSrdciEskKanady",
-    "title1",
-    "title2",
-    "upraveno_Logo112",
     "item321Props",
     "item322Props",
     "item323Props",
@@ -112,10 +88,9 @@ export default {
 
 .list-7
   align-items: center
-  align-self: stretch
   display: flex
   flex: 0 0 auto
-  flex-direction: column
+  flex-direction: row
   gap: 20px
   justify-content: center
   overflow: hidden
@@ -123,17 +98,7 @@ export default {
   position: relative
   width: 100%
 
-.container-17
-  align-items: center
-  align-self: stretch
-  display: flex
-  flex: 0 0 auto
-  flex-direction: column
-  gap: 24px
-  position: relative
-  width: 100%
-
-.list-8
+.list-kontakt1
   align-items: center
   align-self: stretch
   display: flex
@@ -144,8 +109,7 @@ export default {
   position: relative
   width: 100%
 
-.row-1
-  align-items: flex-start
+.row-kontakt1
   align-self: stretch
   display: flex
   flex: 0 0 auto
@@ -166,12 +130,12 @@ export default {
   width: 100%
 
 .container-18
-  align-items: flex-start
   display: flex
   flex-direction: column
   gap: 24px
-  height: 484px
   position: relative
+  width: 100%
+  padding: 0px 60px
 
 .kontakt-info2
   display: flex
@@ -203,39 +167,13 @@ export default {
   position: relative
   width: 100%
 
-.footer-7
-  align-items: center
-  background-color: transparent
-  display: flex
-  gap: 60px
-  height: 313px
-  justify-content: center
-  padding: 60px 170px
-  position: relative
-  width: 1504px
-
-.upraveno_logo-1-1-15
-  height: 109px
-  object-fit: cover
-  position: relative
-  width: 153px
-
-.component-1-7
-  border-radius: 5px
-  height: 308px
-  margin-bottom: -57.50px
-  margin-top: -57.50px
-  overflow: hidden
-  position: relative
-  width: 260px
-
-.button-container-14
-  align-items: flex-start
-  display: flex
-  flex-direction: column
-  left: 20px
-  min-height: 220px
-  position: relative
-  top: 20px
-  width: 80px
+@media (max-width: 480px)
+  .row-kontakt1
+    flex-direction: column
+    gap: 20px
+  .list-7
+    padding: 20px 20px
+    flex-direction: column
+  .container-18
+    padding: 0px 20px
 </style>

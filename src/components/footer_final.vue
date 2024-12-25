@@ -20,11 +20,9 @@
   </footer>
 </template>
 <script>
-import Container from "@/components/Container.vue";
 export default {
   name: "FooterFinal",
   components: {
-    Container,
   },
   props: ["upraveno_Logo112", "vector200"],
 };
@@ -71,7 +69,7 @@ export default {
   line-height: 44px
   position: relative
 
-@media (max-width: 468px)
+@media (max-width: 480px)
   .footer
     flex-direction: column
     height: 100%

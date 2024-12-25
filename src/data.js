@@ -20,7 +20,7 @@ export const contents1Data = {
 };
 
 export const imageContainer5Data = {
-    src: "https://cdn.animaapp.com/projects/673b2aed8a1b7d25aab8cf0f/releases/673b2d66ac84e614e11f02a0/img/s-obrazem-1.png",
+    src: "https://cdn.animaapp.com/pes/6rojects/673b2aed8a1b7d25aab8cf0f/releas73b2d66ac84e614e11f02a0/img/s-obrazem-1.png",
 };
 
 export const imageContainer6Data = {

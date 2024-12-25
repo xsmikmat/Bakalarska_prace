@@ -109,21 +109,12 @@ export default {
   display: flex
   flex: 0 0 auto
   flex-direction: row
-  gap: 20px
-  justify-content: center
+  gap: 160px
   padding: 20px 80px
   position: relative
   width: 100%
+  justify-content: space-evenly
 
-.container-35
-  align-items: center
-  align-self: stretch
-  display: flex
-  flex: 0 0 auto
-  flex-direction: column
-  gap: 24px
-  position: relative
-  width: 100%
 
 .list-okoli
   align-items: center
@@ -197,8 +188,6 @@ export default {
   width: 116px
   border-radius: 50px
 
-
-
 .image-container-30
   align-items: flex-start
   align-self: stretch
@@ -223,46 +212,17 @@ export default {
   padding: 12px
   position: relative
   width: 100%
-
-.subtitle-14
-  letter-spacing: 0
-  line-height: 28px
-  margin-top: -1.00px
-  position: relative
-
-.title-49
-  align-self: stretch
-  letter-spacing: 0
-  line-height: 24px
-  position: relative
-
-.span1
-  text-decoration: underline
-
-.card-7
-  align-items: center
-  border: 1px solid
-  border-color: $black-2
-  border-radius: 6px
-  display: flex
-  flex: 1
-  flex-direction: column
-  flex-grow: 1
-  height: 540px
-  overflow: hidden
-  position: relative
-
-@media screen and (max-width: 768px)
+@media (max-width: 480px)
   .okoli-uvod
     flex-direction: column
+    padding: 20px
     gap: 0px
+  .row-icons
     width: 100%
-  .image-container-okoli
-    height: 200px
-  .image-okoli
-    height: 200px
-  .row-12
-    flex-direction: column
-    gap: 8px
-
+    gap: 20px
+  .card-okoli
+    flex: 1 1 100%
+    max-width: 100%
+  .row-okoli
+    gap: 20px
 </style>

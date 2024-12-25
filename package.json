@@ -7,6 +7,7 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
+    "@fawmi/vue-google-maps": "^0.9.79",
     "@primevue/themes": "^4.2.4",
     "core-js": "^3.6.5",
     "pinia": "^2.0.32",
@@ -14,7 +15,8 @@
     "primevue": "^4.2.4",
     "vue": "^3.5.13",
     "vue-datepicker-next": "^1.0.3",
-    "vue-router": "^4.4.5"
+    "vue-router": "^4.4.5",
+    "vue3-google-map": "^0.21.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
